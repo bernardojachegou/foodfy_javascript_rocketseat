@@ -215,7 +215,11 @@ header {
     margin-bottom: 24px;
 }
 
-.list ul li {
+/* Gambiarra para mostrar e esconder conteúdo */
+
+.list ul li,
+.list1 ul li,
+.list2 ul li {
     margin-left: 20px;
     font-size: 18px;
     color: #444444;
@@ -228,12 +232,26 @@ header {
     line-height: 28px;
 }
 
-/* Configuração do botão MOSTRAR/ESCONDER */
+/* Gambiarra para mostrar e esconder conteúdo */
 
-.recipe_titles a {
+.recipe_titles .button,
+.recipe_titles .button1,
+.recipe_titles .button2 {
     font-size: 12px;
     color: #999999;
     text-decoration: none;
     font-weight: 700;
     padding-left: 12px;
+    cursor: pointer;
 }
+
+/* Gambiarra para mostrar e esconder conteúdo */
+
+.list.hide,
+.list1.hide,
+.list2.hide {
+    display: none;
+}
+
+
+

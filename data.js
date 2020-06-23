@@ -2,7 +2,7 @@ module.exports = [
   {
     id: 1,
     image: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png',
-    title: 'burger',
+    title: 'Triplo bacon burger',
     author: 'Jorge Relato',
     ingredients: [
       '3 kg de carne moída (escolha uma carne magra e macia)',

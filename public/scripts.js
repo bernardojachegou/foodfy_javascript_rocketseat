@@ -1,23 +1,53 @@
-const modalOverlay = document.querySelector('.modal_overlay');
 const cards = document.querySelectorAll(".card");
-
-document.querySelector(".close_modal").addEventListener("click", function () {
-    modalOverlay.classList.remove("active")
-});
-
+const button = document.querySelector(".button");
+const button1 = document.querySelector(".button1");
+const button2 = document.querySelector(".button2");
 
 for (let card of cards) {
-    card.addEventListener("click", function () {
-        modalOverlay.classList.add("active");
-        const imageId = card.querySelector("img").getAttribute("src");
-        modalOverlay.querySelector("img").src = `${imageId}`;
-
-        const titleId = card.querySelector("h3").textContent;
-        modalOverlay.querySelector("h1").textContent = `${titleId}`;
-
-        const authorName = card.querySelector("#author_name").textContent;
-        modalOverlay.querySelector("p").textContent = `${authorName}`;
-
+    card.addEventListener("click", () => {
+        const recipeId = card.getAttribute("id");
+        window.location.href = `/receita?id=${recipeId}`
     });
 }
 
+button.addEventListener("click", () => {
+    if (button.innerHTML == "MOSTRAR") {
+        button.innerHTML = "ESCONDER";
+        document.querySelector(".list").classList.remove("hide");
+    } else {
+        button.innerHTML = "MOSTRAR";
+        document.querySelector(".list").classList.add("hide");
+    }
+});
+
+button1.addEventListener("click", () => {
+    if (button1.innerHTML == "MOSTRAR") {
+        button1.innerHTML = "ESCONDER";
+        document.querySelector(".list1").classList.remove("hide");
+    } else {
+        button1.innerHTML = "MOSTRAR";
+        document.querySelector(".list1").classList.add("hide");
+    }
+});
+
+button2.addEventListener("click", () => {
+    if (button2.innerHTML == "MOSTRAR") {
+        button2.innerHTML = "ESCONDER";
+        document.querySelector(".list2").classList.remove("hide");
+    } else {
+        button2.innerHTML = "MOSTRAR";
+        document.querySelector(".list2").classList.add("hide");
+    }
+});
+
+// for (let button of buttons) {
+//     button.addEventListener("click", () => {
+//         if (button.innerHTML == "MOSTRAR") {
+//             button.innerHTML = "ESCONDER";
+//             document.querySelector(".list").classList.remove("hide");
+//         } else {
+//             button.innerHTML = "MOSTRAR";
+//             document.querySelector(".list").classList.add("hide");
+//         }
+//     });
+// }
