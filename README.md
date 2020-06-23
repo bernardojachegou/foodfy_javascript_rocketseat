@@ -26,6 +26,10 @@
   <li>Javascript</li>
   <li>HTML</li>
   <li>CSS</li>
+  <li>Node.js</li>
+  <li>Nodemon</li>
+  <li>Express</li>
+  <li>Nunjucks</li>
  </ul>
  
 ## :computer: Rodando o projeto:
