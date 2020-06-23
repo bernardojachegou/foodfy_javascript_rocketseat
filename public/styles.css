@@ -40,7 +40,7 @@ header {
     margin-right: 80px;
 }
 
-/* Configurações da div welcome */
+/* Configurações da página inicial */
 
 .welcome {
     display: flex;
@@ -107,6 +107,7 @@ header {
     width: 100%;
     border-radius: 16px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .card_info h3 {
@@ -122,10 +123,12 @@ header {
     color: #777777;
 }
 
+/* Confifurações do footer */
+
 .footer {
-    /* position: fixed;
+    position: fixed;
     left: 0;
-    bottom: 0; */
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,6 +141,8 @@ header {
     font-size: 14px;
     color: #999999;
 }
+
+/* Configurações da página Sobre */
 
 .foodfy_about {
     margin-top: 24px;
@@ -166,65 +171,69 @@ header {
     margin: 18px 0;
 }
 
-.modal_overlay {
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    opacity: 0;
-    visibility: hidden;
+/* Configurações da página de detalhes */
+
+.recipe_details {
+    margin-bottom: 100px;
 }
 
-
-.modal {
-    background-color: white;
-    width: 660px;
-    height: 413px;
-    margin: 25vh auto;
-    position: relative;
-    border-radius: 18px;
-}
-
-
-.modal_image img {
-    margin: 25px 25px;
-    width: 600px;
-    height: 200px;
-    border-radius: 15px;
-}
-
-.modal_content {
+.recipe_head {
     text-align: center;
+    margin-bottom: 48px;
 }
 
-.modal_content h1 {
-    font-size: 24px;
+.recipe_head img {
+    width: 100%;
+    height: 280px;
+    border-radius: 15px;
+    margin-bottom: 36px;
+}
+
+.recipe_head h1 {
+    font-size: 36px;
     color: #111111;
 }
 
-.modal_content p {
-    font-size: 18px;
-    line-height: 28px;
+.recipe_head p {
+    font-size: 20px;
     color: #777777;
+    line-height: 30px;
 }
 
-.fecha_modal {
-    text-align: center;
-    margin-top: 60px;
+.recipe_titles {
+    display: flex;
+    align-items: baseline;
 }
 
-.fecha_modal a {
-    font-size: 16px;
+.recipe_titles h2 {
+    font-size: 24px;
+    color: #111111;
+    margin-bottom: 16px;
+}
+
+.recipe_ingredients, .recipe_preparation, .recipe_additional {
+    margin-bottom: 24px;
+}
+
+.list ul li {
+    margin-left: 20px;
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+.recipe_additional p {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+/* Configuração do botão MOSTRAR/ESCONDER */
+
+.recipe_titles a {
+    font-size: 12px;
     color: #999999;
     text-decoration: none;
-    cursor: pointer;
-}
-
-/* MODAL.ACTIVE */
-/* Configuração elemento pai do modal com a classe active: Opacidade e visibilidade; */
-
-.modal_overlay.active {
-    opacity: 1;
-    visibility: visible;
+    font-weight: 700;
+    padding-left: 12px;
 }
