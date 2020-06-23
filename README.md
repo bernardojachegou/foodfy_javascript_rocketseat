@@ -38,9 +38,9 @@
 
 2 - Rode um `npm install` na pasta do projeto.
 
-3 - Rode um `npm run dev` para rodar o projeto.
+3 - Rode um `npm start` para rodar o projeto.
 
-4 - Abra o projeto em `localhost:3000`
+4 - Abra o projeto em `localhost:5000`
 
 5 - Curta o projeto!
 
