@@ -36,4 +36,12 @@
 
 1 - Clone o projeto e o abra utilizando seu editor preferido.
 
+2 - Rode um `npm install` na pasta do projeto.
+
+3 - Rode um `npm run dev` para rodar o projeto.
+
+4 - Abra o projeto em `localhost:3000`
+
+5 - Curta o projeto!
+
 
