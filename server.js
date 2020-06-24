@@ -24,15 +24,15 @@ server.get("/receitas", (request, response) => {
     return response.render("recipes", { recipes });
 })
 
-server.get("/receita", (request, response) => {
-    const id = request.query.id;
+server.get("/receitas/:id", (request, response) => {
+    const id = request.params.index;
 
     const recipe = recipes.find(function (recipe) {
-        return recipe.id == id;
+        return recipe.index == id;
     })
 
     if (!recipe) {
-        return response.send("Curso não encontrado");
+        return response.send("Receita não encontrada");
     }
     return response.render("recipeDetails", { recipe })
 })

@@ -3,10 +3,12 @@ const button = document.querySelector(".button");
 const button1 = document.querySelector(".button1");
 const button2 = document.querySelector(".button2");
 
+// const buttons = document.querySelectorAll(".button");
+
 for (let card of cards) {
     card.addEventListener("click", () => {
         const recipeId = card.getAttribute("id");
-        window.location.href = `/receita?id=${recipeId}`
+        window.location.href = `/receitas/${recipeId}`
     });
 }
 
