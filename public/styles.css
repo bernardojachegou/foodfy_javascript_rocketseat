@@ -215,28 +215,21 @@ header {
     margin-bottom: 24px;
 }
 
-/* Gambiarra para mostrar e esconder conteúdo */
-
-.list ul li,
-.list1 ul li,
-.list2 ul li {
+.ingredients-list,
+.preparation-list {
     margin-left: 20px;
     font-size: 18px;
     color: #444444;
     line-height: 28px;
 }
 
-.recipe_additional p {
+.information-list p {
     font-size: 18px;
     color: #444444;
     line-height: 28px;
 }
 
-/* Gambiarra para mostrar e esconder conteúdo */
-
-.recipe_titles .button,
-.recipe_titles .button1,
-.recipe_titles .button2 {
+.recipe_titles .button {
     font-size: 12px;
     color: #999999;
     text-decoration: none;
@@ -245,13 +238,6 @@ header {
     cursor: pointer;
 }
 
-/* Gambiarra para mostrar e esconder conteúdo */
-
-.list.hide,
-.list1.hide,
-.list2.hide {
+.hide {
     display: none;
 }
-
-
-
