@@ -1,41 +1,22 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
+const routes = require("./routes");
+const methodOverride = require("method-override");
 
 const server = express();
-const recipes = require("./data");
 
+server.use(express.urlencoded({extended: true}));
 server.use(express.static("public"));
+server.use(methodOverride("_method"));
+server.use(routes);
 
 server.set("view engine", "njk");
 
 nunjucks.configure("views", {
-    express: server
+    express: server,
+    autoescape: false, 
+    noCache: true
 });
-
-server.get("/", (request, response) => {
-    return response.render("index", { recipes });
-});
-
-server.get("/sobre", (request, response) => {
-    return response.render("about");
-})
-
-server.get("/receitas", (request, response) => {
-    return response.render("recipes", { recipes });
-})
-
-server.get("/receitas/:id", (request, response) => {
-    const id = request.params.index;
-
-    const recipe = recipes.find(function (recipe) {
-        return recipe.index == id;
-    })
-
-    if (!recipe) {
-        return response.send("Receita não encontrada");
-    }
-    return response.render("recipeDetails", { recipe })
-})
 
 server.listen(3000, () => {
     console.log("Server online...")
