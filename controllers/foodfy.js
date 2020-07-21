@@ -1,26 +1,28 @@
-const recipes = require("../data");
+const data = require("../data.json");
 
 exports.index = (request, response) => {
-    return response.render("index", { recipes });
+    return response.render("foodfy/index", { recipes: data.recipes });
 }
 
 exports.about = (request, response) => {
-    return response.render("about");
+    return response.render("foodfy/about");
 }
 
 exports.recipesTable = (request, response) => {
-    return response.render("recipes", { recipes });
+    return response.render("foodfy/recipes", { recipes: data.recipes });
 }
 
 exports.recipesDetails = (request, response) => {
-    const id = request.params.index;
+    
+    const { id } = request.params;
 
-    const recipe = recipes.find(function (recipe) {
-        return recipe.index == id;
+    const foundRecipe = data.recipes.find(function (recipe) {
+        return recipe.id == id;
     })
 
-    if (!recipe) {
-        return response.send("Receita não encontrada");
-    }
-    return response.render("recipeDetails", { recipe })
+    if (!foundRecipe) return response.send("Receita não encontrada");
+    
+    const recipe = foundRecipe;
+
+    return response.render("foodfy/recipeDetails", { recipe })
 }
