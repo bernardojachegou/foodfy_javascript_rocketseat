@@ -22,7 +22,7 @@ html, body {
 .main {
     max-width: 960px;
     margin: 0 auto;
-    padding: 32px 16px 100px;
+    padding: 32px 16px 80px;
 }
 
 /* Configurações do menu */
@@ -51,6 +51,10 @@ header {
     font-size: 16px;
     line-height: 19px;
     margin: 15px;
+}
+
+.links a:last-child {
+    margin-right: 0;
 }
 
 #link_logo {
@@ -266,36 +270,68 @@ header {
 
 /* Configuração da página de receitas da área administrativa; */
 
-.recipes-link {
+.recipe-link {
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;
     color: #6558C3;
 }
 
+
 .admin-cards {
     margin-top: 20px;
     max-width: 960px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+
+.admin-card {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 16px;
 }
 
 .admin-card-img img {
     width: 100%;
-    border-radius: 16px;
-    margin-bottom: 20px;
+    min-height: 80px;
+    border-radius: 8px;
 }
 
 .admin-card-info h3 {
     font-weight: 400;
     font-size: 18px;
     color: #111111;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .admin-card-info p {
     font-weight: 400;
     font-size: 14px;
     color: #777777;
+    margin-bottom: 8px;
+}
+
+.recipe_details .recipe_options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+.recipe_options h1 {
+    font-size: 24px;
+    color: #111111;
+}
+
+.recipe_details .recipe_options a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background: #6558C3;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 500;
 }

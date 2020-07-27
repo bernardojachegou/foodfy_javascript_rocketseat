@@ -5,7 +5,11 @@
 {% endblock %}
 
 {% block content %}
+        <div class="recipe_options">
+            <h1>Gerenciar receitas</h1>
+        </div>
     <section class="admin-cards">
+
         {% for recipe in recipes %}
             <div class="admin-card" id="{{recipe.id}}">
                 <div class="admin-card-img">
@@ -14,7 +18,7 @@
                 <div class="admin-card-info">
                     <h3>{{recipe.title}}</h3>
                     <p id="author_name">{{recipe.author}}</p>
-                    <a class="recipes-link" href="">Vizualizar</a>
+                    <a class="recipe-link" href="/admin/receitas/{{recipe.id}}">Vizualizar</a>
                 </div>
             </div>
         {% endfor %}

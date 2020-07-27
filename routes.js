@@ -11,6 +11,7 @@ routes.get("/receitas/:id", foodfy.recipesDetails);
 
 // Área administrativa
 routes.get("/admin/receitas", admin.index);
+routes.get("/admin/receitas/:id", admin.recipesDetails);
 
 
 module.exports = routes;
