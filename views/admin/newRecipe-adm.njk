@@ -1,0 +1,43 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+    {# ?_method=PUT #}
+    <div class="all">
+        <form method="POST" action="">
+            <div class="recipe_options">
+                <h1>Criando receita</h1>
+                <a class="edit_button" href="/admin/criar">Salvar receita</a>
+            </div>
+
+            <div class="item">
+                <h3>Imagem da receita</h3>
+                <div>
+                    <input type="url" name="image" value="">
+                </div>
+            </div>
+
+            <div class="item">
+                <h3>Ingredientes</h3>
+                <div>
+                    <input type="text" name="ingredients" value="">
+                </div>
+                <a href="#">Adicionar novo ingrediente</a>
+            </div>
+
+            <div class="item">
+                <h3>Modo de preparo</h3>
+                <div>
+                    <input type="text" name="" value="">
+                </div>
+                <a href="#">Adicionar novo passo</a>
+            </div>
+
+            <div class="item">
+                <h3>Informações adicionais</h3>
+                <div>
+                    <textarea name="information" id="information_box" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

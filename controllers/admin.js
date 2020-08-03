@@ -18,3 +18,7 @@ exports.recipesDetails = (request, response) => {
 
     return response.render("admin/recipeDetails-adm", { recipe })
 }
+
+exports.newRecipe = (request, response) => {
+    return response.render("admin/newRecipe-adm");
+}

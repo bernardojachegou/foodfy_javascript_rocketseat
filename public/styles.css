@@ -312,7 +312,11 @@ header {
     margin-bottom: 8px;
 }
 
-.recipe_details .recipe_options {
+form .recipe_options {
+    padding-bottom: 8px;
+}
+
+.recipe_options {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -324,7 +328,7 @@ header {
     color: #111111;
 }
 
-.recipe_details .recipe_options a {
+.recipe_options .edit_button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -334,4 +338,33 @@ header {
     font-size: 16px;
     color: #FFFFFF;
     font-weight: 500;
+    text-decoration: none;
+}
+
+form .item {
+    margin: 24px 0; 
+}
+
+form .item h3 {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+form .item input,
+form textarea {
+    width: 100%;
+    padding: 12px 4px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    margin: 16px 0;
+    color: #555555;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form .item a {
+    color: #6558C3;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
 }
