@@ -12,7 +12,7 @@ html, body {
     height: 100%;
 }
 
-/* Configurações de layout; */
+/* Configurações do template (default); */
 
 .all {
     min-height: 100%;
@@ -40,7 +40,7 @@ header {
     justify-content: space-between;
 }
 
-.menu .menu-items {
+.menu .menu_items {
     display: flex;
     align-items: center;
 }
@@ -67,25 +67,20 @@ header {
 
 /* Configurações das boas-vindas; */
 
-.welcome {
+.welcome_banner {
     display: flex;
+    justify-content: space-between;
     border-radius: 30px;
     width: 100%;
     height: 366px;
     background-color: #FBDFDB;
 }
 
-.welcome .description {
+.welcome_banner .description {
     width: 50%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.welcome .image {
-    width: 50%;
-    height: 100%;
 }
 
 .description h1 {
@@ -104,10 +99,12 @@ header {
     opacity: 0.7;
 }
 
-.image img {
-    position: relative;
-    left: 30%;
-    top: 18%;
+.welcome_banner .image {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 /* Configurações da apresentação de receitas; */
@@ -201,7 +198,7 @@ header {
 /* Configurações da página de detalhes das receitas; */
 
 .recipe_details {
-    margin-bottom: 100px;
+    margin-bottom: 24px;
 }
 
 .recipe_head {
@@ -242,20 +239,20 @@ header {
     margin-bottom: 24px;
 }
 
-.ingredients-list, .preparation-list {
+.ingredients_list, .preparation_list {
     margin-left: 20px;
     font-size: 18px;
     color: #444444;
     line-height: 28px;
 }
 
-.information-list p {
+.information_list p {
     font-size: 18px;
     color: #444444;
     line-height: 28px;
 }
 
-.recipe_titles .button {
+.recipe_titles .toggle_button {
     font-size: 12px;
     color: #999999;
     text-decoration: none;
@@ -268,15 +265,7 @@ header {
     display: none;
 }
 
-/* Configuração da página de receitas da área administrativa; */
-
-.recipe-link {
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-    color: #6558C3;
-}
-
+/* Configuração da página visualização de receitas da área administrativa; */
 
 .admin-cards {
     margin-top: 20px;
@@ -286,7 +275,7 @@ header {
     gap: 20px;
 }
 
-.admin-card {
+.admin-cards .admin-card {
     display: grid;
     grid-template-columns: 40% 1fr;
     gap: 16px;
@@ -312,9 +301,14 @@ header {
     margin-bottom: 8px;
 }
 
-form .recipe_options {
-    padding-bottom: 8px;
+.admin-card-info a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    color: #6558C3;
 }
+
+/* Configuração padrão das opções de gerenciamento de receitas da área administrativa: criar, salvar */
 
 .recipe_options {
     display: flex;
@@ -328,7 +322,7 @@ form .recipe_options {
     color: #111111;
 }
 
-.recipe_options .edit_button {
+.recipe_options .crud_button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -339,10 +333,17 @@ form .recipe_options {
     color: #FFFFFF;
     font-weight: 500;
     text-decoration: none;
+    cursor: pointer;
+}
+
+/* Configurações do formulário de criação de novas receitas */
+
+form .recipe_options {
+    padding-bottom: 8px;
 }
 
 form .item {
-    margin: 24px 0; 
+    margin-top: 24px;
 }
 
 form .item h3 {
@@ -350,21 +351,28 @@ form .item h3 {
     font-size: 16px;
 }
 
-form .item input,
-form textarea {
+form .item input, form textarea {
     width: 100%;
     padding: 12px 4px;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
-    margin: 16px 0;
+    margin: 16px 0 0;
     color: #555555;
     font-size: 16px;
     box-sizing: border-box;
 }
 
-form .item a {
+form #adding_button {
+    margin: 8px 0;
     color: #6558C3;
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+form #adding_button:hover {
+    text-decoration: underline;
 }

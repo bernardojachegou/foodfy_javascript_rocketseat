@@ -6,7 +6,7 @@
         <form method="POST" action="">
             <div class="recipe_options">
                 <h1>Criando receita</h1>
-                <a class="edit_button" href="/admin/criar">Salvar receita</a>
+                <button class="crud_button">Salvar receita</button>
             </div>
 
             <div class="item">
@@ -16,21 +16,21 @@
                 </div>
             </div>
 
-            <div class="item">
+            <div id="ingredients" class="item">
                 <h3>Ingredientes</h3>
-                <div>
-                    <input type="text" name="ingredients" value="">
+                <div class="ingredient">
+                    <input type="text" name="ingredients[]" value=""/>
                 </div>
-                <a href="#">Adicionar novo ingrediente</a>
             </div>
+            <button id="adding_button" type="button" class="add-ingredient">Adicionar novo ingrediente</button>
 
             <div class="item">
                 <h3>Modo de preparo</h3>
-                <div>
-                    <input type="text" name="" value="">
+                <div class="preparation">
+                    <input type="text" name="preparations[]" value="">
                 </div>
-                <a href="#">Adicionar novo passo</a>
             </div>
+            <button id="adding_button" type="button" class="add-preparation">Adicionar novo passo</button>
 
             <div class="item">
                 <h3>Informações adicionais</h3>

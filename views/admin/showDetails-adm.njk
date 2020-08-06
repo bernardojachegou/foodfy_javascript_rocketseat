@@ -4,7 +4,7 @@
     <div class="recipe_details">
         <div class="recipe_options">
             <h1>Receita: {{recipe.title}}</h1>
-            <a class="edit_button" href="#">Editar receita</a>
+            <a class="crud_button" href="#">Editar receita</a>
         </div>
         <div class="recipe_head">
             <img src="{{recipe.image}}" alt="{{recipe.title}}">
@@ -15,7 +15,7 @@
         <div class="recipe_ingredients">
             <div class="recipe_titles">
                 <h2>Ingredientes</h2>
-                <a class="button" onclick="handleRecipeDetail('.ingredients-list', this)">MOSTRAR</a>
+                <a class="toggle_button" onclick="handleRecipeDetail('.ingredients-list', this)">MOSTRAR</a>
             </div>
 
             <div class="ingredients-list hide">
@@ -30,7 +30,7 @@
         <div class="recipe_preparation">
             <div class="recipe_titles">
                 <h2>Modo de preparo</h2>
-                <a class="button" onclick="handleRecipeDetail('.preparation-list', this)">MOSTRAR</a>
+                <a class="toggle_button" onclick="handleRecipeDetail('.preparation-list', this)">MOSTRAR</a>
             </div>
 
             <div class="preparation-list hide">
@@ -45,7 +45,7 @@
         <div class="recipe_additional">
             <div class="recipe_titles">
                 <h2>Informações adicionais</h2>
-                <a class="button" onclick="handleRecipeDetail('.information-list', this)">MOSTRAR</a>
+                <a class="toggle_button" onclick="handleRecipeDetail('.information-list', this)">MOSTRAR</a>
             </div>
             <div class="information-list hide">
                 <p>{{recipe.information}}</p>
