@@ -1,4 +1,5 @@
-const data = require("../data.json");
+const fs = require('fs');
+const data = require('../data.json');
 
 exports.index = (request, response) => {
     return response.render("admin/indexRecipes-adm", { recipes: data.recipes });
@@ -22,33 +23,91 @@ exports.show = (request, response) => {
     return response.render("admin/showDetails-adm", { recipe })
 }
 
-// exports.post = (request, response) => {
+exports.edit = (request, response) => {
 
-//     const keys = Object.keys(request.body);
+    const { id } = request.params;
 
-//     for (key of keys) {
-//         if (request.body[key] == "") {
-//             return response.send("Please, fill all the fields!");
-//         }
-//     }
+    const foundRecipe = data.recipes.find(function (recipe) {
+        return recipe.id == id;
+    })
 
-//     let id = 1;
-//     const lastRecipe = data.recipes[data.recipes.length - 1];
+    if (!foundRecipe) return response.send("Receita não encontrada");
 
-//     if (lastRecipe) {
-//         id = lastRecipe.id + 1;
-//     }
 
-//     data.recipes.push({
-//         id,
-//         ...request.body,
-//     })
+    return response.render("admin/editDetails-admin", { recipe: foundRecipe });
+}
 
-//     fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
-//         if (err) return response.send("Writing file error!")
+exports.post = (request, response) => {
 
-//         return response.redirect(`/receitas/${id}`)
-//     })
+    const keys = Object.keys(request.body);
 
-// }
+    for (key of keys) {
+        if (request.body[key] == "") {
+            return response.send("Please, fill all the fields!");
+        }
+    }
 
+    let id = 1;
+    const lastRecipe = data.recipes[data.recipes.length - 1];
+
+    if (lastRecipe) {
+        id = lastRecipe.id + 1;
+    }
+
+    data.recipes.push({
+        id,
+        ...request.body,
+    })
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
+        if (err) return response.send("Writing file error!")
+
+        return response.redirect(`/receitas/${id}`)
+    })
+
+}
+
+exports.put = (request, response) => {
+    const { id } = request.body;
+
+    let index = 0;
+
+    const foundRecipe = data.recipes.find(function (recipe, foundIndex) {
+        if (id == recipe.id) {
+            index = foundIndex
+            return true;
+        }
+    })
+
+    if (!foundRecipe) return response.send("Recipe not found!");
+
+    const recipe = {
+        ...foundRecipe,
+        ...request.body,
+        id: Number(request.body.id)
+    }
+
+    data.recipes[index] = recipe;
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
+        if (err) return response.send("Could not include on date.json!")
+
+        return response.redirect(`/admin/receitas/${id}`);
+    })
+}
+
+exports.delete = (request, response) => {
+    const { id } = request.body;
+
+    const filteredRecipes = data.recipes.filter(function (recipe) {
+        return recipe.id != id;
+    })
+
+    data.recipes = filteredRecipes;
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
+        if(err) return response.send("Could not delete the selected recipe!");
+
+        return response.redirect("/admin/receitas");
+    })
+}

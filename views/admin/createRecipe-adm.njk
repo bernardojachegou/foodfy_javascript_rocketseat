@@ -1,43 +1,15 @@
 {% extends "layout.njk" %}
 
 {% block content %}
-    {# ?_method=PUT #}
     <div class="all">
-        <form method="POST" action="">
+        <form method="POST" action="/admin/receitas">
             <div class="recipe_options">
                 <h1>Criando receita</h1>
-                <button class="crud_button">Salvar receita</button>
+                <button type="submit" class="crud_button">Salvar receita</button>
             </div>
 
-            <div class="item">
-                <h3>Imagem da receita</h3>
-                <div>
-                    <input type="url" name="image" value="">
-                </div>
-            </div>
+            {% include 'admin/fields.njk' %}
 
-            <div id="ingredients" class="item">
-                <h3>Ingredientes</h3>
-                <div class="ingredient">
-                    <input type="text" name="ingredients[]" value=""/>
-                </div>
-            </div>
-            <button id="adding_button" type="button" class="add-ingredient">Adicionar novo ingrediente</button>
-
-            <div class="item">
-                <h3>Modo de preparo</h3>
-                <div class="preparation">
-                    <input type="text" name="preparations[]" value="">
-                </div>
-            </div>
-            <button id="adding_button" type="button" class="add-preparation">Adicionar novo passo</button>
-
-            <div class="item">
-                <h3>Informações adicionais</h3>
-                <div>
-                    <textarea name="information" id="information_box" cols="30" rows="10"></textarea>
-                </div>
-            </div>
         </form>
     </div>
 {% endblock content %}

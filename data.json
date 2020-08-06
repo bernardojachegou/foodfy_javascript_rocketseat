@@ -2,76 +2,60 @@
   "recipes": [
     {
       "id": 1,
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png",
-      "title": "Triplo bacon burger mega super ",
-      "author": "Jorge Relato",
+      "title": "Omelete do papai!",
+      "image": "https://images.unsplash.com/photo-1521513919009-be90ad555598?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1289&q=80",
       "ingredients": [
-        "3 kg de carne moída (escolha uma carne magra e macia)",
-        "300 g de bacon moído",
-        "1 ovo",
-        "3 colheres (sopa) de farinha de trigo",
-        "3 colheres (sopa) de tempero caseiro: feito com alho, sal, cebola, pimenta e cheiro verde processados no liquidificador",
-        "30 ml de água gelada"
+        "05 Ovos",
+        "01 Colher de azeite de oliva"
       ],
-      "preparation": [
-        "Misture todos os ingredientes muito bem e amasse para que fique tudo muito bem misturado.",
-        "Faça porções de 90 g a 100 g.",
-        "Forre um plástico molhado em uma bancada e modele os hambúrgueres utilizando um aro como base.",
-        "Faça um de cada vez e retire o aro logo em seguida.",
-        "Forre uma assadeira de metal com plástico, coloque os hambúrgueres e intercale camadas de carne e plásticos (sem apertar).",
-        "Faça no máximo 4 camadas por forma e leve para congelar.",
-        "Retire do congelador, frite ou asse e está pronto."
+      "preparations": [
+        "Numa tigela pequena quebre o ovo, com cuidado para não furar a gema.",
+        "Leve uma frigideira antiaderente ao fogo baixo e regue com 1 colher (chá) de azeite. ",
+        "Assim que a clara começar a firmar, tempere com sal e pimenta a gosto e tampe a frigideira para o ovo terminar de fritar"
       ],
-      "information": "Preaqueça a chapa, frigideira ou grelha por 10 minutos antes de levar os hambúrgueres. Adicione um pouquinho de óleo ou manteiga e não amasse os hambúrgueres! \n\n Você sabia que a receita que precede o hambúrguer surgiu no século XIII, na Europa? A ideia de moer a carne chegou em Hamburgo no século XVII, onde um açogueiro resolveu também temperá-la. Assim, a receita foi disseminada nos Estados Unidos por alemães da região. Lá surgiu a ideia de colocar o hambúrguer no meio do pão e adicionar outros ingredientes, como queijom tomates e alface."
+      "information": "Sirva-se!",
+      "author": "Michel Bernardo"
     },
     {
       "id": 2,
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png",
-      "title": "Triplo bacon burger mega super ",
-      "author": "Jorge Relato",
+      "title": "Suco de abacaxi com hortelã",
+      "image": "https://images.unsplash.com/photo-1587883012610-e3df17d41270?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
       "ingredients": [
-        "3 kg de carne moída (escolha uma carne magra e macia)",
-        "300 g de bacon moído",
-        "1 ovo",
-        "3 colheres (sopa) de farinha de trigo",
-        "3 colheres (sopa) de tempero caseiro: feito com alho, sal, cebola, pimenta e cheiro verde processados no liquidificador",
-        "30 ml de água gelada"
+        "½ xícara (chá) de abacaxi em cubos sem o miolo",
+        "¾ xícara (chá) de água",
+        "5 folhas de hortelã"
       ],
-      "preparation": [
-        "Misture todos os ingredientes muito bem e amasse para que fique tudo muito bem misturado.",
-        "Faça porções de 90 g a 100 g.",
-        "Forre um plástico molhado em uma bancada e modele os hambúrgueres utilizando um aro como base.",
-        "Faça um de cada vez e retire o aro logo em seguida.",
-        "Forre uma assadeira de metal com plástico, coloque os hambúrgueres e intercale camadas de carne e plásticos (sem apertar).",
-        "Faça no máximo 4 camadas por forma e leve para congelar.",
-        "Retire do congelador, frite ou asse e está pronto."
+      "preparations": [
+        "1. No liquidificador, junte o abacaxi, a água e as folhas de hortelã (se quiser adicione açúcar). ",
+        " Bata até ficar liso.",
+        "Transfira para um copo, acrescente cubos de gelo e sirva a seguir.  "
       ],
-      "information": "Preaqueça a chapa, frigideira ou grelha por 10 minutos antes de levar os hambúrgueres. Adicione um pouquinho de óleo ou manteiga e não amasse os hambúrgueres! \n\n Você sabia que a receita que precede o hambúrguer surgiu no século XIII, na Europa? A ideia de moer a carne chegou em Hamburgo no século XVII, onde um açogueiro resolveu também temperá-la. Assim, a receita foi disseminada nos Estados Unidos por alemães da região. Lá surgiu a ideia de colocar o hambúrguer no meio do pão e adicionar outros ingredientes, como queijom tomates e alface."
+      "information": "e quiser levar para o trabalho, coloque o suco numa garrafinha com tampa e deixe na geladeira até a hora de consumir.",
+      "author": "Aline Silva"
     },
     {
       "id": 3,
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png",
-      "title": "Triplo bacon burger",
-      "author": "Jorge Relato",
+      "title": "Sanduíche natural",
+      "image": "https://images.unsplash.com/photo-1553909489-cd47e0907980?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1225&q=80",
       "ingredients": [
-        "3 kg de carne moída (escolha uma carne magra e macia)",
-        "300 g de bacon moído",
-        "1 ovo",
-        "3 colheres (sopa) de farinha de trigo",
-        "3 colheres (sopa) de tempero caseiro: feito com alho, sal, cebola, pimenta e cheiro verde processados no liquidificador",
-        "30 ml de água gelada"
+        "20 g ou ¼ xícara (chá) de cenoura ralada",
+        "15 g ou ¼ xícara (chá) de beterraba ralada",
+        "1 colher (chá) de cebola picada",
+        "14 g ou 3 colheres (sopa) de queijo cottage",
+        "2 fatias de pão de fôrma",
+        "sal e pimenta-do-reino moída na hora moída a gosto"
       ],
-      "preparation": [
-        "Misture todos os ingredientes muito bem e amasse para que fique tudo muito bem misturado.",
-        "Faça porções de 90 g a 100 g.",
-        "Forre um plástico molhado em uma bancada e modele os hambúrgueres utilizando um aro como base.",
-        "Faça um de cada vez e retire o aro logo em seguida.",
-        "Forre uma assadeira de metal com plástico, coloque os hambúrgueres e intercale camadas de carne e plásticos (sem apertar).",
-        "Faça no máximo 4 camadas por forma e leve para congelar.",
-        "Retire do congelador, frite ou asse e está pronto."
+      "preparations": [
+        "Com uma escovinha limpa, lave muito bem a cenoura e a beterraba sob água corrente. ",
+        "Descasque a cenoura e a beterraba, usando uma faquinha. Na parte grossa do ralador, rale as duas e reserve em tigelas separadas. ",
+        "Com uma faca, descasque e pique a cebola em pedaços pequenos. Reserve.",
+        "Numa tigela pequena, junte o queijo cottage e tempere com sal e pimenta-do-reino moída a gosto. ",
+        "Coloque as fatias de pão na torradeira ou leve ao forno para tostar. ",
+        "Com o auxílio de uma colher, distribua o queijo cottage sobre uma das fatias de pão. Em seguida, cubra o queijo com a cenoura, a beterraba e a cebola. ",
+        "Cubra o recheio com a outra fatia de pão, formando um sanduíche. Sirva a seguir."
       ],
-      "information": "Preaqueça a chapa, frigideira ou grelha por 10 minutos antes de levar os hambúrgueres. Adicione um pouquinho de óleo ou manteiga e não amasse os hambúrgueres! \n\n Você sabia que a receita que precede o hambúrguer surgiu no século XIII, na Europa? A ideia de moer a carne chegou em Hamburgo no século XVII, onde um açogueiro resolveu também temperá-la. Assim, a receita foi disseminada nos Estados Unidos por alemães da região. Lá surgiu a ideia de colocar o hambúrguer no meio do pão e adicionar outros ingredientes, como queijom tomates e alface."
+      "information": "Aproveite essa delícia!",
+      "author": "Fernando Silva"
     }
-    
   ]
 }

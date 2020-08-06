@@ -1,0 +1,4 @@
+Refatoração do código:
+1. Corrigir CSS das imagens do card;
+2. Refatorar função para adicionar novo input;
+3. Criar responsividade;
