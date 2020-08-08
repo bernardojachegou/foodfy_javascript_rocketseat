@@ -50,7 +50,19 @@ header {
     color: white;
     font-size: 16px;
     line-height: 19px;
-    margin: 15px;
+    margin: 0 15px;
+    padding: 4px;
+    border-radius: 6px;
+    transition: 300ms;
+}
+
+.links a:hover, .links a:last-child:hover {
+    background-color: white;
+    color: black;
+}
+
+.links a:first-child:hover {
+    background-color: black;
 }
 
 .links a:last-child {
@@ -263,6 +275,11 @@ header {
     font-weight: 700;
     padding-left: 12px;
     cursor: pointer;
+    transition: 300ms;
+}
+
+.recipe_titles .toggle_button:hover {
+    color: black;
 }
 
 .hide {
@@ -313,6 +330,14 @@ header {
     font-weight: 700;
     font-size: 14px;
     color: #6558C3;
+    transition: 300ms;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.admin-card-info a:hover {
+    background-color: #6558C3;
+    color: white;
 }
 
 /* Configuração padrão das opções de gerenciamento de receitas da área administrativa: criar, salvar */
@@ -339,17 +364,31 @@ header {
     justify-content: center;
     padding: 8px 16px;
     background: #6558C3;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 16px;
     color: #FFFFFF;
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;
+    border: 2px solid white;
+    transition: 300ms;
+}
+
+.crud_button:hover {
+    background-color: white;
+    border: 2px solid #6558C3;
+    color: #6558C3;
 }
 
 form #delete_button {
     background: #DC4747;
     margin-bottom: 8px;
+}
+
+form #delete_button:hover {
+    background-color: white;
+    border: 2px solid #DC4747;
+    color: #DC4747;
 }
 
 #delete_form {
