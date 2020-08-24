@@ -1,0 +1,61 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Omelete do papai!",
+      "image": "https://images.unsplash.com/photo-1521513919009-be90ad555598?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1289&q=80",
+      "ingredients": [
+        "05 Ovos",
+        "01 Colher de azeite de oliva"
+      ],
+      "preparations": [
+        "Numa tigela pequena quebre o ovo, com cuidado para não furar a gema.",
+        "Leve uma frigideira antiaderente ao fogo baixo e regue com 1 colher (chá) de azeite. ",
+        "Assim que a clara começar a firmar, tempere com sal e pimenta a gosto e tampe a frigideira para o ovo terminar de fritar"
+      ],
+      "information": "Sirva-se!",
+      "author": "Michel Bernardo"
+    },
+    {
+      "id": 2,
+      "title": "Suco de abacaxi com hortelã",
+      "image": "https://images.unsplash.com/photo-1587883012610-e3df17d41270?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "ingredients": [
+        "½ xícara (chá) de abacaxi em cubos sem o miolo",
+        "¾ xícara (chá) de água",
+        "5 folhas de hortelã"
+      ],
+      "preparations": [
+        "1. No liquidificador, junte o abacaxi, a água e as folhas de hortelã (se quiser adicione açúcar). ",
+        " Bata até ficar liso.",
+        "Transfira para um copo, acrescente cubos de gelo e sirva a seguir.  "
+      ],
+      "information": "e quiser levar para o trabalho, coloque o suco numa garrafinha com tampa e deixe na geladeira até a hora de consumir.",
+      "author": "Aline Silva"
+    },
+    {
+      "id": 3,
+      "title": "Sanduíche natural",
+      "image": "https://images.unsplash.com/photo-1553909489-cd47e0907980?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1225&q=80",
+      "ingredients": [
+        "20 g ou ¼ xícara (chá) de cenoura ralada",
+        "15 g ou ¼ xícara (chá) de beterraba ralada",
+        "1 colher (chá) de cebola picada",
+        "14 g ou 3 colheres (sopa) de queijo cottage",
+        "2 fatias de pão de fôrma",
+        "sal e pimenta-do-reino moída na hora moída a gosto"
+      ],
+      "preparations": [
+        "Com uma escovinha limpa, lave muito bem a cenoura e a beterraba sob água corrente. ",
+        "Descasque a cenoura e a beterraba, usando uma faquinha. Na parte grossa do ralador, rale as duas e reserve em tigelas separadas. ",
+        "Com uma faca, descasque e pique a cebola em pedaços pequenos. Reserve.",
+        "Numa tigela pequena, junte o queijo cottage e tempere com sal e pimenta-do-reino moída a gosto. ",
+        "Coloque as fatias de pão na torradeira ou leve ao forno para tostar. ",
+        "Com o auxílio de uma colher, distribua o queijo cottage sobre uma das fatias de pão. Em seguida, cubra o queijo com a cenoura, a beterraba e a cebola. ",
+        "Cubra o recheio com a outra fatia de pão, formando um sanduíche. Sirva a seguir."
+      ],
+      "information": "Aproveite essa delícia!",
+      "author": "Fernando Silva"
+    }
+  ]
+}

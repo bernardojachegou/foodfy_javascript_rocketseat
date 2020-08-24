@@ -1,12 +1,12 @@
 const fs = require('fs');
-const data = require('../data.json');
+const data = require('../../data.json');
 
 exports.index = (request, response) => {
-    return response.render("admin/indexRecipes-adm", { recipes: data.recipes });
+    return response.render("admin/recipes/index", { recipes: data.recipes });
 }
 
 exports.create = (request, response) => {
-    return response.render("admin/createRecipe-adm");
+    return response.render("admin/recipes/create");
 }
 
 exports.show = (request, response) => {
@@ -20,7 +20,7 @@ exports.show = (request, response) => {
 
     const recipe = foundRecipe;
 
-    return response.render("admin/showDetails-adm", { recipe })
+    return response.render("admin/recipes/read", { recipe })
 }
 
 exports.edit = (request, response) => {
@@ -34,7 +34,7 @@ exports.edit = (request, response) => {
     if (!foundRecipe) return response.send("Receita não encontrada");
 
 
-    return response.render("admin/editDetails-admin", { recipe: foundRecipe });
+    return response.render("admin/recipes/edit", { recipe: foundRecipe });
 }
 
 exports.post = (request, response) => {
@@ -106,7 +106,7 @@ exports.delete = (request, response) => {
     data.recipes = filteredRecipes;
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
-        if(err) return response.send("Could not delete the selected recipe!");
+        if (err) return response.send("Could not delete the selected recipe!");
 
         return response.redirect("/admin/receitas");
     })
