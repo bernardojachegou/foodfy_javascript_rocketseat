@@ -1,5 +1,8 @@
 const fs = require('fs');
 const data = require('../../data.json');
+const { date } = require('../../lib/utils');
+const db = require('../../config/db');
+const { callbackify } = require('util');
 
 exports.index = (request, response) => {
     return response.render("admin/recipes/index", { recipes: data.recipes });
@@ -47,23 +50,51 @@ exports.post = (request, response) => {
         }
     }
 
-    let id = 1;
-    const lastRecipe = data.recipes[data.recipes.length - 1];
+    const query = `
+        INSERT INTO recipes (
+            image,
+            title,
+            ingredients,
+            preparation,
+            information,
+            created_at
+        ) VALUES ($1, $2, $3, $4, $5, $6)
+        RETURNING id
+    `
 
-    if (lastRecipe) {
-        id = lastRecipe.id + 1;
-    }
+    const values = [
+        request.body.image,
+        request.body.title,
+        request.body.ingredients,
+        request.body.preparation,
+        request.body.information,
+        date(Date.now()).iso
 
-    data.recipes.push({
-        id,
-        ...request.body,
-    })
+    ]
 
-    fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
-        if (err) return response.send("Writing file error!")
+    // let id = 1;
+    // const lastRecipe = data.recipes[data.recipes.length - 1];
 
-        return response.redirect(`/receitas/${id}`)
-    })
+    // if (lastRecipe) {
+    //     id = lastRecipe.id + 1;
+    // }
+
+    // data.recipes.push({
+    //     id,
+    //     ...request.body,
+    // })
+
+    // fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
+    //     if (err) return response.send("Writing file error!")
+
+    //     return response.redirect(`/receitas/${id}`)
+    // })
+
+    db.query(query, values, function (err, results) {
+        if (err) throw `Database error: ${err}`
+
+        return response.redirect(`/admin/receitas/${results.rows[0].id}`)
+    });
 
 }
 
