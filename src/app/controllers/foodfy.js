@@ -1,28 +1,28 @@
-const data = require("../../data.json");
+const Recipe = require('../models/recipe');
 
-exports.index = (request, response) => {
-    return response.render("foodfy/index", { recipes: data.recipes });
+module.exports = {
+    index(request, response) {
+        Recipe.all(function (recipes) {
+            return response.render("foodfy/index", { recipes })
+        })
+    },
+
+    get_about(request, response) {
+        return response.render("foodfy/read_about");
+    },
+
+    get_recipes(request, response) {
+        Recipe.all(function (recipes) {
+            return response.render("foodfy/show_recipes", { recipes })
+        })
+    },
+
+    get_details(request, response) {
+        Recipe.find(request.params.id, function (recipe) {
+            if (!recipe) return response.send("Recipe not found!")
+
+            return response.render("foodfy/read_recipe", { recipe })
+        })
+    }
 }
 
-exports.get_about = (request, response) => {
-    return response.render("foodfy/read_about");
-}
-
-exports.get_recipes = (request, response) => {
-    return response.render("foodfy/show_recipes", { recipes: data.recipes });
-}
-
-exports.get_details = (request, response) => {
-
-    const { id } = request.params;
-
-    const foundRecipe = data.recipes.find(function (recipe) {
-        return recipe.id == id;
-    })
-
-    if (!foundRecipe) return response.send("Receita não encontrada");
-
-    const recipe = foundRecipe;
-
-    return response.render("foodfy/read_recipe", { recipe })
-}
