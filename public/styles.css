@@ -437,3 +437,40 @@ form #adding_button {
 form #adding_button:hover {
     text-decoration: underline;
 }
+
+/* Listagem de Chefs */
+
+.chef-card-img {
+
+}
+
+#chef-card-img {
+    width: 64px;
+    height: 64px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 3px 1px 6px -4px black;
+}
+
+.chef-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 32px;
+}
+
+.chef-card {
+    display: flex;
+    align-items: center;
+}
+
+.chef-box-img {
+    padding-right: 16px;
+}
+
+.chef-card .admin-card-info a {
+    padding: 0;
+}
+.chef-card .admin-card-info a:hover {
+    padding: 4px;
+}

@@ -44,12 +44,12 @@ module.exports = {
     },
 
     put(request, response) {
-        // const keys = Object.keys(request.body);
-        // for (key of keys) {
-        //     if (request.body[key] == "") {
-        //         return response.send("Please, fill all the fields!")
-        //     }
-        // }
+        const keys = Object.keys(request.body);
+        for (key of keys) {
+            if (request.body[key] == "") {
+                return response.send("Please, fill all the fields!")
+            }
+        }
 
         Recipe.update(request.body, function () {
             return response.redirect(`/admin/receitas/${request.body.id}`)

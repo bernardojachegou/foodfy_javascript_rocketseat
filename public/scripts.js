@@ -40,7 +40,7 @@ document
     .addEventListener("click", handleNewIngredient);
 
 function handleNewPreparation() {
-    const preparations = document.querySelector("#preparations");
+    const preparations = document.querySelector("#preparation");
     const preparationContainer = document.querySelectorAll(".preparation");
     // Realiza um clone do último ingrediente adicionado
     const newField = preparationContainer[preparationContainer.length - 1].cloneNode(true);

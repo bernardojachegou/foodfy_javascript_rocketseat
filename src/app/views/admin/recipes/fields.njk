@@ -26,15 +26,15 @@
 </div>
 <button id="adding_button" type="button" class="add-ingredient">Adicionar novo ingrediente</button>
 
-<div id="preparations" class="item">
+<div id="preparation" class="item">
     <h3>Modo de preparo</h3>
-    {% for preparation in recipe.preparations %}
+    {% for instruction in recipe.preparation %}
         <div class="preparation">
-            <input type="text" name="preparations[]" value="{{ preparation }}">
+            <input type="text" name="preparation[]" value="{{ instruction }}">
         </div>
     {% else %}
         <div class="preparation">
-            <input type="text" name="preparations[]" value=""/>
+            <input type="text" name="preparation[]" value=""/>
         </div>
     {% endfor %}
 
