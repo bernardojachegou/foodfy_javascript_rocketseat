@@ -11,6 +11,14 @@ module.exports = {
         return response.render("admin/chefs/create")
     },
 
+    show(request, response) {
+        Chef.find(request.params.id, function (chef) {
+            if (!chef) return response.send("Chef not found!")
+
+            return response.render("admin/chefs/read", { chef })
+        })
+    },
+
     post(request, response) {
         const keys = Object.keys(request.body);
         for (key of keys) {
@@ -20,7 +28,7 @@ module.exports = {
         }
 
         Chef.create(request.body, function (chef) {
-            return response.redirect(`/admin/chefs`)
+            return response.redirect(`/admin/chefs/${chef.id}`)
         })
     }
 }
