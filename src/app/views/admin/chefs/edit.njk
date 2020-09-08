@@ -3,21 +3,21 @@
 {% block content %}
     <div class="all">
 
-        <form id="delete_form" method="POST" action="/admin/receitas?_method=DELETE">
-            <input type="hidden" name="id" value="{{recipe.id}}">
+        <form id="delete_form" method="POST" action="/admin/chefs?_method=DELETE">
+            <input type="hidden" name="id" value="{{chef.id}}">
             <button id="delete_button" class="crud_button" type="submit">Deletar</button>
         </form>
 
-        <form method="POST" action="/admin/receitas?_method=PUT">
+        <form method="POST" action="/admin/chefs?_method=PUT">
             <div class="recipe_options">
-                <h1>Editando receita</h1>
+                <h1>Editando chef</h1>
                 <div class="options_buttons">
-                    <input type="hidden" name="id" value="{{recipe.id}}">
-                    <button class="crud_button" type="submit">Salvar receita</button>
+                    <input type="hidden" name="id" value="{{chef.id}}">
+                    <button class="crud_button" type="submit">Salvar chef</button>
                 </div>
             </div>
-            {% include 'admin/recipes/fields.njk' %}
+            {% include 'admin/chefs/fields.njk' %}
         </form>
     </div>
-    <script src="../public/scripts.js"></script>
+    <script src="/scripts.js"></script>
 {% endblock content %}

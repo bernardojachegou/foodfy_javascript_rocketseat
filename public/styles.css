@@ -468,6 +468,27 @@ form #adding_button:hover {
 .chef-card .admin-card-info a {
     padding: 0;
 }
+
 .chef-card .admin-card-info a:hover {
     padding: 4px;
+}
+
+/* Página de exibição de chef */
+
+.recipe_details .chef-box-img {
+    text-align: center;
+}
+
+.recipe_details .chef-box-img span {
+    padding-right: 0;
+    width: 200px;
+    height: 200px;
+    margin: 50px 0 30px;
+}
+
+.recipe_details .chef-box-img p {
+    font-size: 20px;
+    color: #777777;
+    text-align: center;
+    margin-top: 4px;
 }
