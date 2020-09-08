@@ -440,17 +440,14 @@ form #adding_button:hover {
 
 /* Listagem de Chefs */
 
-.chef-card-img {
-
-}
-
-#chef-card-img {
+.chef-box-img span {
     width: 64px;
     height: 64px;
-    background-position: center;
-    background-size: cover;
     border-radius: 50%;
     box-shadow: 3px 1px 6px -4px black;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
 }
 
 .chef-cards {
