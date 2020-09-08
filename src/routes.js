@@ -23,6 +23,14 @@ routes.delete("/admin/receitas", recipes.delete);
 
 // Chefs:
 routes.get("/admin/chefs", chefs.index);
+routes.get("/admin/chefs/criar", chefs.create);
+// routes.get("/admin/receitas/:id", recipes.show);
+// routes.get("/admin/receitas/:id/editar", recipes.edit);
+
+routes.post("/admin/chefs", chefs.post);
+// routes.put("/admin/receitas", recipes.put);
+// routes.delete("/admin/receitas", recipes.delete);
+
 
 module.exports = routes;
 

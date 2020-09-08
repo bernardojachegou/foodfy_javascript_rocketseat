@@ -1,9 +1,6 @@
 Refatoração do código:
-1. Corrigir CSS das imagens do card;
+1. Corrigir CSS;
 2. Refatorar função para adicionar novo input;
 3. Criar responsividade;
+4. Refatorar menu;
 
-
-
-Processo:
-1. Elaboração de código como banco de dados;

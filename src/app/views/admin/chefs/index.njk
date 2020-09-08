@@ -8,7 +8,7 @@
 
     <div class="recipe_options">
         <h1>Gerenciar chefs</h1>
-        <a class="crud_button" href="/admin/receitas/criar">Cadastrar</a>
+        <a class="crud_button" href="/admin/chefs/criar">Cadastrar</a>
     </div>
 
     <section class="chef-cards">
@@ -19,7 +19,7 @@
                 </div>
                 <div class="admin-card-info">
                     <h3>{{chef.name}}</h3>
-                    <a href="/admin/receitas/{{chef.id}}">Vizualizar</a>
+                    <a href="/admin/chefs/{{chef.id}}">Vizualizar</a>
                 </div>
             </div>
         {% endfor %}
