@@ -10,24 +10,24 @@
         <div class="chef-box-img">
             <span style="background-image: url({{chef.avatar_url}})"></span>
             <h1>{{chef.name}}</h1>
-            <p>10 receitas</p>
+            <p>{{chef.total_recipes}} receitas</p>
         </div>
 
-        <section class="admin-cards">
+        {# <section class="admin-cards">
             <h2>Receitas</h2>
-            {% for recipe in recipes %}
+            {% for recipe in chef.total_recipes %}
                 <div class="admin-card" id="{{recipe.id}}">
                     <div class="admin-card-img">
                         <img src="{{recipe.image}}" alt="{{recipe.title}}">
                     </div>
                     <div class="admin-card-info">
                         <h3>{{recipe.title}}</h3>
-                        <p id="author_name">{{recipe.author}}</p>
+                        <p id="author_name">{{chef.name}}</p>
                         <a href="/admin/receitas/{{recipe.id}}">Vizualizar</a>
                     </div>
                 </div>
             {% endfor %}
-        </section>
+        </section> #}
 
     </div>
 {% endblock %}

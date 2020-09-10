@@ -5,7 +5,7 @@
         <div class="recipe_head">
             <img src="{{recipe.image}}" alt="{{recipe.title}}">
             <h1>{{recipe.title}}</h1>
-            <p>{{recipe.author}}</p>
+            <p>{{recipe.chef_name}}</p>
         </div>
 
         <div class="recipe_ingredients">
@@ -44,7 +44,7 @@
                 <a class="toggle_button" onclick="handleRecipeDetail('.information_list', this)">MOSTRAR</a>
             </div>
             <div class="information_list hide">
-            <p>{{recipe.information}}</p>
+                <p>{{recipe.information}}</p>
             </div>
         </div>
     </div>

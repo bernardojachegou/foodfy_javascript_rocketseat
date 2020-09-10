@@ -9,7 +9,12 @@ module.exports = {
     },
 
     create(request, response) {
-        return response.render("admin/recipes/create");
+
+        Recipe.chefsSelectOption(function (options) {
+            return response.render("admin/recipes/create", { chefOptions: options });
+        })
+
+
     },
 
     show(request, response) {
@@ -25,7 +30,9 @@ module.exports = {
         Recipe.find(request.params.id, function (recipe) {
             if (!recipe) return response.send("Recipe not found!")
 
-            return response.render("admin/recipes/edit", { recipe })
+            Recipe.chefsSelectOption(function (options) {
+                return response.render("admin/recipes/edit", { recipe, chefOptions: options });
+            })
 
         })
     },

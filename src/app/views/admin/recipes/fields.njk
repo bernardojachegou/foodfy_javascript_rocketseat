@@ -1,4 +1,17 @@
 <div class="item">
+    <h3>Chef</h3>
+    <div>
+        <select name="chef">
+            {% for chef in chefOptions %}
+                <option value="{{chef.id}}" {% if recipe.chef_id == chef.id %} selected="selected" {% endif %}>
+                    {{chef.name}}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
+<div class="item">
     <h3>Título da receita</h3>
     <div>
         <input type="text" name="title" value="{{ recipe.title }}"/>
@@ -45,12 +58,5 @@
     <h3>Informações adicionais</h3>
     <div>
         <textarea name="information" id="information_box" cols="30" rows="10">{{ recipe.information }}</textarea>
-    </div>
-</div>
-
-<div class="item">
-    <h3>Autor da receita</h3>
-    <div>
-        <input type="text" name="author" value="{{ recipe.author }}"/>
     </div>
 </div>
