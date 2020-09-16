@@ -57,13 +57,11 @@ document
     .querySelector(".add-preparation")
     .addEventListener("click", handleNewPreparation);
 
-const deleteForm = document.querySelector("#delete_form");
-deleteForm.addEventListener("submit", function (event) {
-    const confirmation = confirm("Tem certeza que quer deletar a receita?");
-
+function handleDeleteConfirmation() {
+    const confirmation = confirm("Tem certeza que deseja apagar?");
     if (!confirmation) {
         event.preventDefault();
     }
-})
+}
 
 

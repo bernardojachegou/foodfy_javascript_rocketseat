@@ -5,7 +5,6 @@
 
         <form id="delete_form" method="POST" action="/admin/receitas?_method=DELETE">
             <input type="hidden" name="id" value="{{recipe.id}}">
-            <button id="delete_button" class="crud_button" type="submit">Deletar</button>
         </form>
 
         <form method="POST" action="/admin/receitas?_method=PUT">
@@ -13,11 +12,12 @@
                 <h1>Editando receita</h1>
                 <div class="options_buttons">
                     <input type="hidden" name="id" value="{{recipe.id}}">
+                    <button id="delete_button" class="crud_button" type="submit" form="delete_form" onclick="handleDeleteConfirmation()">Deletar</button>
                     <button class="crud_button" type="submit">Salvar receita</button>
                 </div>
             </div>
             {% include 'admin/recipes/fields.njk' %}
         </form>
     </div>
-    <script src="../public/scripts.js"></script>
+    <script src="/scripts.js"></script>
 {% endblock content %}

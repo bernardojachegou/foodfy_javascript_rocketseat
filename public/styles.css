@@ -362,7 +362,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 16px;
+    padding: 9px 20px;
     background: #6558C3;
     border-radius: 8px;
     font-size: 16px;
@@ -382,7 +382,6 @@ header {
 
 form #delete_button {
     background: #DC4747;
-    margin-bottom: 8px;
 }
 
 form #delete_button:hover {
