@@ -29,7 +29,7 @@ html, body {
 
 header {
     background-color: white;
-    padding-top: 24px;
+    padding-top: 14px;
 }
 
 .links {
@@ -54,6 +54,15 @@ header {
     padding: 4px;
     border-radius: 6px;
     transition: 300ms;
+}
+
+.links a.active {
+    background-color: black;
+    color: white;
+}
+
+.links a.active:first-child {
+    background-color: white;
 }
 
 .links a:hover {
@@ -122,7 +131,7 @@ header {
 /* Configurações da apresentação de receitas; */
 
 #wrapper {
-    margin: 45px 0 15px 0;
+    margin: 18px 0 12px 0;
 }
 
 #wrapper h2 {
@@ -495,4 +504,28 @@ form #adding_button:hover {
     color: #777777;
     text-align: center;
     margin-top: 4px;
+}
+
+/* Estilo do filtro */
+
+.menu .links form {
+    display: grid;
+    grid-template-columns: 240px 90px;
+    gap: 8px;
+}
+
+.menu .links form button {
+    border: 1px solid #6558C3;
+}
+
+.menu .links form input {
+    border: 1px solid #DDDDDD;
+    padding: 4px 8px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.menu .links form input, .menu .links form input::placeholder {
+    font-size: 14px;
+    color: #999999;
 }

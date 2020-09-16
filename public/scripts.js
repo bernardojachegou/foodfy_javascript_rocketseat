@@ -1,3 +1,12 @@
+const currentPage = location.pathname;
+const menuItems = document.querySelectorAll("header .links .menu_items a");
+
+for (item of menuItems) {
+    if (currentPage.includes(item.getAttribute("href"))) {
+        item.classList.add("active");
+    }
+}
+
 const recipeCards = document.querySelectorAll('.card');
 
 function handleRecipeCards(element) {

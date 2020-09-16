@@ -3,10 +3,17 @@ const Chef = require('../models/Chef');
 
 module.exports = {
     index(request, response) {
-        Recipe.all(function (recipes) {
+        const { filter } = request.query;
 
-            return response.render("foodfy/index", { recipes })
-        })
+        if (filter) {
+            Recipe.findBy(filter, function (recipes) {
+                return response.render("foodfy/index", { recipes })
+            })
+        } else {
+            Recipe.all(function (recipes) {
+                return response.render("foodfy/index", { recipes })
+            })
+        }
     },
 
     getAbout(request, response) {
@@ -14,9 +21,17 @@ module.exports = {
     },
 
     getRecipes(request, response) {
-        Recipe.all(function (recipes) {
-            return response.render("foodfy/showRecipes", { recipes })
-        })
+        const { filter } = request.query;
+
+        if (filter) {
+            Recipe.findBy(filter, function (recipes) {
+                return response.render("foodfy/showRecipes", { recipes })
+            })
+        } else {
+            Recipe.all(function (recipes) {
+                return response.render("foodfy/showRecipes", { recipes })
+            })
+        }
     },
 
     getRecipeDetails(request, response) {

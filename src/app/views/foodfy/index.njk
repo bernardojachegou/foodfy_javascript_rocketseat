@@ -1,5 +1,12 @@
 {% extends "layout.njk" %}
 
+{% block filter %}
+    <form action="/" method="GET">
+        <input type="text" name="filter" placeholder="Buscar uma receita">
+        <button class="crud_button" type="submit">Buscar</button>
+    </form>
+{% endblock %}
+
 {% block content %}
     <div class="welcome_banner">
         <div class="description">
@@ -26,7 +33,9 @@
                     </div>
                     <div class="card_info">
                         <h3>{{recipe.title}}</h3>
-                        <p id="author_name"> Por {{recipe.chef_name}}</p>
+                        <p id="author_name">
+                            Por
+                            {{recipe.chef_name}}</p>
                     </div>
                 </div>
             {% endif %}

@@ -1,5 +1,12 @@
 {% extends "layout.njk" %}
 
+{% block filter %}
+    <form action="/receitas" method="GET">
+        <input type="text" name="filter" placeholder="Buscar uma receita">
+        <button class="crud_button" type="submit">Buscar</button>
+    </form>
+{% endblock %}
+
 {% block head %}
     <title>Foodfy - Receitas</title>
 {% endblock %}
@@ -7,13 +14,14 @@
 {% block content %}
     <section class="cards">
         {% for recipe in recipes %}
-            <div class="card" id="{{recipe.id}}" >
+            <div class="card" id="{{recipe.id}}">
                 <div class="card_image">
                     <img src="{{recipe.image}}" alt="{{recipe.title}}">
                 </div>
                 <div class="card_info">
                     <h3>{{recipe.title}}</h3>
-                    <p id="author_name">Por {{recipe.chef_name}}</p>
+                    <p id="author_name">Por
+                        {{recipe.chef_name}}</p>
                 </div>
             </div>
         {% endfor %}
