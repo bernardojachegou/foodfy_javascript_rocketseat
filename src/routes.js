@@ -6,9 +6,12 @@ const chefs = require("./app/controllers/chefs");
 
 // Área comum
 routes.get("/", foodfy.index);
-routes.get("/sobre", foodfy.get_about);
-routes.get("/receitas", foodfy.get_recipes);
-routes.get("/receitas/:id", foodfy.get_details);
+routes.get("/sobre", foodfy.getAbout);
+routes.get("/receitas", foodfy.getRecipes);
+routes.get("/receitas/:id", foodfy.getRecipeDetails);
+routes.get("/chefs", foodfy.getChefs);
+routes.get("/chefs/:id", foodfy.getChefDetails);
+
 
 // Área administrativa
 // Receitas:

@@ -22,14 +22,14 @@ html, body {
 .main {
     max-width: 960px;
     margin: 0 auto;
-    padding: 32px 16px 80px;
+    padding: 16px 16px 80px;
 }
 
 /* Configurações do menu */
 
 header {
-    background-color: black;
-    padding: 16px 0;
+    background-color: white;
+    padding-top: 24px;
 }
 
 .links {
@@ -47,7 +47,7 @@ header {
 
 .links a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 16px;
     line-height: 19px;
     margin: 0 15px;
@@ -56,17 +56,17 @@ header {
     transition: 300ms;
 }
 
-.links a:hover, .links a:last-child:hover {
-    background-color: white;
-    color: black;
-}
-
-.links a:first-child:hover {
+.links a:hover {
     background-color: black;
+    color: white;
 }
 
 .links a:last-child {
     margin-right: 0;
+}
+
+.links a:first-child:hover {
+    background-color: white;
 }
 
 #link_logo {
@@ -455,9 +455,14 @@ form #adding_button:hover {
     gap: 32px;
 }
 
+.chef-cards#foodfy-chefs {
+    margin-top: 50px;
+}
+
 .chef-card {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .chef-box-img {

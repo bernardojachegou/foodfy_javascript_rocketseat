@@ -1,4 +1,5 @@
-const Recipe = require('../models/recipe');
+const Recipe = require('../models/Recipe');
+const Chef = require('../models/Chef');
 
 module.exports = {
     index(request, response) {
@@ -8,21 +9,39 @@ module.exports = {
         })
     },
 
-    get_about(request, response) {
-        return response.render("foodfy/read_about");
+    getAbout(request, response) {
+        return response.render("foodfy/readAbout");
     },
 
-    get_recipes(request, response) {
+    getRecipes(request, response) {
         Recipe.all(function (recipes) {
-            return response.render("foodfy/show_recipes", { recipes })
+            return response.render("foodfy/showRecipes", { recipes })
         })
     },
 
-    get_details(request, response) {
+    getRecipeDetails(request, response) {
         Recipe.find(request.params.id, function (recipe) {
             if (!recipe) return response.send("Recipe not found!")
 
-            return response.render("foodfy/read_recipe", { recipe })
+            return response.render("foodfy/readRecipe", { recipe })
+        })
+    },
+
+    getChefs(request, response) {
+        Chef.all(function (chefs) {
+            return response.render("foodfy/showChefs", { chefs })
+        })
+    },
+
+    getChefDetails(request, response) {
+        Chef.find(request.params.id, function (chef) {
+            if (!chef) return response.send("Recipe not found!")
+
+            Chef.findRecipes(request.params.id, function (recipes) {
+
+                return response.render("foodfy/readChef", { chef, recipes })
+            })
+
         })
     }
 }

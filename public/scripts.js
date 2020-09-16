@@ -1,6 +1,6 @@
-const cards = document.querySelectorAll('.card');
+const recipeCards = document.querySelectorAll('.card');
 
-function handleCards(element) {
+function handleRecipeCards(element) {
     for (let card of element) {
         card.addEventListener("click", () => {
             const recipeId = card.getAttribute("id");
@@ -9,7 +9,20 @@ function handleCards(element) {
     }
 }
 
-handleCards(cards);
+handleRecipeCards(recipeCards);
+
+const chefCards = document.querySelectorAll('.chef-card');
+
+function handleChefCards(element) {
+    for (let card of element) {
+        card.addEventListener("click", () => {
+            const chefId = card.getAttribute("id");
+            window.location.href = `/chefs/${chefId}`
+        });
+    }
+}
+
+handleChefCards(chefCards);
 
 function handleRecipeDetail(classSelected, element) {
     document.querySelector(classSelected).classList.toggle('hide')

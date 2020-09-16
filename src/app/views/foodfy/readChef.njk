@@ -1,0 +1,28 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+    <div class="recipe_details">
+        <div class="chef-box-img">
+            <span style="background-image: url({{chef.avatar_url}})"></span>
+            <h1>{{chef.name}}</h1>
+            <p>{{chef.total_recipes}} receitas</p>
+        </div>
+
+        <div class="recipe_options">
+            <h1>Receitas</h1>
+        </div>
+        <section class="admin-cards">
+            {% for recipe in recipes %}
+                <div class="admin-card" id="{{recipe.id}}">
+                    <div class="admin-card-img">
+                        <img src="{{recipe.image}}" alt="{{recipe.title}}">
+                    </div>
+                    <div class="admin-card-info">
+                        <h3>{{recipe.title}}</h3>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+
+    </div>
+{% endblock %}
