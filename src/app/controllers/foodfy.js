@@ -3,6 +3,7 @@ const Recipe = require('../models/recipe');
 module.exports = {
     index(request, response) {
         Recipe.all(function (recipes) {
+
             return response.render("foodfy/index", { recipes })
         })
     },

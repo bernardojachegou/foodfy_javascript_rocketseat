@@ -41,7 +41,7 @@ module.exports = {
             LEFT JOIN recipes ON (recipes.chef_id = chefs.id)
             WHERE chefs.id = $1
             GROUP BY chefs.id, chefs.name, chefs.avatar_url, chefs.created_at;`, [id], function (err, results) {
-            if (err) throw `Database error!: ${err}`
+            if (err) throw `Database error: ${err}`
             callback(results.rows[0]);
         })
     },
@@ -72,5 +72,16 @@ module.exports = {
 
             return callback();
         })
+    },
+
+    findRecipes(id, callback) {
+        db.query(`
+            SELECT * 
+            FROM recipes 
+            WHERE chef_id = $1`, [id], function (err, results) {
+            if (err) throw `Database error: ${err}`
+            callback(results.rows);
+        })
     }
+
 }

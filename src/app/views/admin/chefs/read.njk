@@ -13,9 +13,11 @@
             <p>{{chef.total_recipes}} receitas</p>
         </div>
 
-        {# <section class="admin-cards">
-            <h2>Receitas</h2>
-            {% for recipe in chef.total_recipes %}
+        <div class="recipe_options">
+            <h1>Receitas</h1>
+        </div>
+        <section class="admin-cards">
+            {% for recipe in recipes %}
                 <div class="admin-card" id="{{recipe.id}}">
                     <div class="admin-card-img">
                         <img src="{{recipe.image}}" alt="{{recipe.title}}">
@@ -27,7 +29,7 @@
                     </div>
                 </div>
             {% endfor %}
-        </section> #}
+        </section>
 
     </div>
 {% endblock %}

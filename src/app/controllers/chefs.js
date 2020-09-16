@@ -15,7 +15,10 @@ module.exports = {
         Chef.find(request.params.id, function (chef) {
             if (!chef) return response.send("Chef not found!")
 
-            return response.render("admin/chefs/read", { chef })
+            Chef.findRecipes(request.params.id, function (recipes) {
+
+                return response.render("admin/chefs/read", { chef, recipes })
+            })
         })
     },
 
