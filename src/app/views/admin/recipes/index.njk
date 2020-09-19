@@ -4,11 +4,25 @@
     <title>Foodfy - Receitas</title>
 {% endblock %}
 
-{% block content %}
-        <div class="recipe_options">
-            <h1>Gerenciar receitas</h1>
-            <a class="crud_button" href="/admin/receitas/criar">Nova receita</a>
+{% block header %}
+    <header class="menu_admin">
+        <div class="links_admin">
+            <div class="menu_items">
+                <div class="logo">
+                    <a id="link_logo" href="/admin/receitas"><img id="logo" src="/assets/logo.png" alt="logo"></a>
+                </div>
+                <a href="/admin/receitas">RECEITAS</a>
+                <a href="/admin/chefs">CHEFS</a>
+            </div>
         </div>
+    </header>
+{% endblock %}
+
+{% block content %}
+    <div class="recipe_options">
+        <h1>Gerenciar receitas</h1>
+        <a class="crud_button" href="/admin/receitas/criar">Nova receita</a>
+    </div>
     <section class="admin-cards">
 
         {% for recipe in recipes %}

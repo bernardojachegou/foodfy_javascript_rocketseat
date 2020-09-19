@@ -22,14 +22,14 @@ html, body {
 .main {
     max-width: 960px;
     margin: 0 auto;
-    padding: 16px 16px 80px;
+    padding: 0 16px 80px;
 }
 
 /* Configurações do menu */
 
-header {
+.menu {
     background-color: white;
-    padding-top: 14px;
+    padding: 24px 0;
 }
 
 .links {
@@ -84,6 +84,59 @@ header {
 
 #logo {
     margin-right: 24px;
+}
+
+/* Configurações do menu-admin */
+
+.menu_admin {
+    background-color: black;
+    padding: 24px 0;
+}
+
+.links_admin {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu_admin .menu_items {
+    display: flex;
+    align-items: center;
+}
+
+.links_admin a {
+    text-decoration: none;
+    font-size: 15px;
+    margin: 0 15px;
+    padding: 4px;
+    border-radius: 6px;
+    transition: 300ms;
+    font-weight: bold;
+    color: #999999;
+}
+
+.links_admin a.active {
+    background-color: white;
+    color: black;
+}
+
+.links_admin a.active:first-child {
+    background-color: black;
+}
+
+.links_admin a:hover {
+    background-color: white;
+    color: black;
+}
+
+.links_admin a:last-child {
+    margin-right: 0;
+}
+
+.links_admin a:first-child:hover {
+    background-color: black;
 }
 
 /* Configurações das boas-vindas; */
@@ -355,7 +408,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 16px;
+    padding: 16px 0;
 }
 
 .recipe_options h1 {
@@ -462,6 +515,7 @@ form #adding_button:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 32px;
+    margin-top: 20px;
 }
 
 .chef-cards#foodfy-chefs {

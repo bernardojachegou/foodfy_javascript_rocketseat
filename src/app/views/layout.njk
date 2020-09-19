@@ -15,21 +15,7 @@
 
     <body>
         <div class="all">
-
-            <header class="menu">
-                <div class="links">
-                    <div class="menu_items">
-                        <div class="logo">
-                            <a id="link_logo" href="/"><img id="logo" src="/assets/logo2.png" alt="logo"></a>
-                        </div>
-                        <a href="/sobre">Sobre</a>
-                        <a href="/receitas">Receitas</a>
-                        <a href="/chefs">Chefs</a>
-                    </div>
-                    {% block filter %}{% endblock %}
-                </div>
-            </header>
-
+            {% block header %}{% endblock %}
             <div class="main">
                 {% block content %}{% endblock %}
             </div>
