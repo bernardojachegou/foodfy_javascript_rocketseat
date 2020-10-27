@@ -6,8 +6,15 @@
 </div>
 
 <div class="item">
-    <h3>Avatar</h3>
     <div>
-        <input type="url" name="avatar_url" value="{{ chef.avatar_url }}">
+        <div id="avatar_upload">
+            <input 
+                id="avatar-input"
+                type="file"  
+                name="chef_avatar"
+                accept="image/*"
+            >
+            <p>Enviar avatar</p>
+        </div>
     </div>
 </div>
