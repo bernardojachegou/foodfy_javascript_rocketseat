@@ -1,4 +1,21 @@
 <div class="item">
+    <h3>Imagem da receita</h3>
+    <div>
+        <div id="recipes-upload">
+            <input 
+                id="recipe-photo-input" 
+                type="file" name="recipe_photo" 
+                accept="image/*" 
+                multiple="multiple"
+            >
+            <div id="get-image-container">
+                <p>+</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="item">
     <h3>Chef</h3>
     <div>
         <select name="chef">
@@ -15,13 +32,6 @@
     <h3>Título da receita</h3>
     <div>
         <input type="text" name="title" value="{{ recipe.title }}"/>
-    </div>
-</div>
-
-<div class="item">
-    <h3>Imagem da receita</h3>
-    <div>
-        <input type="url" name="image" value="{{ recipe.image }}">
     </div>
 </div>
 

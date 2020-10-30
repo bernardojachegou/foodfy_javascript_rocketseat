@@ -584,7 +584,7 @@ form #adding_button:hover {
     color: #999999;
 }
 
-/* Estlização do input de arquivos (botão) */
+/* Estlização do input de imagens do chef */
 
 .item #avatar_upload {
     position: relative;
@@ -604,6 +604,45 @@ form #adding_button:hover {
 }
 
 .item #avatar_upload #avatar-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Estilização de input de imagens das receitas */
+
+.item #recipes-upload {
+    margin-top: 12px;
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.item #recipes-upload #get-image-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+}
+
+.item #recipes-upload p {
+    color: #777777;
+    text-align: center;
+    font-size: 50px;
+
+}
+
+.item #recipe-photo-input {
     position: absolute;
     top: 0;
     left: 0;
