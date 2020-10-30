@@ -20,6 +20,7 @@
     <div>
         <select name="chef">
             {% for chef in chefOptions %}
+                <option hidden="hidden" value="">Selecione um chef</option>
                 <option value="{{chef.id}}" {% if recipe.chef_id == chef.id %} selected="selected" {% endif %}>
                     {{chef.name}}
                 </option>
