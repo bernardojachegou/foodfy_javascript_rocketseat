@@ -1,6 +1,6 @@
 <div class="item">
     <h3>Imagem da receita</h3>
-    <div>
+    <div id="photos_wrapper">
         <div id="recipes-upload">
             <input 
                 id="recipe-photo-input" 
@@ -10,11 +10,11 @@
                 accept="image/*"
                 onchange="PhotosUpload.handleFileInput(event)"
             >
-            <div id="get-image-container">
-                <p>+</p>
+            <div id="add_icon">
+                <i class="material-icons">add</i>
             </div>
-            <div id="photos-preview"></div>
         </div>
+        <div id="photos-preview"></div>
     </div>
 </div>
 
