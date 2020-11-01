@@ -4,9 +4,11 @@
         <div id="recipes-upload">
             <input 
                 id="recipe-photo-input" 
-                type="file" name="recipe_photo" 
-                accept="image/*" 
-                multiple="multiple"
+                type="file" 
+                name="recipe_photo" 
+                multiple
+                accept="image/*"
+                onchange="PhotosUpload.handleFileInput(event)"
             >
             <div id="get-image-container">
                 <p>+</p>
