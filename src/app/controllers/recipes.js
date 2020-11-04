@@ -40,9 +40,10 @@ module.exports = {
 
     async post(request, response) {
         const keys = Object.keys(request.body);
+
         for (key of keys) {
             if (request.body[key] == "") {
-                return response.send("Please, fill all the fields!");
+                return response.send("Por favor, preencha todos os campos");
             }
         }
 

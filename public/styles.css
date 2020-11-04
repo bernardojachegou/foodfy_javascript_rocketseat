@@ -615,6 +615,10 @@ form #adding_button:hover {
     cursor: pointer;
 }
 
+.item #input-avatar {
+    margin-top: 16px;
+}
+
 /* Estilização de input de imagens das receitas */
 
 .item #photos_wrapper {
