@@ -1,19 +1,19 @@
+const { query } = require('../../config/db');
 const db = require('../../config/db');
 const { date } = require('../../lib/utils');
 
 module.exports = {
-    all(callback) {
-        db.query(`
-            SELECT recipes.*, chefs.name AS chef_name
-            FROM recipes 
-            LEFT JOIN chefs ON (recipes.chef_id = chefs.id)`, function (err, results) {
-            if (err) throw `Database error: ${err}`
-
-            callback(results.rows);
-        })
+    all() {
+        return db.query(
+            `
+        SELECT recipes.*, chefs.name AS chef_name
+        FROM recipes 
+        LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
+        `
+        )
     },
 
-    create(data, callback) {
+    create(data) {
         const query = `
             INSERT INTO recipes (
                 image,
@@ -37,12 +37,7 @@ module.exports = {
             data.chef
         ]
 
-        db.query(query, values, function (err, results) {
-            if (err) throw `Database error!: ${err}`
-
-            callback(results.rows[0])
-        });
-
+        return db.query(query, values)
     },
 
     find(id, callback) {
