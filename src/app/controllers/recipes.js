@@ -10,15 +10,6 @@ module.exports = {
         return response.render("admin/recipes/index", { recipes })
     },
 
-    create(request, response) {
-
-        Recipe.chefsSelectOption(function (options) {
-            return response.render("admin/recipes/create", { chefOptions: options });
-        })
-
-
-    },
-
     async show(request, response) {
 
         let results = await Recipe.find(request.params.id);
@@ -30,58 +21,71 @@ module.exports = {
 
     },
 
-    edit(request, response) {
-    Recipe.find(request.params.id, function (recipe) {
+    async create(request, response) {
+
+        let results = await Recipe.chefsList();
+        const chefsList = results.rows;
+        return response.render("admin/recipes/create", { chefsList });
+    },
+
+    async edit(request, response) {
+
+        let results = await Recipe.find(request.params.id);
+        const recipe = results.rows[0];
+
         if (!recipe) return response.send("Recipe not found!")
 
-        Recipe.chefsSelectOption(function (options) {
-            return response.render("admin/recipes/edit", { recipe, chefOptions: options });
-        })
+        results = await Recipe.chefsList();
+        const chefsList = results.rows;
 
-    })
-},
+        return response.render("admin/recipes/edit", { recipe, chefsList });
 
-async post(request, response) {
-    const keys = Object.keys(request.body);
+    },
 
-    for (key of keys) {
-        if (request.body[key] == "") {
-            return response.send("Por favor, preencha todos os campos");
+    async post(request, response) {
+        const keys = Object.keys(request.body);
+
+        for (key of keys) {
+            if (request.body[key] == "") {
+                return response.send("Por favor, preencha todos os campos");
+            }
         }
-    }
 
-    if (request.files.length == 0) {
-        return response.send('Por favor, envie pelo menos uma imagem');
-    }
-
-    let results = await Recipe.create(request.body);
-    const recipeId = results.rows[0].id;
-
-    const filesPromise = request.files.map(file => File.create({ ...file }))
-    await Promise.all(filesPromise);
-
-
-    return response.redirect(`/receitas/${recipeId}`)
-
-},
-
-put(request, response) {
-    const keys = Object.keys(request.body);
-    for (key of keys) {
-        if (request.body[key] == "") {
-            return response.send("Please, fill all the fields!")
+        if (request.files.length == 0) {
+            return response.send('Por favor, envie pelo menos uma imagem');
         }
-    }
 
-    Recipe.update(request.body, function () {
-        return response.redirect(`/admin/receitas/${request.body.id}`)
-    })
-},
+        let results = await Recipe.create(request.body);
+        const recipeId = results.rows[0].id;
 
-delete (request, response) {
-    Recipe.delete(request.body.id, function () {
+        const filesPromise = request.files.map(file => File.create({ ...file }))
+        await Promise.all(filesPromise);
+
+        return response.redirect(`/receitas/${recipeId}`)
+
+    },
+
+    async put(request, response) {
+        const keys = Object.keys(request.body);
+
+        for (key of keys) {
+            if (request.body[key] == "") {
+                return response.send("Please, fill all the fields!")
+            }
+        }
+
+        let results = await Recipe.update(request.body);
+        const recipeId = results.rows[0].id;
+
+        return response.redirect(`/admin/receitas/${recipeId}`)
+
+    },
+
+    async delete(request, response) {
+        await Recipe.delete(request.body.id);
+
         return response.redirect("/admin/receitas")
-    })
-}
+
+    }
 }
 
