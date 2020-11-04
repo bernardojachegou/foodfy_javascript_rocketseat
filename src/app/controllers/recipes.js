@@ -1,4 +1,5 @@
 const Recipe = require('../models/recipe');
+const File = require('../models/File');
 
 module.exports = {
     index(request, response) {
@@ -37,7 +38,7 @@ module.exports = {
         })
     },
 
-    post(request, response) {
+    async post(request, response) {
         const keys = Object.keys(request.body);
         for (key of keys) {
             if (request.body[key] == "") {
@@ -45,9 +46,18 @@ module.exports = {
             }
         }
 
-        Recipe.create(request.body, function (recipe) {
-            return response.redirect(`/receitas/${recipe.id}`)
-        })
+        if (request.files.length == 0)
+            return response.send("Por favor, adicione ao menos uma imagem");
+
+        let results = await Recipe.create(request.body);
+        const recipeId = results.rows[0].id;
+
+        const filesPromise = request.files.map(file => File.create({ ...file, recipe_id: recipeId }))
+        await Promise.all(filesPromise);
+
+
+        return response.redirect(`/receitas/${recipeId}`)
+
     },
 
     put(request, response) {
