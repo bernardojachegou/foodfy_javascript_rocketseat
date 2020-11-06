@@ -590,7 +590,6 @@ form #adding_button:hover {
     position: relative;
     display: block;
     overflow: hidden;
-    width: 150px;
 }
 
 .item #avatar_upload p {
@@ -601,6 +600,8 @@ form #adding_button:hover {
     color: white;
     font-weight: 500;
     text-align: center;
+    margin-top: 16px;
+    max-width: 100px;
 }
 
 .item #avatar_upload #avatar-input {
@@ -613,10 +614,6 @@ form #adding_button:hover {
     height: 100%;
     opacity: 0;
     cursor: pointer;
-}
-
-.item #input-avatar {
-    margin-top: 16px;
 }
 
 /* Estilização de input de imagens das receitas */

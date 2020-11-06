@@ -14,7 +14,11 @@
                 type="file"  
                 name="chef_avatar"
                 accept="image/*"
+                onchange="AvatarUpload.handleFileInput(event)"
             >
+            <div id="avatar-preview">
+                <input type="text" name="avatar_preview" value=""/>
+            </div>
             <p>Enviar avatar</p>
         </div>
     </div>
