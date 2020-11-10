@@ -177,34 +177,17 @@ const PhotosUpload = {
 }
 
 const AvatarUpload = {
-    input: "",
     uploadLimit: 1,
-    handleFileInput(event) {
-        AvatarUpload.input = event.target;
+    handleAvatarInput(event) {
+        const { files: fileList } = event.target;
+        const { uploadLimit } = AvatarUpload;
 
-        console.log(AvatarUpload.input);
-
-        if (AvatarUpload.hasLimit(event)) return;
-
-        const reader = new FileReader();
-
-        reader.onload = () => {
-            const image = new Image();
-            image.src = String(reader.result);
-
-            const input = AvatarUpload.getContainer(image.src);
-            AvatarUpload.preview.appendChild(input);
+        if (fileList.length > uploadLimit) {
+            alert(`Envie no máximo ${uploadLimit} foto`);
+            event.preventDefault();
+            return;
         }
-
-        reader.readAsDataURL(file);
-    },
-
-    getContainer(image) {
-        const input = document.createElement('input');
-        input.appendChild(image);
-        return input;
-    },
-
+    }
 }
 
 

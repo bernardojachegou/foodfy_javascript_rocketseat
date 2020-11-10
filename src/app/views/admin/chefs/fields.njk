@@ -10,14 +10,15 @@
     <div id="input-avatar">
         <div id="avatar_upload">
             <input 
-                id="avatar-input"
-                type="file"  
-                name="chef_avatar"
-                accept="image/*"
-                onchange="AvatarUpload.handleFileInput(event)"
+                id="avatar-input" 
+                type="file" 
+                name="chef_avatar" 
+                accept="image/*" 
+                multiple="multiple" 
+                onchange="AvatarUpload.handleAvatarInput(event)"
             >
             <div id="avatar-preview">
-                <input type="text" name="avatar_preview" value=""/>
+                <input type="text" name="avatar_preview"/>
             </div>
             <p>Enviar avatar</p>
         </div>
