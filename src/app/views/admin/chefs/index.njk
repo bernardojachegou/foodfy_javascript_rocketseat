@@ -1,40 +1,40 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-    <title>Foodfy - Chefs</title>
+		<title>Foodfy - Chefs</title>
 {% endblock %}
 
 {% block header %}
-    <header class="menu_admin">
-        <div class="links_admin">
-            <div class="menu_items">
-                <div class="logo">
-                    <a id="link_logo" href="/admin/receitas"><img id="logo" src="/assets/logo.png" alt="logo"></a>
-                </div>
-                <a href="/admin/receitas">RECEITAS</a>
-                <a href="/admin/chefs">CHEFS</a>
-            </div>
-        </div>
-    </header>
+		<header class="menu_admin">
+				<div class="links_admin">
+						<div class="menu_items">
+								<div class="logo">
+										<a id="link_logo" href="/admin/receitas"><img id="logo" src="/assets/logo.png" alt="logo"></a>
+								</div>
+								<a href="/admin/receitas">RECEITAS</a>
+								<a href="/admin/chefs">CHEFS</a>
+						</div>
+				</div>
+		</header>
 {% endblock %}
 
 {% block content %}
-    <div class="recipe_options">
-        <h1>Gerenciar chefs</h1>
-        <a class="crud_button" href="/admin/chefs/criar">Cadastrar</a>
-    </div>
+		<div class="recipe_options">
+				<h1>Gerenciar chefs</h1>
+				<a class="crud_button" href="/admin/chefs/criar">Cadastrar</a>
+		</div>
 
-    <section class="chef-cards">
-        {% for chef in chefs %}
-            <div class="chef-card" id="{{chef.id}}">
-                <div class="chef-box-img">
-                    <span style="background-image: url({{chef.avatar_url}})"></span>
-                </div>
-                <div class="admin-card-info">
-                    <h3>{{chef.name}}</h3>
-                    <a href="/admin/chefs/{{chef.id}}">Vizualizar</a>
-                </div>
-            </div>
-        {% endfor %}
-    </section>
+		<section class="chef-cards">
+				{% for chef in chefs %}
+						<div class="chef-card" id="{{chef.id}}">
+								<div class="chef-box-img">
+										<span style="background-image: url({{chef.avatar_url}})"></span>
+								</div>
+								<div class="admin-card-info">
+										<h3>{{chef.name}}</h3>
+										<a href="/admin/chefs/{{chef.id}}">Vizualizar</a>
+								</div>
+						</div>
+				{% endfor %}
+		</section>
 {% endblock %}

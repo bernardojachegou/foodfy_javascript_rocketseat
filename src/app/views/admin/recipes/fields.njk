@@ -1,83 +1,69 @@
 <div class="item">
-    <h3>Nome</h3>
-    <div>
-        <input type="text" name="name" value="{{ chef.name }}"/>
-    </div>
+		<h3>Imagem da receita</h3>
+		<div id="photos_wrapper">
+				<div id="recipes-upload">
+						<input id="recipe-photo-input" type="file" name="recipe_photos" multiple="multiple" accept="image/*" onchange="PhotosUpload.handleFileInput(event)">
+						<div id="add_icon">
+								<i class="material-icons">add</i>
+						</div>
+				</div>
+				<div id="photos-preview"></div>
+		</div>
 </div>
 
 <div class="item">
-    <h3>Imagem da receita</h3>
-    <div id="photos_wrapper">
-        <div id="recipes-upload">
-            <input 
-                id="recipe-photo-input" 
-                type="file" 
-                name="recipe_photos" 
-                multiple
-                accept="image/*"
-                onchange="PhotosUpload.handleFileInput(event)"
-            >
-            <div id="add_icon">
-                <i class="material-icons">add</i>
-            </div>
-        </div>
-        <div id="photos-preview"></div>
-    </div>
+		<h3>Chef</h3>
+		<div>
+				<select name="chef">
+						{% for chef in chefsList %}
+								<option hidden="hidden" value="">Selecione um chef</option>
+								<option value="{{chef.id}}" {% if recipe.chef_id == chef.id %} selected="selected" {% endif %}>
+										{{chef.name}}
+								</option>
+						{% endfor %}
+				</select>
+		</div>
 </div>
 
 <div class="item">
-    <h3>Chef</h3>
-    <div>
-        <select name="chef">
-            {% for chef in chefsList %}
-                <option hidden="hidden" value="">Selecione um chef</option>
-                <option value="{{chef.id}}" {% if recipe.chef_id == chef.id %} selected="selected" {% endif %}>
-                    {{chef.name}}
-                </option>
-            {% endfor %}
-        </select>
-    </div>
-</div>
-
-<div class="item">
-    <h3>Título da receita</h3>
-    <div>
-        <input type="text" name="title" value="{{ recipe.title }}"/>
-    </div>
+		<h3>Título da receita</h3>
+		<div>
+				<input type="text" name="title" value="{{ recipe.title }}"/>
+		</div>
 </div>
 
 <div id="ingredients" class="item">
-    <h3>Ingredientes</h3>
-    {% for ingredient in recipe.ingredients %}
-        <div class="ingredient">
-            <input type="text" name="ingredients[]" value="{{ ingredient }}"/>
-        </div>
-    {% else %}
-        <div class="ingredient">
-            <input type="text" name="ingredients[]" value=""/>
-        </div>
-    {% endfor %}
+		<h3>Ingredientes</h3>
+		{% for ingredient in recipe.ingredients %}
+				<div class="ingredient">
+						<input type="text" name="ingredients[]" value="{{ ingredient }}"/>
+				</div>
+		{% else %}
+				<div class="ingredient">
+						<input type="text" name="ingredients[]" value=""/>
+				</div>
+		{% endfor %}
 </div>
 <button id="adding_button" type="button" class="add-ingredient">Adicionar novo ingrediente</button>
 
 <div id="preparation" class="item">
-    <h3>Modo de preparo</h3>
-    {% for instruction in recipe.preparation %}
-        <div class="preparation">
-            <input type="text" name="preparation[]" value="{{ instruction }}">
-        </div>
-    {% else %}
-        <div class="preparation">
-            <input type="text" name="preparation[]" value=""/>
-        </div>
-    {% endfor %}
+		<h3>Modo de preparo</h3>
+		{% for instruction in recipe.preparation %}
+				<div class="preparation">
+						<input type="text" name="preparation[]" value="{{ instruction }}">
+				</div>
+		{% else %}
+				<div class="preparation">
+						<input type="text" name="preparation[]" value=""/>
+				</div>
+		{% endfor %}
 
 </div>
 <button id="adding_button" type="button" class="add-preparation">Adicionar novo passo</button>
 
 <div class="item">
-    <h3>Informações adicionais</h3>
-    <div>
-        <textarea name="information" id="information_box" cols="30" rows="10">{{ recipe.information }}</textarea>
-    </div>
+		<h3>Informações adicionais</h3>
+		<div>
+				<textarea name="information" id="information_box" cols="30" rows="10">{{ recipe.information }}</textarea>
+		</div>
 </div>

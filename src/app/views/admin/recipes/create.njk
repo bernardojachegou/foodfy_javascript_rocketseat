@@ -1,33 +1,33 @@
 {% extends "layout.njk" %}
 
 {% block header %}
-    <header class="menu_admin">
-        <div class="links_admin">
-            <div class="menu_items">
-                <div class="logo">
-                    <a id="link_logo" href="/admin/receitas"><img id="logo" src="/assets/logo.png" alt="logo"></a>
-                </div>
-                <a href="/admin/receitas">RECEITAS</a>
-                <a href="/admin/chefs">CHEFS</a>
-            </div>
-        </div>
-    </header>
+		<header class="menu_admin">
+				<div class="links_admin">
+						<div class="menu_items">
+								<div class="logo">
+										<a id="link_logo" href="/admin/receitas"><img id="logo" src="/assets/logo.png" alt="logo"></a>
+								</div>
+								<a href="/admin/receitas">RECEITAS</a>
+								<a href="/admin/chefs">CHEFS</a>
+						</div>
+				</div>
+		</header>
 {% endblock %}
 
 {% block content %}
-    <div class="all">
-        <form method="POST" action="/admin/receitas" enctype="multpart/form-data">
-            <div class="recipe_options">
-                <h1>Criando receita</h1>
-                <button type="submit" class="crud_button">Salvar receita</button>
-            </div>
+		<div class="all">
+				<form method="POST" action="/admin/receitas" enctype="multpart/form-data">
+						<div class="recipe_options">
+								<h1>Criando receita</h1>
+								<button type="submit" class="crud_button">Salvar receita</button>
+						</div>
 
-            {% include 'admin/recipes/fields.njk' %}
+						{% include 'admin/recipes/fields.njk' %}
 
-        </form>
-    </div>
+				</form>
+		</div>
 {% endblock content %}
 
 {% block scripts %}
-    <script src="/recipes_funcs.js"></script>
+		<script src="/recipes_funcs.js"></script>
 {% endblock scripts %}

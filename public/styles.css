@@ -675,13 +675,13 @@ form #adding_button:hover {
 	border-radius: 4px;
 }
 
-#photos-preview .photo {
+#photos-preview .photo, #avatar-preview .avatar {
 	position: relative;
 }
 
 /* Photos-preview delete Icon */
 
-#photos-preview .photo i {
+#photos-preview .photo i, #avatar-preview .avatar i {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -698,7 +698,7 @@ form #adding_button:hover {
 	transition: opacity 200ms;
 }
 
-#photos-preview .photo:hover i {
+#photos-preview .photo:hover i, #avatar-preview .avatar:hover i {
 	opacity: 1;
 }
 

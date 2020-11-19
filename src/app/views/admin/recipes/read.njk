@@ -1,74 +1,74 @@
 {% extends "layout.njk" %}
 
 {% block header %}
-    <header class="menu_admin">
-        <div class="links_admin">
-            <div class="menu_items">
-                <div class="logo">
-                    <a id="link_logo" href="/admin/receitas"><img id="logo" src="/assets/logo.png" alt="logo"></a>
-                </div>
-                <a href="/admin/receitas">RECEITAS</a>
-                <a href="/admin/chefs">CHEFS</a>
-            </div>
-        </div>
-    </header>
+		<header class="menu_admin">
+				<div class="links_admin">
+						<div class="menu_items">
+								<div class="logo">
+										<a id="link_logo" href="/admin/receitas"><img id="logo" src="/assets/logo.png" alt="logo"></a>
+								</div>
+								<a href="/admin/receitas">RECEITAS</a>
+								<a href="/admin/chefs">CHEFS</a>
+						</div>
+				</div>
+		</header>
 {% endblock %}
 
 {% block content %}
-    <div class="recipe_details">
-        <div class="recipe_options">
-            <h1>Receita:
-                {{recipe.title}}</h1>
-            <a class="crud_button" href="/admin/receitas/{{recipe.id}}/editar">Editar receita</a>
-        </div>
-        <div class="recipe_head">
-            <img src="{{recipe.image}}" alt="{{recipe.title}}">
-            <h1>{{recipe.title}}</h1>
-            <p>{{recipe.chef_name}}</p>
-        </div>
+		<div class="recipe_details">
+				<div class="recipe_options">
+						<h1>Receita:
+								{{recipe.title}}</h1>
+						<a class="crud_button" href="/admin/receitas/{{recipe.id}}/editar">Editar receita</a>
+				</div>
+				<div class="recipe_head">
+						<img src="{{recipe.image}}" alt="{{recipe.title}}">
+						<h1>{{recipe.title}}</h1>
+						<p>{{recipe.chef_name}}</p>
+				</div>
 
-        <div class="recipe_ingredients">
-            <div class="recipe_titles">
-                <h2>Ingredientes</h2>
-                <a class="toggle_button" onclick="handleRecipeDetail('.ingredients_list', this)">MOSTRAR</a>
-            </div>
+				<div class="recipe_ingredients">
+						<div class="recipe_titles">
+								<h2>Ingredientes</h2>
+								<a class="toggle_button" onclick="handleRecipeDetail('.ingredients_list', this)">MOSTRAR</a>
+						</div>
 
-            <div class="ingredients_list hide">
-                <ul>
-                    {% for ingredient in recipe.ingredients %}
-                        <li>{{ingredient}}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+						<div class="ingredients_list hide">
+								<ul>
+										{% for ingredient in recipe.ingredients %}
+												<li>{{ingredient}}</li>
+										{% endfor %}
+								</ul>
+						</div>
+				</div>
 
-        <div class="recipe_preparation">
-            <div class="recipe_titles">
-                <h2>Modo de preparo</h2>
-                <a class="toggle_button" onclick="handleRecipeDetail('.preparation_list', this)">MOSTRAR</a>
-            </div>
+				<div class="recipe_preparation">
+						<div class="recipe_titles">
+								<h2>Modo de preparo</h2>
+								<a class="toggle_button" onclick="handleRecipeDetail('.preparation_list', this)">MOSTRAR</a>
+						</div>
 
-            <div class="preparation_list hide">
-                <ul>
-                    {% for instruction in recipe.preparation %}
-                        <li>{{instruction}}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+						<div class="preparation_list hide">
+								<ul>
+										{% for instruction in recipe.preparation %}
+												<li>{{instruction}}</li>
+										{% endfor %}
+								</ul>
+						</div>
+				</div>
 
-        <div class="recipe_additional">
-            <div class="recipe_titles">
-                <h2>Informações adicionais</h2>
-                <a class="toggle_button" onclick="handleRecipeDetail('.information_list', this)">MOSTRAR</a>
-            </div>
-            <div class="information_list hide">
-                <p>{{recipe.information}}</p>
-            </div>
-        </div>
-    </div>
+				<div class="recipe_additional">
+						<div class="recipe_titles">
+								<h2>Informações adicionais</h2>
+								<a class="toggle_button" onclick="handleRecipeDetail('.information_list', this)">MOSTRAR</a>
+						</div>
+						<div class="information_list hide">
+								<p>{{recipe.information}}</p>
+						</div>
+				</div>
+		</div>
 {% endblock %}
 
 {% block scripts %}
-    <script src="/recipes_funcs.js"></script>
+		<script src="/recipes_funcs.js"></script>
 {% endblock scripts %}
