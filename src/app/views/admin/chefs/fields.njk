@@ -1,4 +1,7 @@
 <div class="item">
+    <div id="avatar-preview"></div>
+</div>
+<div class="item">
     <h3>Nome</h3>
     <div>
         <input type="text" name="name" value="{{ chef.name }}"/>
@@ -17,9 +20,6 @@
                 multiple="multiple" 
                 onchange="AvatarUpload.handleAvatarInput(event)"
             >
-            <div id="avatar-preview">
-                <input type="text" name="avatar_preview"/>
-            </div>
             <p>Enviar avatar</p>
         </div>
     </div>
