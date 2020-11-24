@@ -49,17 +49,19 @@ module.exports = {
 			return response.send('Por favor, envie pelo menos uma imagem');
 		}
 
-		const filesPromise = request.files.map(file => File.create({ ...file }))
-		await Promise.all(filesPromise);
-		const fileId = filesPromise.rows[0].id; // capturar o Id do file e jopar no create do chef;
+		const filesPromise = request.files.map(file => 
+			File.create(file));
+			
+		const filePromiseResults = await Promise.all(filesPromise);
+		
+		const fileId = filePromiseResults[0].rows[0].id; // capturar o Id do file e jogar no create do chef;
 
-		let resultsChefs = await Chef.create({ ...body, file_id: fileId });
+		let resultsChefs = await Chef.create({ 
+		name: request.body.name,
+		file_id: fileId,
+		});
 
 		const chefId = resultsChefs.rows[0].id;
-
-		// consoles de verificação;
-		console.log(filesPromise);
-		console.log(resultsChefs.rows);
 
 		return response.redirect(`/admin/chefs/${chefId}`)
 

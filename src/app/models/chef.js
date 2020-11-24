@@ -10,19 +10,19 @@ module.exports = {
             ORDER BY chefs.name ASC`)
 	},
 
-	create(data) {
+	create({ file_id, name }) {
 		const query = `
-            INSERT INTO chefs (
-                file_id,
-                name,
-                created_at
-            ) VALUES ($1, $2, $3)
-            RETURNING id
-        `
+			INSERT INTO chefs (
+					file_id,
+					name,
+					created_at
+			) VALUES ($1, $2, $3)
+			RETURNING id
+		`
 
 		const values = [
-			data.file_id,
-			data.name,
+			file_id,
+			name,
 			date(Date.now()).iso
 		]
 
