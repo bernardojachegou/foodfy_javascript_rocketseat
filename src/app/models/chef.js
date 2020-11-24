@@ -60,6 +60,10 @@ module.exports = {
 
 	findRecipes(id) {
 		return db.query(` SELECT * FROM recipes WHERE chef_id = $1`, [id])
+	},
+	
+	files(id) {
+		return db.query(` SELECT * FROM files WHERE id = $1`, [id]);
 	}
 
 }

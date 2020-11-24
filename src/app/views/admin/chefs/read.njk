@@ -22,7 +22,14 @@
 						<a class="crud_button" href="/admin/chefs/{{chef.id}}/editar">Editar chef</a>
 				</div>
 				<div class="chef-box-img">
-						<span style="background-image: url({{chef.avatar_url}})"></span>
+							{% if not files[0] %}
+								<img src="http://placehold.it/500x500?text=PRODUTO SEM FOTO" alt="Produto">
+							{% else %}
+								<img 
+										src="{{files[0].src}}" 
+										alt="{{files[0].name}}"
+								>
+							{% endif %}
 						<h1>{{chef.name}}</h1>
 						<p>{{chef.total_recipes}}
 								receitas</p>

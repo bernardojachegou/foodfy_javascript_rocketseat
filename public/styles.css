@@ -546,11 +546,13 @@ form #adding_button:hover {
 	text-align: center;
 }
 
-.recipe_details .chef-box-img span {
+.recipe_details .chef-box-img img {
 	padding-right: 0;
 	width: 200px;
 	height: 200px;
 	margin: 50px 0 30px;
+	object-fit: cover;
+	border-radius: 50%;
 }
 
 .recipe_details .chef-box-img p {
