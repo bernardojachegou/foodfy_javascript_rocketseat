@@ -1,5 +1,6 @@
 const Recipe = require('../models/recipe');
 const File = require('../models/File');
+const RecipeFile = require('../models/RecipeFile');
 
 module.exports = {
   async index(request, response) {
@@ -37,27 +38,41 @@ module.exports = {
   },
 
   async post(request, response) {
-    const keys = Object.keys(request.body);
+    try {
+      const keys = Object.keys(request.body);
 
-    for (key of keys) {
-      if (request.body[key] == '') {
-        return response.send('Por favor, preencha todos os campos');
+      //Check empty fields;
+      for (key of keys) {
+        if (request.body[key] == '') {
+          return response.send('Por favor, preencha todos os campos!');
+        }
       }
+
+      // Check images quantity;
+      if (request.files.length == 0) {
+        return response.send('Por favor, envie pelo menos uma imagem');
+      }
+
+      // Create recipes (db input);
+      const recipeResults = await Recipe.create(request.body);
+      const recipe = recipeResults.rows[0];
+
+      //Create files (db input);
+      const filesResults = await Promise.all(
+        request.files.map((file) => File.create(file))
+      );
+      const files = filesResults.map((result) => result.rows[0]);
+
+      //Create recipe_file (db input);
+      files.map((file) =>
+        RecipeFile.create({ recipe_id: recipe.id, file_id: file.id })
+      );
+
+      const recipeId = recipe.id;
+      return response.redirect(`/receitas/${recipeId}`);
+    } catch (error) {
+      console.log(error);
     }
-
-    if (request.files.length == 0) {
-      return response.send('Por favor, envie pelo menos uma imagem');
-    }
-
-    let results = await Recipe.create(request.body);
-    const recipeId = results.rows[0].id;
-
-    const filesPromise = request.files.map((file) =>
-      File.createRecipeFiles({ ...file, recipe_id: recipeId })
-    );
-    await Promise.all(filesPromise);
-
-    return response.redirect(`/receitas/${recipeId}`);
   },
 
   async put(request, response) {

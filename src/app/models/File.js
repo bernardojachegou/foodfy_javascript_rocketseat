@@ -14,30 +14,23 @@ module.exports = {
 
     return db.query(query, values);
   },
-  async createRecipeFiles({ filename, path, recipe_id }) {
+  find(id) {
+    return db.query(
+      `
+        SELECT * FROM files WHERE id = $1`,
+      [id]
+    );
+  },
+  async delete(id) {
     try {
-      let query = `
-                INSERT INTO files (
-                    name,
-                    path
-                ) VALUES ($1, $2)
-                RETURNING id
-            `;
-      let values = [filename, path];
-      const result = await db.query(query, values);
-      const fileId = result.rows[0].id;
-      query = `
-                INSERT INTO recipe_files (
-                    recipe_id,
-                    file_id
-                ) VALUES ($1, $2) 
-                RETURNING id
-            `;
-      values = [recipe_id, fileId];
+      const result = await db.query(`SELECT * FROM files WHERE id = $1`, [id]);
+      const file = result.rows[0];
 
-      return db.query(query, values);
-    } catch (error) {
-      console.log(`Database Error => ${error}`);
+      fs.unlinkSync(file.path);
+
+      return db.query(`DELETE FROM files WHERE id = $1`, [id]);
+    } catch (err) {
+      console.error(err);
     }
   },
 };
