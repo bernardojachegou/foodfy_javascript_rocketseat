@@ -28,7 +28,7 @@
 				{% for chef in chefs %}
 						<div class="chef-card" id="{{chef.id}}">
 								<div class="chef-box-img">
-										<span style="background-image: url({{chef.avatar_url}})"></span>
+										<img src="{{chef.image}}" alt="{{chef.name}}">
 								</div>
 								<div class="admin-card-info">
 										<h3>{{chef.name}}</h3>

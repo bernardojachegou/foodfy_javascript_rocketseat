@@ -148,8 +148,8 @@ module.exports = {
       const keys = Object.keys(request.body);
 
       for (key of keys) {
-        if (request.body[key] == '') {
-          return response.send('Por favor, preencha todos os campos!');
+        if (request.body[key] == '' && key != 'removed_files') {
+          return response.send('Please fill all fields!');
         }
       }
 
@@ -159,13 +159,13 @@ module.exports = {
         newFiles = await Promise.all(
           request.files.map((file) => File.create(file))
         );
-        console.log(newFiles);
+        // console.log(newFiles);
 
         const files = newFiles.map((result) => result.rows[0]);
         files.map((file) =>
           RecipeFile.create({ recipe_id: request.body.id, file_id: file.id })
         );
-        console.log(files);
+        // console.log(files);
       }
 
       // remove photo from db

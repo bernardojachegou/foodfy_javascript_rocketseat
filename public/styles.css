@@ -576,7 +576,7 @@ form #adding_button:hover {
 
 /* Listagem de Chefs */
 
-.chef-box-img span {
+.chef-box-img img {
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -584,6 +584,7 @@ form #adding_button:hover {
   background-position: center;
   background-size: cover;
   display: inline-block;
+  object-fit: cover;
 }
 
 .chef-cards {

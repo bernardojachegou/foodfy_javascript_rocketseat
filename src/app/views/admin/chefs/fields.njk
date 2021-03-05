@@ -1,25 +1,29 @@
 <div class="item">
-		<div id="avatar-preview"></div>
+		<div id="avatar-preview">
+				{% if files %}
+						<div class="avatar" id="{{files[0].id}}">
+								<img src="{{files[0].src}}" alt="{{files[0].name}}">
+								<i class="material-icons" onclick="AvatarUpload.removePhoto(event)">close</i>
+						</div>
+						<input type="hidden" name="removed_files">
+				{% endif %}
+		</div>
 </div>
 <div class="item">
 		<h3>Nome</h3>
 		<div>
-				<input type="text" name="name" value="{{ chef.name }}"/>
+				<input type="text" name="name" value="{{ chef.name }}" placeholder="Digite o nome do chef"/>
 		</div>
 </div>
 
 <div class="item">
 		<h3>Avatar</h3>
 		<div id="input-avatar">
+				{% if files %}
+						<input value="{{files[0].src}}" disabled="disabled">
+				{% endif %}
 				<div id="avatar_upload">
-						<input 
-                id="avatar-input" 
-                type="file" 
-                name="chef_avatar" 
-                accept="image/*" 
-                multiple="multiple" 
-                onchange="AvatarUpload.handleAvatarInput(event)"
-            >
+						<input id="avatar-input" type="file" name="chef_avatar" accept="image/*" multiple="multiple" onchange="AvatarUpload.handleAvatarInput(event)">
 						<p>Enviar avatar</p>
 				</div>
 		</div>

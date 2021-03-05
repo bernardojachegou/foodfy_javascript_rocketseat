@@ -3,11 +3,10 @@ const { date } = require('../../lib/utils');
 
 module.exports = {
   all() {
-    return db.query(`SELECT chefs.*, count(recipes) AS total_recipes
-            FROM chefs
-            LEFT JOIN recipes ON (recipes.chef_id = chefs.id)
-            GROUP BY chefs.id, chefs.name, chefs.created_at
-            ORDER BY chefs.name ASC`);
+    return db.query(`
+        SELECT * 
+        FROM chefs
+        ORDER BY name ASC`);
   },
 
   create({ file_id, name }) {
@@ -37,24 +36,56 @@ module.exports = {
     );
   },
 
+  findRecipesOfChef(id) {
+    return db.query(
+      `
+    SELECT *
+    FROM recipes
+    LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
+    WHERE chefs.id = $1`,
+      [id]
+    );
+  },
+
+  findChefRecipes(id) {
+    return db.query(
+      `
+        SELECT *
+        FROM recipes
+        WHERE chef_id = $1
+        ORDER BY created_at DESC
+    `,
+      [id]
+    );
+  },
+
   update(data) {
     const query = `
-            UPDATE chefs SET
-                name=($1),
-                file_id=($2),
-            WHERE id = $3
-        `;
-    const values = [data.name, data.avatar_url, data.id];
+        UPDATE chefs SET
+            name=($1),
+            file_id=($2)
+        WHERE id = $3
+    `;
+
+    const values = [data.name, data.file_id, data.id];
 
     return db.query(query, values);
   },
 
   delete(id) {
-    return db.query(`DELETE FROM chefs WHERE id = $1`, [id]);
+    try {
+      return db.query(`DELETE FROM chefs WHERE id = $1`, [id]);
+    } catch (error) {
+      console.error(error);
+    }
   },
 
-  findRecipes(id) {
-    return db.query(` SELECT * FROM recipes WHERE chef_id = $1`, [id]);
+  totalRecipesOfChef() {
+    return db.query(`
+        SELECT chefs.*, count(recipes) AS total_recipes
+        FROM chefs
+        LEFT JOIN recipes ON (chefs.id = recipes.chef_id)
+        GROUP BY chefs.id`);
   },
 
   files(id) {
