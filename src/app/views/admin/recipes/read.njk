@@ -21,8 +21,28 @@
 								{{recipe.title}}</h1>
 						<a class="crud_button" href="/admin/receitas/{{recipe.id}}/editar">Editar receita</a>
 				</div>
+
 				<div class="recipe_head">
-						<img src="{{recipeFiles[0].src}}" alt="{{recipe.title}}">
+						<div class="gallery">
+								<div class="highlight">
+										{% if not recipeFiles[0] %}
+												<img src="http://placehold.it/500x500?text=PRODUTO SEM FOTO">
+										{% else %}
+												<img src="{{recipeFiles[0].src}}" alt="{{recipe.title}}" onclick="Lightbox.open()">
+										{% endif %}
+										<div class="lightbox-target">
+												<img src="{{recipeFiles[0].src}}" alt="{{recipe.title}}">
+												<a href="#" class="lightbox-close" onclick="Lightbox.close()">
+														<i class="material-icons">close</i>
+												</a>
+										</div>
+								</div>
+								<div class="gallery-preview">
+										{% for photo in recipeFiles %}
+												<img src="{{photo.src}}" alt="{{photo.name}}" %{% if loop.index0 == 0 %} class="active" {% endif %} onclick="ImageGallery.setImage(event)">
+										{% endfor %}
+								</div>
+						</div>
 						<h1>{{recipe.title}}</h1>
 						<p>{{recipe.chef_name}}</p>
 				</div>

@@ -137,7 +137,7 @@ module.exports = {
 
       const recipeId = recipe.id;
 
-      return response.redirect(`admin/receitas/${recipeId}`);
+      return response.redirect(`receitas/${recipeId}`);
     } catch (error) {
       console.log(error);
     }
