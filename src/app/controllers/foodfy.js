@@ -161,7 +161,6 @@ module.exports = {
         chefs.map(async (chef) => {
           const fileResults = await Chef.find(chef.id);
           const fileId = fileResults.rows[0].file_id;
-
           const imageResults = await File.find(fileId);
           const image = imageResults.rows[0].path;
 
@@ -173,7 +172,10 @@ module.exports = {
           };
         })
       );
-      return response.render('foodfy/chefs', { chefs: chefWithImage });
+
+      return response.render('foodfy/chefs', {
+        chefs: chefWithImage,
+      });
     } catch (error) {
       console.log(error);
     }

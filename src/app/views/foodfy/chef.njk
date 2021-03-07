@@ -29,16 +29,7 @@
 				</div>
 				<div class="cards">
 						{% for recipe in chefRecipes %}
-								<div class="admin-card" id="{{recipe.id}}">
-										<div class="admin-card-img">
-												<img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
-										</div>
-										<div class="admin-card-info">
-												<h3>{{recipe.title}}</h3>
-												<p id="author_name">por{{chef.name}}</p>
-												<a href="/admin/receitas/{{recipe.id}}">Visualizar</a>
-										</div>
-								</div>
+								{% include "parts/foodfy-recipes.njk" %}
 						{% endfor %}
 				</div>
 

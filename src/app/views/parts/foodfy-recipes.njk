@@ -4,8 +4,12 @@
   </div>
   <div class="card_info">
     <h3>{{recipe.title}}</h3>
-    <p id="author_name">
-      Por
-      {{recipe.chef_name}}</p>
+    {% if recipe.chef_name %}
+      <p id="author_name">Por
+        {{recipe.chef_name}}</p>
+    {% else %}
+      <p id="author_name">Por
+        {{chef.name}}</p>
+    {% endif %}
   </div>
 </div>
