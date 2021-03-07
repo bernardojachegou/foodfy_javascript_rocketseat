@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 		<head>
 				<meta charset="UTF-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<link rel="stylesheet" href="/styles.css">
 				<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 				<link rel="shortcut icon" href="https://www.flaticon.com/br/premium-icon/icons/svg/2994/2994533.svg" type="image/x-icon">
-
 				{% block head %}
 						<title>Foodfy - Vamos cozinhar!</title>
 				{% endblock %}
-
 		</head>
 
 		<body>
@@ -20,14 +17,10 @@
 						<div class="main">
 								{% block content %}{% endblock %}
 						</div>
-
-						<div class="footer">
-								<p>Todos os direitos reservados, receitas Foodfy.</p>
-						</div>
-
+						{% include "parts/footer.njk" %}
 				</div>
 				{% block scripts %}{% endblock scripts %}
-				<script src="/global_funcs.js"></script>
+				<script src="/scripts.js"></script>
 		</body>
 
 </html>

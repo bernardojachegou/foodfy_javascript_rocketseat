@@ -8,8 +8,6 @@ module.exports = {
       let recipeResults = await Recipe.all();
       const recipes = recipeResults.rows;
 
-      // if (!recipes) return response.send('Recipes not found!')
-
       async function getImage(recipe_id) {
         const fileResults = await RecipeFile.findRecipeId(recipe_id);
         const fileId = fileResults.rows[0].file_id;
