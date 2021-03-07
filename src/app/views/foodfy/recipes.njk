@@ -20,20 +20,9 @@
 {% block content %}
 		<section class="cards">
 				{% for recipe in recipes %}
-						<div class="card" id="{{recipe.id}}">
-								<div class="card_image">
-										<img src="{{recipe.image}}" alt="{{recipe.title}}">
-								</div>
-								<div class="card_info">
-										<h3>{{recipe.title}}</h3>
-										<p id="author_name">Por
-												{{recipe.chef_name}}</p>
-								</div>
-						</div>
+						{% include "parts/foodfy-recipes.njk" %}
 				{% endfor %}
 		</section>
 {% endblock %}
 
-{% block scripts %}
-		<script src="/recipes_funcs.js"></script>
-{% endblock scripts %}
+{% block scripts %}{% endblock scripts %}

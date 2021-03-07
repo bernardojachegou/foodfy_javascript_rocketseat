@@ -5,17 +5,7 @@
 {% endblock %}
 
 {% block header %}
-		<header class="menu_admin">
-				<div class="links_admin">
-						<div class="menu_items">
-								<div class="logo">
-										<a id="link_logo" href="/admin/receitas"><img id="logo" src="/assets/logo.png" alt="logo"></a>
-								</div>
-								<a href="/admin/receitas">RECEITAS</a>
-								<a href="/admin/chefs">CHEFS</a>
-						</div>
-				</div>
-		</header>
+		{% include "parts/admin-navbar.njk" %}
 {% endblock %}
 
 {% block content %}

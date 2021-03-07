@@ -10,11 +10,11 @@ module.exports = {
 
       const chefWithImage = await Promise.all(
         chefs.map(async (chef) => {
-          const fileResults = await Chef.find(chef.id); // trazendo os chefs
-          const fileId = fileResults.rows[0].file_id; // pegando o id da imagem dentro de chef
+          const fileResults = await Chef.find(chef.id);
+          const fileId = fileResults.rows[0].file_id;
 
-          const imageResults = await File.find(fileId); // trazendo as imagens
-          const image = imageResults.rows[0].path; // acessando a propriedade path das imagens
+          const imageResults = await File.find(fileId);
+          const image = imageResults.rows[0].path;
 
           return {
             ...chef,
@@ -36,14 +36,12 @@ module.exports = {
 
   async show(request, response) {
     try {
-      // get chef
       let results = await Chef.find(request.params.id);
 
       const chef = results.rows[0];
 
       if (!chef) return response.send('Chef not found!');
 
-      // get image of chef
       results = await File.find(chef.file_id);
       const files = results.rows.map((file) => ({
         ...file,
@@ -53,21 +51,18 @@ module.exports = {
         )}`,
       }));
 
-      // get recipes of chef
       results = await Chef.findChefRecipes(chef.id);
       const chefRecipes = results.rows;
 
-      // get image of recipe
       const chefRecipesWithImage = await Promise.all(
         chefRecipes.map(async (recipe) => {
-          const fileResults = await RecipeFile.findRecipeId(recipe.id); // id 31
-          const fileId = fileResults.rows[0].file_id; // 92
+          const fileResults = await RecipeFile.findRecipeId(recipe.id);
+          const fileId = fileResults.rows[0].file_id;
 
-          const imageResults = await File.find(fileId); // pega oq tem no file(name, path)
-          const image = imageResults.rows[0].path; // acessando o path
+          const imageResults = await File.find(fileId);
+          const image = imageResults.rows[0].path;
 
           return {
-            // no map eu preciso de um return, no caso retorno uma nova propriedade para recipe
             ...recipe,
             image: `${request.protocol}://${
               request.headers.host

@@ -1,26 +1,11 @@
-<section>
-  <div id="wrapper">
-    <h2>Mais acessadas</h2>
+<div class="card" id="{{recipe.id}}">
+  <div class="card_image">
+    <img src="{{recipe.image}}" alt="{{recipe.title}}">
   </div>
-
-  <div class="cards">
-
-    {% for recipe in recipes %}
-      {% if loop.index0 < 6 %}
-
-        <div class="card" id="{{recipe.id}}">
-          <div class="card_image">
-            <img src="{{recipe.image}}" alt="{{recipe.title}}">
-          </div>
-          <div class="card_info">
-            <h3>{{recipe.title}}</h3>
-            <p id="author_name">
-              Por
-              {{recipe.chef_name}}</p>
-          </div>
-        </div>
-      {% endif %}
-    {% endfor %}
-
+  <div class="card_info">
+    <h3>{{recipe.title}}</h3>
+    <p id="author_name">
+      Por
+      {{recipe.chef_name}}</p>
   </div>
-</section>
+</div>

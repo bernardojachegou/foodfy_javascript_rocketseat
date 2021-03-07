@@ -14,7 +14,11 @@
 {% block content %}
 		<div class="recipe_details">
 				<div class="chef-box-img">
-						<span style="background-image: url({{chef.avatar_url}})"></span>
+						{% if not files[0] %}
+								<img src="http://placehold.it/500x500?text=Chef sem foto" alt="Chef">
+						{% else %}
+								<img src="{{files[0].src}}" alt="{{files[0].name}}">
+						{% endif %}
 						<h1>{{chef.name}}</h1>
 						<p>{{chef.total_recipes}}
 								receitas</p>
@@ -23,22 +27,24 @@
 				<div class="recipe_options">
 						<h1>Receitas</h1>
 				</div>
-				<section class="admin-cards">
-						{% for recipe in recipes %}
+				<div class="cards">
+						{% for recipe in chefRecipes %}
 								<div class="admin-card" id="{{recipe.id}}">
 										<div class="admin-card-img">
-												<img src="{{recipe.image}}" alt="{{recipe.title}}">
+												<img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
 										</div>
 										<div class="admin-card-info">
 												<h3>{{recipe.title}}</h3>
+												<p id="author_name">por{{chef.name}}</p>
+												<a href="/admin/receitas/{{recipe.id}}">Visualizar</a>
 										</div>
 								</div>
 						{% endfor %}
-				</section>
+				</div>
 
 		</div>
 {% endblock %}
 
 {% block scripts %}
-		<script src="/chefs_funcs.js"></script>
+		<script src="/chefScripts.js"></script>
 {% endblock scripts %}

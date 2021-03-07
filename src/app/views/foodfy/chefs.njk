@@ -16,17 +16,15 @@
 {% endblock %}
 
 {% block content %}
-
-		<section class="chef-cards" id="foodfy-chefs">
+		<section class="chef-cards">
 				{% for chef in chefs %}
 						<div class="chef-card" id="{{chef.id}}">
 								<div class="chef-box-img">
-										<span style="background-image: url({{chef.avatar_url}})"></span>
+										<img src="{{chef.image}}" alt="{{chef.name}}">
 								</div>
 								<div class="admin-card-info">
 										<h3>{{chef.name}}</h3>
-										<p>{{chef.total_recipes}}
-												receitas</p>
+										<a href="/chefs/{{chef.id}}">Vizualizar</a>
 								</div>
 						</div>
 				{% endfor %}
@@ -34,5 +32,5 @@
 {% endblock %}
 
 {% block scripts %}
-		<script src="/chefs_funcs.js"></script>
+		<script src="/chefScripts.js"></script>
 {% endblock scripts %}
