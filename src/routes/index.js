@@ -1,19 +1,19 @@
 const express = require('express');
 const routes = express.Router();
-const foodfy = require('../app/controllers/foodfyController');
+const FoodfyController = require('../app/controllers/FoodfyController');
 const Chef = require('./restricted/chef');
 const Recipe = require('./restricted/recipe');
-// const User = require('./restricted/user');
+const User = require('./restricted/user');
 
-// User(routes);
+User(routes);
 Chef(routes);
 Recipe(routes);
 
-routes.get('/', foodfy.index);
-routes.get('/about', foodfy.about);
-routes.get('/recipes', foodfy.recipes);
-routes.get('/recipes/:id', foodfy.recipe);
-routes.get('/chefs', foodfy.chefs);
-routes.get('/chefs/:id', foodfy.chef);
+routes.get('/', FoodfyController.index);
+routes.get('/about', FoodfyController.about);
+routes.get('/recipes', FoodfyController.recipes);
+routes.get('/recipes/:id', FoodfyController.recipe);
+routes.get('/chefs', FoodfyController.chefs);
+routes.get('/chefs/:id', FoodfyController.chef);
 
 module.exports = routes;

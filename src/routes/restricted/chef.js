@@ -1,12 +1,12 @@
-const chefs = require('../../app/controllers/ChefsController');
+const chefsController = require('../../app/controllers/ChefsController');
 const multer = require('../../app/middlewares/multer');
 
 module.exports = (routes) => {
-  routes.get('/admin/chefs', chefs.index);
-  routes.get('/admin/chefs/create', chefs.create);
-  routes.get('/admin/chefs/:id', chefs.show);
-  routes.get('/admin/chefs/:id/edit', chefs.edit);
-  routes.post('/admin/chefs', multer.array('chef_avatar', 1), chefs.post);
-  routes.put('/admin/chefs', multer.array('chef_avatar', 1), chefs.put);
-  routes.delete('/admin/chefs', chefs.delete);
+  routes.get('/admin/chefs', chefsController.index);
+  routes.get('/admin/chefs/create', chefsController.create);
+  routes.get('/admin/chefs/:id', chefsController.show);
+  routes.get('/admin/chefs/:id/edit', chefsController.edit);
+  routes.post('/admin/chefs', multer.array('chef_avatar', 1), chefsController.post);
+  routes.put('/admin/chefs', multer.array('chef_avatar', 1), chefsController.put);
+  routes.delete('/admin/chefs', chefsController.delete);
 };
