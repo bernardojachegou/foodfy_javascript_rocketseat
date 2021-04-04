@@ -9,7 +9,7 @@
 				<div class="recipe_options">
 						<h1>Chef:
 								{{chef.name}}</h1>
-						<a class="crud_button" href="/admin/chefs/{{chef.id}}/editar">Editar chef</a>
+						<a class="crud_button" href="/admin/chefs/{{chef.id}}/edit">Editar chef</a>
 				</div>
 				<div class="chef-box-img">
 						{% if not files[0] %}
@@ -34,7 +34,7 @@
 										<div class="admin-card-info">
 												<h3>{{recipe.title}}</h3>
 												<p id="author_name">por{{chef.name}}</p>
-												<a href="/admin/receitas/{{recipe.id}}">Visualizar</a>
+												<a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
 										</div>
 								</div>
 						{% endfor %}

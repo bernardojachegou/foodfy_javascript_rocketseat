@@ -24,14 +24,16 @@ module.exports = {
           };
         })
       );
-      return response.render('admin/chefs/index', { chefs: chefWithImage });
+      return response.render('restricted/chefs/index', {
+        chefs: chefWithImage,
+      });
     } catch (error) {
       console.log(error);
     }
   },
 
   create(request, response) {
-    return response.render('admin/chefs/create');
+    return response.render('restricted/chefs/create');
   },
 
   async show(request, response) {
@@ -71,7 +73,7 @@ module.exports = {
         })
       );
 
-      return response.render('admin/chefs/read', {
+      return response.render('restricted/chefs/read', {
         chef,
         files,
         chefRecipes: chefRecipesWithImage,
@@ -100,7 +102,7 @@ module.exports = {
         )}`,
       }));
 
-      return response.render('admin/chefs/edit', { chef, files });
+      return response.render('restricted/chefs/edit', { chef, files });
     } catch (error) {
       console.log(error);
     }

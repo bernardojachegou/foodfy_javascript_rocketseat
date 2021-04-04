@@ -9,14 +9,14 @@
 				<div class="recipe_options">
 						<h1>Receita:
 								{{recipe.title}}</h1>
-						<a class="crud_button" href="/admin/receitas/{{recipe.id}}/editar">Editar receita</a>
+						<a class="crud_button" href="/admin/recipes/{{recipe.id}}/edit">Editar receita</a>
 				</div>
 
 				<div class="recipe_head">
 						<div class="gallery">
 								<div class="highlight">
 										{% if not recipeFiles[0] %}
-												<img src="http://placehold.it/500x500?text=PRODUTO SEM FOTO">
+												<img src="http://placehold.it/500x500?text=SEM FOTO">
 										{% else %}
 												<img src="{{recipeFiles[0].src}}" alt="{{recipe.title}}" onclick="Lightbox.open()">
 										{% endif %}
@@ -80,5 +80,5 @@
 {% endblock %}
 
 {% block scripts %}
-		<script src="/recipeScripts.js"></script>
+		<script src="/scripts/recipes.js"></script>
 {% endblock scripts %}

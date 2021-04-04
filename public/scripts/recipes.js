@@ -1,3 +1,16 @@
+const recipeCards = document.querySelectorAll('.card');
+
+function handleRecipeCards(element) {
+  for (let card of element) {
+    card.addEventListener('click', () => {
+      const recipeId = card.getAttribute('id');
+      window.location.href = `/recipes/${recipeId}`;
+    });
+  }
+}
+
+handleRecipeCards(recipeCards);
+
 const ImageGallery = {
   hightlight: document.querySelector('.gallery .highlight > img'),
   previews: document.querySelectorAll('.gallery-preview img'),

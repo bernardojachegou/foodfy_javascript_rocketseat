@@ -28,7 +28,7 @@ module.exports = {
       });
 
       const lastAdded = await Promise.all(recipesPromise);
-      return response.render('admin/recipes/index', { recipes: lastAdded });
+      return response.render('restricted/recipes/index', { recipes: lastAdded });
     } catch (error) {
       console.log(error);
     }
@@ -54,7 +54,7 @@ module.exports = {
           ''
         )}`,
       }));
-      return response.render('admin/recipes/read', { recipe, recipeFiles });
+      return response.render('restricted/recipes/read', { recipe, recipeFiles });
     } catch (error) {
       console.log(error);
     }
@@ -65,7 +65,7 @@ module.exports = {
       let results = await Recipe.chefsList();
       const chefsList = results.rows;
 
-      return response.render('admin/recipes/create', { chefsList });
+      return response.render('restricted/recipes/create', { chefsList });
     } catch (error) {
       console.log(error);
     }
@@ -92,7 +92,7 @@ module.exports = {
         )}`,
       }));
 
-      return response.render('admin/recipes/edit', {
+      return response.render('restricted/recipes/edit', {
         recipe,
         files,
         chefsList,
@@ -135,7 +135,7 @@ module.exports = {
 
       const recipeId = recipe.id;
 
-      return response.redirect(`receitas/${recipeId}`);
+      return response.redirect(`/admin/recipes/${recipeId}`);
     } catch (error) {
       console.log(error);
     }
@@ -187,7 +187,7 @@ module.exports = {
 
       await Recipe.update(request.body);
 
-      return response.redirect(`/admin/receitas/${request.body.id}`);
+      return response.redirect(`/admin/recipes/${request.body.id}`);
     } catch (error) {
       console.log(error);
     }
@@ -210,7 +210,7 @@ module.exports = {
         })
       );
 
-      return response.redirect('/admin/receitas');
+      return response.redirect('/admin/recipes');
     } catch (error) {
       console.log(error);
     }

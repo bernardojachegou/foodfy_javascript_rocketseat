@@ -1,0 +1,23 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+		{% include "parts/admin-navbar.njk" %}
+{% endblock %}
+
+{% block content %}
+		<div class="all">
+				<form method="POST" action="/admin/recipes" enctype="multipart/form-data">
+						<div class="recipe_options">
+								<h1>Criando receita</h1>
+								<button type="submit" class="crud_button">Salvar receita</button>
+						</div>
+
+						{% include 'restricted/recipes/fields.njk' %}
+
+				</form>
+		</div>
+{% endblock content %}
+
+{% block scripts %}
+		<script src="/scripts/recipes.js"></script>
+{% endblock scripts %}

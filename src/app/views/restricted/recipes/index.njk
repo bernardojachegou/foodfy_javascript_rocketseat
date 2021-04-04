@@ -11,7 +11,7 @@
 {% block content %}
 		<div class="recipe_options">
 				<h1>Gerenciar receitas</h1>
-				<a class="crud_button" href="/admin/receitas/criar">Nova receita</a>
+				<a class="crud_button" href="/admin/recipes/create">Nova receita</a>
 		</div>
 		<section class="admin-cards">
 
@@ -23,7 +23,7 @@
 								<div class="admin-card-info">
 										<h3>{{recipe.title}}</h3>
 										<p id="author_name">{{recipe.author}}</p>
-										<a href="/admin/receitas/{{recipe.id}}">Vizualizar</a>
+										<a href="/admin/recipes/{{recipe.id}}">Vizualizar</a>
 								</div>
 						</div>
 				{% endfor %}
