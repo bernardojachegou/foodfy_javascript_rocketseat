@@ -1,40 +1,36 @@
 {% extends "layout.njk" %}
 
-{% block header %}
-  <header class="menu">
-    <div class="links">
-      {% block navbar %}
-        {% include "parts/foodfy-navbar.njk"%}
-      {% endblock %}
-    </div>
-  </header>
-{% endblock %}
-
 {% block content %}
-  <section class="login container form">
-    <form method="POST" action="/users/login">
+  <section class="login">
+    <form method="POST" action="">
+
+      <div class="logo-box">
+        <a id="link_logo" href="/"><img id="logo" src="/assets/logo2.png" alt="logo"></a>
+      </div>
 
       <div class="header">
-        <h3>Iniciar Sessão</h3>
+        <h3>Iniciar sessão</h3>
       </div>
 
       <div class="item">
-        <div>Email</div>
+        <label for="email">Email</label>
         <div class="input">
           <input type="email" name="email" placeholder="Digite o seu email" value="{{user.email}}" onblur="Validate.apply(this, 'isEmail')">
         </div>
       </div>
 
       <div class="item">
-        <div>Senha</div>
+        <label for="password">Senha</label>
         <div class="input">
           <input type="password" name="password" placeholder="Digite sua senha">
         </div>
       </div>
 
-      <a class="button" href="#">Perdeu a senha?</a>
-      <button class="button" type="submit">Entrar</button>
+      <div class="button-box">
+        <a href="#">Perdeu a senha?</a>
+        <button class="button" type="submit">Acessar</button>
+      </div>
 
     </form>
   </section>
-{% endblock %}
+{% endblock content %}
