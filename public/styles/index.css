@@ -87,58 +87,7 @@ body {
   margin-right: 24px;
 }
 
-/* Configurações do menu-admin */
 
-.menu_admin {
-  background-color: black;
-  padding: 24px 0;
-}
-
-.links_admin {
-  width: 960px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.menu_admin .menu_items {
-  display: flex;
-  align-items: center;
-}
-
-.links_admin a {
-  text-decoration: none;
-  font-size: 15px;
-  margin: 0 15px;
-  padding: 4px;
-  border-radius: 6px;
-  transition: 300ms;
-  font-weight: bold;
-  color: #999999;
-}
-
-.links_admin a.active {
-  background-color: white;
-  color: black;
-}
-
-.links_admin a.active:first-child {
-  background-color: black;
-}
-
-.links_admin a:hover {
-  background-color: white;
-  color: black;
-}
-
-.links_admin a:last-child {
-  margin-right: 0;
-}
-
-.links_admin a:first-child:hover {
-  background-color: black;
-}
 
 /* Configurações das boas-vindas; */
 

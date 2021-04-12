@@ -56,45 +56,44 @@ function handleRecipeDetail(classSelected, element) {
   }
 }
 
-function handleNewIngredient() {
-  const ingredients = document.querySelector('#ingredients');
-  const ingredientContainer = document.querySelectorAll('.ingredient');
+const ingredients = document.querySelector('#ingredients');
+const ingredientContainer = document.querySelectorAll('.ingredient');
+const preparations = document.querySelector('#preparation');
+const preparationContainer = document.querySelectorAll('.preparation');
+
+function handleNewIngredientOrPreparation(element, container) {
   // Realiza um clone do último ingrediente adicionado
-  const newField = ingredientContainer[
-    ingredientContainer.length - 1
-  ].cloneNode(true);
+  const newField = container[container.length - 1].cloneNode(true);
 
   // Não adiciona um novo input se o último tem um valor vazio
-  if (newField.children[0].value == '') return false;
+  if (newField.children[0].value == '') {
+    console.log('Please, fill the container to add a new one!');
+    return false;
+  }
 
   // Deixa o valor do input vazio
   newField.children[0].value = '';
-  ingredients.appendChild(newField);
+  element.appendChild(newField);
 }
 
-document
-  .querySelector('.add-ingredient')
-  .addEventListener('click', handleNewIngredient);
+// function handleNewPreparation() {
 
-function handleNewPreparation() {
-  const preparations = document.querySelector('#preparation');
-  const preparationContainer = document.querySelectorAll('.preparation');
-  // Realiza um clone do último ingrediente adicionado
-  const newField = preparationContainer[
-    preparationContainer.length - 1
-  ].cloneNode(true);
+//   // Realiza um clone do último ingrediente adicionado
+//   const newField = preparationContainer[
+//     preparationContainer.length - 1
+//   ].cloneNode(true);
 
-  // Não adiciona um novo input se o último tem um valor vazio
-  if (newField.children[0].value == '') return false;
+//   // Não adiciona um novo input se o último tem um valor vazio
+//   if (newField.children[0].value == '') return false;
 
-  // Deixa o valor do input vazio
-  newField.children[0].value = '';
-  preparations.appendChild(newField);
-}
+//   // Deixa o valor do input vazio
+//   newField.children[0].value = '';
+//   preparations.appendChild(newField);
+// }
 
-document
-  .querySelector('.add-preparation')
-  .addEventListener('click', handleNewPreparation);
+// document
+//   .querySelector('.add-preparation')
+//   .addEventListener('click', handleNewPreparation);
 
 function handleDeleteConfirmation() {
   const confirmation = confirm('Tem certeza que deseja apagar?');

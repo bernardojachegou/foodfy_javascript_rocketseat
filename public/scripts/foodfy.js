@@ -1,10 +1,11 @@
-const currentPage = location.pathname;
-const menuItems = document.querySelectorAll(".menu_items a");
+const adminNavbarItems = document.querySelectorAll('.admin-navbar-items a');
 
-for (item of menuItems) {
-	if (currentPage.includes(item.getAttribute("href"))) {
-		item.classList.add("active");
-	}
+function handleHilightedNavbarItem(HtmlElement) {
+  for (item of HtmlElement) {
+    if (location.pathname.includes(item.getAttribute('href'))) {
+      item.classList.add('active');
+    }
+  }
 }
 
-
+handleHilightedNavbarItem(adminNavbarItems);

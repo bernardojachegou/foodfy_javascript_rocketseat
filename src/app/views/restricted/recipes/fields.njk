@@ -54,7 +54,7 @@
 				</div>
 		{% endfor %}
 </div>
-<button id="adding_button" type="button" class="add-ingredient">Adicionar novo ingrediente</button>
+<button id="adding_button" type="button" class="add-ingredient" onclick="handleNewIngredientOrPreparation(ingredients, ingredientContainer)">Adicionar novo ingrediente</button>
 
 <div id="preparation" class="item">
 		<h3>Modo de preparo</h3>
@@ -69,7 +69,7 @@
 		{% endfor %}
 
 </div>
-<button id="adding_button" type="button" class="add-preparation">Adicionar novo passo</button>
+<button id="adding_button" type="button" class="add-preparation" onclick="handleNewIngredientOrPreparation(preparations, preparationContainer)">Adicionar novo passo</button>
 
 <div class="item">
 		<h3>Informações adicionais</h3>
