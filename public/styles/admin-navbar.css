@@ -32,6 +32,7 @@ body {
   background-color: black;
   padding: 24px 0;
   display: flex;
+  position: relative;
 }
 
 .admin-navbar .admin-links {
@@ -65,5 +66,20 @@ body {
 }
 
 .admin-links a:hover {
+  color: white;
+}
+
+.admin-logout-button a {
+  position: absolute;
+  top: 24px;
+  right: 48px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #999999;
+  font-weight: bold;
+  transition: 300ms;
+}
+
+.admin-logout-button a:hover {
   color: white;
 }

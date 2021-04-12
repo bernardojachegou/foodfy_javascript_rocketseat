@@ -1,11 +1,40 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-  <title>Foodfy - Chefs</title>
+  <title>Foodfy - Perfil</title>
 {% endblock %}
 
 {% block header %}
   {% include "parts/admin-navbar.njk" %}
 {% endblock %}
 
-{% block content %}{% endblock %}
+{% block content %}
+  <div class="profile-header">
+    <h3>Bem vindo Michel</h3>
+    <a href="#">salvar</a>
+  </div>
+  <div class="profile-items">
+
+    <div class="item">
+      <label for="name">Nome</label>
+      <div class="input">
+        <input type="text" name="name" placeholder="Digite o seu nome" value="{{user.name}}">
+      </div>
+    </div>
+
+    <div class="item">
+      <label for="email">Email</label>
+      <div class="input">
+        <input type="email" name="email" placeholder="Digite seu email" value="{{user.email}}" onblur="Validate.apply(this, 'isEmail')">
+      </div>
+    </div>
+
+    <div class="item">
+      <label for="password">Senha</label>
+      <div class="input">
+        <input type="password" name="password" placeholder="Digite sua senha" value="{{user.password}}">
+      </div>
+    </div>
+
+  </div>
+{% endblock %}
