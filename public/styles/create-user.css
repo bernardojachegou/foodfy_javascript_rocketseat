@@ -1,0 +1,114 @@
+/* Configurações universais */
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Configurações do template (default); */
+
+.all {
+  min-height: 100%;
+  position: relative;
+}
+
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px 80px;
+}
+
+/* Apagar configurações acima!!! */
+
+.create-user-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 32px 0;
+}
+
+.create-user-header h3 {
+  font-size: 24px;
+}
+
+.create-user-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-user-header a:first-child {
+  margin-right: 16px;
+}
+
+.create-user-header .save-button {
+  text-decoration: none;
+  background-color: #7159c1;
+  padding: 9px 40px;
+  border-radius: 4px;
+  color: white;
+  transition: 300ms;
+}
+
+.create-user-header .save-button:hover {
+  background-color: rgb(64, 57, 119);
+}
+
+.create-user-header .cancel-button {
+  text-decoration: none;
+  background-color: #8a8a8a;
+  padding: 9px 32px;
+  border-radius: 4px;
+  color: white;
+  transition: 300ms;
+}
+
+.create-user-header .cancel-button:hover {
+  background-color: #616060;
+}
+
+.create-user-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+}
+
+.create-user-items .item {
+  margin-top: 24px;
+}
+
+.create-user-items .item label {
+  font-weight: bold;
+}
+
+.create-user-items .item input {
+  padding: 14px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  margin-top: 10px;
+  color: #111111;
+  box-sizing: border-box;
+  font-size: 16px;
+  width: 100%;
+}
+
+.create-user-items .item .input:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.create-user-items .item input#isAdmin {
+  width: 15px;
+  height: 15px;
+  margin-top: 0;
+  margin-right: 8px;
+}

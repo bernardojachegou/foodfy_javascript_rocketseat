@@ -30,7 +30,7 @@ body {
 
 .admin-navbar {
   background-color: black;
-  padding: 24px 0;
+  padding: 24px 16px;
   display: flex;
   position: relative;
 }

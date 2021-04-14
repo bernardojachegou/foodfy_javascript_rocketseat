@@ -1,0 +1,42 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>Foodfy - Criar usuário</title>
+{% endblock %}
+
+{% block header %}
+  {% include "parts/admin-navbar.njk" %}
+{% endblock %}
+
+{% block content %}
+  <div class="create-user-header">
+    <h3>Criar Usuário</h3>
+    <div class="create-user-buttons">
+      <a class="save-button" href="#">Salvar</a>
+      <a class="cancel-button" href="#">Cancelar</a>
+    </div>
+  </div>
+
+  <div class="create-user-items">
+    <div class="item">
+      <label for="name">Nome</label>
+      <div class="input">
+        <input type="text" name="name" placeholder="Digite o seu nome completo" value="{{user.name}}">
+      </div>
+    </div>
+
+    <div class="item">
+      <label for="email">Email</label>
+      <div class="input">
+        <input type="email" name="email" placeholder="Digite o email" value="{{user.email}}" onblur="Validate.apply(this, 'isEmail')">
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="input">
+        <input type="checkbox" id="isAdmin" nome="Administrador" value="isAdmin">
+        <label for="isAdmin">Administrador</label>
+      </div>
+    </div>
+  </div>
+{% endblock %}
