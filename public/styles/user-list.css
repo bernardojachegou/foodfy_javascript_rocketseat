@@ -1,0 +1,98 @@
+/* Configurações universais */
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Configurações do template (default); */
+
+.all {
+  min-height: 100%;
+  position: relative;
+}
+
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px 80px;
+}
+
+/* Apagar configurações acima!!! */
+
+.user-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 32px 0;
+}
+
+.user-list-header h3 {
+  font-size: 24px;
+}
+
+.user-list-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-list-header .new-button {
+  text-decoration: none;
+  background-color: #7159c1;
+  padding: 9px 48px;
+  border-radius: 4px;
+  color: white;
+  transition: 300ms;
+}
+
+.user-list-header .new-button:hover {
+  background-color: rgb(64, 57, 119);
+}
+
+.user-list-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 200px;
+  grid-row-gap: 32px;
+}
+
+.user-list-items .item {
+  margin-top: 24px;
+}
+
+.user-list-items .item h4 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+
+.user-list-items .item p {
+  font-size: 14px;
+  font-weight: normal;
+  color: #777777;
+  margin-bottom: 16px;
+}
+
+.user-list-items .item a:first-child {
+  color: #6558c3;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 16px;
+}
+
+.user-list-items .item a:last-child {
+  color: #f55a5a;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+}
