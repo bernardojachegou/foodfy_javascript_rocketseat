@@ -26,63 +26,6 @@ body {
   padding: 0 16px 80px;
 }
 
-/* Configurações do menu */
-
-.menu {
-  background-color: white;
-  padding: 24px 0;
-}
-
-.links {
-  width: 960px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.menu .menu_items {
-  display: flex;
-  align-items: center;
-}
-
-.links a {
-  text-decoration: none;
-  color: black;
-  font-size: 16px;
-  line-height: 19px;
-  margin: 0 15px;
-  padding: 4px;
-  border-radius: 6px;
-  transition: 300ms;
-}
-
-.links a.active {
-  background-color: black;
-  color: white;
-}
-
-.links a.active:first-child {
-  background-color: white;
-}
-
-.links a:hover {
-  background-color: black;
-  color: white;
-}
-
-.links a:last-child {
-  margin-right: 0;
-}
-
-.links a:first-child:hover {
-  background-color: white;
-}
-
-#link_logo {
-  margin: 0;
-}
-
 /* Configurações das boas-vindas; */
 
 .welcome_banner {
@@ -168,24 +111,6 @@ body {
   font-weight: 400;
   font-size: 14px;
   color: #777777;
-}
-
-/* Confifurações do footer */
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 60px;
-  background-color: #eeeeee;
-}
-
-.footer p {
-  font-size: 14px;
-  color: #999999;
 }
 
 /* Configurações da página Sobre */
@@ -579,31 +504,6 @@ form #adding_button:hover {
   color: #777777;
   text-align: center;
   margin-top: 4px;
-}
-
-/* Estilo do filtro */
-
-.menu .links form {
-  display: grid;
-  grid-template-columns: 240px 90px;
-  gap: 8px;
-}
-
-.menu .links form button {
-  border: 1px solid #6558c3;
-}
-
-.menu .links form input {
-  border: 1px solid #dddddd;
-  padding: 4px 8px;
-  border-radius: 8px;
-  box-sizing: border-box;
-}
-
-.menu .links form input,
-.menu .links form input::placeholder {
-  font-size: 14px;
-  color: #999999;
 }
 
 /* Estlização do input de imagens do chef */

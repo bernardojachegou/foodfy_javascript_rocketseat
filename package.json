@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npm-run-all -p nodemon browsersync",
     "nodemon": "nodemon src/server.js",
-    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public, src/app/views' "
+    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public, src/app/views' ",
+    "sass": "sass --watch public/styles/scss:public/styles/css"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.12",
     "nodemon": "^2.0.4",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.32.11"
   }
 }

@@ -1,11 +1,11 @@
-const adminNavbarItems = document.querySelectorAll('.admin-navbar-items a');
+const navbarItem = document.querySelectorAll('.header__items a');
 
 function handleHilightedNavbarItem(HtmlElement) {
   for (item of HtmlElement) {
     if (location.pathname.includes(item.getAttribute('href'))) {
-      item.classList.add('active');
+      item.classList.add('header__link--active');
     }
   }
 }
 
-handleHilightedNavbarItem(adminNavbarItems);
+handleHilightedNavbarItem(navbarItem);

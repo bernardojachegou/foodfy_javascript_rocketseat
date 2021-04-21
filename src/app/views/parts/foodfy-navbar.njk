@@ -1,11 +1,11 @@
-<div class="menu_items">
-  <div class="logo">
-    <a id="link_logo" href="/"><img id="logo" src="/assets/logo2.png" alt="logo"></a>
+<div class="header__items">
+  <div class="header__logo">
+    <a class="header__imageLink" href="/">
+      <img class="header__image" src="/assets/logo2.png" alt="foodfy logo">
+    </a>
   </div>
-  {% block links %}
-    <a href="/about">Sobre</a>
-    <a href="/recipes">Receitas</a>
-    <a href="/chefs">Chefs</a>
-    <a href="/login">Login</a>
-  {% endblock %}
+  <a class="header__link header__link--hover header__link--black" href="/about">Sobre</a>
+  <a class="header__link header__link--hover header__link--black" href="/recipes">Receitas</a>
+  <a class="header__link header__link--hover header__link--black" href="/chefs">Chefs</a>
+  <a class="header__link header__link--hover header__link--black" href="/login">Login</a>
 </div>

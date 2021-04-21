@@ -1,13 +1,13 @@
 {% extends "layout.njk" %}
 
 {% block header %}
-		<header class="menu">
-				<div class="links">
+		<header class="header header--white">
+				<div class="header__navbar">
 						{% block navbar %}
 								{% include "parts/foodfy-navbar.njk"%}
 						{% endblock %}
 						{% block filter %}
-								{% include "parts/filter.njk"%}
+								{% include "parts/filter.njk" %}
 						{% endblock %}
 				</div>
 		</header>
