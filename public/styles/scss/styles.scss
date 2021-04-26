@@ -7,6 +7,7 @@ $lightGray: #dddddd;
 $lighterGray: #eeeeee;
 $black: #111111;
 $lightBlack: #000000;
+$hero: #fbdfdb;
 
 // Header Component
 .header {
@@ -100,5 +101,51 @@ $lightBlack: #000000;
     &:hover {
       background-color: $primaryDark;
     }
+  }
+}
+
+// Home Page
+
+.hero {
+  display: flex;
+  // justify-content: space-between;
+  border-radius: 30px;
+  width: 100%;
+  height: 330px;
+  margin-bottom: 25px;
+  &--backgroundColor {
+    background-color: $hero;
+  }
+  &__description {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+  }
+  &__title {
+    font-weight: 700;
+    margin-bottom: 10px;
+    &--big {
+      font-size: 32px;
+    }
+  }
+  &__text {
+    max-width: 320px;
+    &--blackOpacity {
+      color: $lightBlack;
+      opacity: 0.7;
+    }
+    &--spacedBig {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  &__imageBox {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
   }
 }

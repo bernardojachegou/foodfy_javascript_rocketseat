@@ -14,18 +14,21 @@
 {% endblock %}
 
 {% block content %}
-		<div class="welcome_banner">
-				<div class="description">
-						<h1>As melhores receitas</h1>
-						<p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+
+		<section class="hero hero--backgroundColor">
+				<div class="hero__description">
+						<h1 class="hero__title hero__title--big">As melhores receitas</h1>
+						<p class="hero__text hero__text--blackOpacity hero__text--spacedBig">Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
 				</div>
-				<div class="image">
-						<img src="./assets/chef.png" alt="Chef">
+				<div class="hero__imageBox">
+						<img class="hero__image" src="./assets/chef.png" alt="Chef">
 				</div>
-		</div>
-		<div id="wrapper">
+		</section>
+
+		<div class="wrapper">
 				<h2>Mais acessadas</h2>
 		</div>
+
 		<section class="cards">
 				{% for recipe in recipes %}
 						{% if loop.index0 < 6 %}
