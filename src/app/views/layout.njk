@@ -14,14 +14,17 @@
 				<link rel="stylesheet" href="/styles/login.css">
 				<link rel="stylesheet" href="/styles/user-list.css">
 				<link rel="stylesheet" href="/styles/index.css">
-				<link rel="stylesheet" href="/styles/css/styles.css">
+				{# New css styles #}
+				<link rel="stylesheet" href="/styles/css/index.css">
+				<link rel="stylesheet" href="/styles/css/parts.css">
+				<link rel="stylesheet" href="/styles/css/pages/home.css">
 				{% block head %}
 						<title>Foodfy - Vamos cozinhar!</title>
 				{% endblock %}
 		</head>
 
 		<body>
-				<div class="all">
+				<div class="content">
 						{% block header %}{% endblock %}
 						<div class="main">
 								{% block content %}{% endblock %}

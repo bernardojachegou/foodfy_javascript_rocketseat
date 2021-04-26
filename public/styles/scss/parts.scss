@@ -1,0 +1,133 @@
+@import 'variables.scss';
+
+// foodfy-navbar
+.header {
+  padding: 24px 0;
+  &--color {
+    background-color: $black;
+  }
+  &__navbar {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    margin-right: 120px;
+  }
+  &__imageLink {
+    margin: 0;
+  }
+  &__link {
+    margin: 0 15px;
+    transition: 300ms;
+    &--font {
+      line-height: 18px;
+      text-decoration: none;
+    }
+    &--color {
+      color: $black;
+    }
+    &--active {
+      font-weight: bold;
+    }
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
+
+// footer
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  &--color {
+    background-color: $lighterGray;
+  }
+  &__item {
+    &--font {
+      font-size: 14px;
+    }
+    &--color {
+      color: $gray;
+    }
+  }
+}
+
+// filter
+.filter {
+  display: flex;
+  align-items: center;
+  &__item {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid $lightGray;
+    border-radius: 4px;
+    margin-right: 8px;
+    &--font {
+      font-size: 14px;
+    }
+    &::placeholder {
+      color: $gray;
+    }
+  }
+  &__button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: 200ms;
+    &--font {
+      font-weight: bold;
+      font-size: 16px;
+    }
+    &--color {
+      background-color: $purple;
+      color: $neutral;
+    }
+    &:hover {
+      background-color: $darkPuple;
+    }
+  }
+}
+
+// foodfy-recipes
+.cardSection {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  &__image {
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+    cursor: pointer;
+    object-fit: cover;
+  }
+  &__info {
+    margin: 16px 0 20px 0;
+  }
+  &__title {
+    &--font {
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
+  &__author {
+    &--font {
+      font-weight: 400;
+      font-size: 14px;
+    }
+    &--color {
+      color: $darkGray;
+    }
+  }
+}

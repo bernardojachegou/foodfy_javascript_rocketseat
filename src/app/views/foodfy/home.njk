@@ -1,7 +1,7 @@
 {% extends "layout.njk" %}
 
 {% block header %}
-		<header class="header header--white">
+		<header class="header">
 				<div class="header__navbar">
 						{% block navbar %}
 								{% include "parts/foodfy-navbar.njk"%}
@@ -15,27 +15,28 @@
 
 {% block content %}
 
-		<section class="hero hero--backgroundColor">
+		<section class="hero hero--color">
 				<div class="hero__description">
-						<h1 class="hero__title hero__title--big">As melhores receitas</h1>
-						<p class="hero__text hero__text--blackOpacity hero__text--spacedBig">Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+						<h1 class="hero__title hero__title--font">As melhores receitas</h1>
+						<p class="hero__text hero__text--color hero__text--font">Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
 				</div>
 				<div class="hero__imageBox">
 						<img class="hero__image" src="./assets/chef.png" alt="Chef">
 				</div>
 		</section>
 
-		<div class="wrapper">
-				<h2>Mais acessadas</h2>
+		<div class="homeCardsSectionBox">
+				<h2 class="homeCardsSectionBox">Mais acessadas</h2>
 		</div>
 
-		<section class="cards">
+		<section class="cardSection">
 				{% for recipe in recipes %}
 						{% if loop.index0 < 6 %}
 								{% include "parts/foodfy-recipes.njk" %}
 						{% endif %}
 				{% endfor %}
 		</section>
+
 {% endblock %}
 
 {% block scripts %}
