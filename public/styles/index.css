@@ -1,17 +1,5 @@
 /* Configurações da página Sobre */
 
-.foodfy_about h1 {
-  font-size: 24px;
-  color: #111111;
-  font-weight: 700;
-}
-
-.foodfy_about h2 {
-  font-weight: 700;
-  font-size: 20px;
-  color: #111111;
-}
-
 .foodfy_about .text {
   font-size: 18px;
   color: #444444;
