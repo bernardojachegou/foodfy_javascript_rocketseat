@@ -4,7 +4,7 @@
 		<header class="header">
 				<div class="header__navbar">
 						{% block navbar %}
-								{% include "parts/foodfy-navbar.njk"%}
+								{% include "parts/navbar.njk"%}
 						{% endblock %}
 						{% block filter %}
 								{% include "parts/filter.njk" %}
@@ -32,7 +32,7 @@
 		<section class="cardSection">
 				{% for recipe in recipes %}
 						{% if loop.index0 < 6 %}
-								{% include "parts/foodfy-recipes.njk" %}
+								{% include "parts/recipes-section.njk" %}
 						{% endif %}
 				{% endfor %}
 		</section>

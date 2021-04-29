@@ -3,12 +3,12 @@
     <img class="cardSection__image" src="{{recipe.image}}" alt="{{recipe.title}}">
   </div>
   <div class="cardSection__info">
-    <h3 class="cardSection__title cardSection__title--font">{{recipe.title}}</h3>
+    <h3 class="cardSection__recipeTitle cardSection__recipeTitle--font">{{recipe.title}}</h3>
     {% if recipe.chef_name %}
-      <p class="cardSection__author cardSection__author--font cardSection__author--color">Por
+      <p class="cardSection__authorName cardSection__authorName--font cardSection__authorName--color">Por
         {{recipe.chef_name}}</p>
     {% else %}
-      <p class="cardSection__author">Por
+      <p class="cardSection__authorName">Por
         {{chef.name}}</p>
     {% endif %}
   </div>

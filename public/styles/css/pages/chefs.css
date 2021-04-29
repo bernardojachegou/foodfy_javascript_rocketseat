@@ -1,0 +1,45 @@
+.chefSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 26px;
+}
+.chefSection__item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.chefSection__imageBox {
+  padding-right: 16px;
+}
+.chefSection__image {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  object-fit: cover;
+}
+.chefSection__image--shadow {
+  box-shadow: 3px 1px 6px -4px black;
+}
+.chefSection__authorName {
+  margin-bottom: 5px;
+}
+.chefSection__authorName--font {
+  font-size: 18px;
+  font-weight: normal;
+}
+.chefSection__authorName--color {
+  color: #111111;
+}
+.chefSection__totalRecipes--font {
+  font-size: 14px;
+  font-weight: normal;
+}
+.chefSection__totalRecipes--color {
+  color: #777777;
+}
+
+/*# sourceMappingURL=chefs.css.map */

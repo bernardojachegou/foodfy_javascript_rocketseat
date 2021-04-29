@@ -1,28 +1,28 @@
 .about__title {
-  font-weight: bold;
   margin: 26px 0 20px 0;
 }
-.about__title--size {
+.about__title--font {
   font-size: 24px;
+  font-weight: bold;
 }
 .about__title--color {
   color: #111111;
 }
 .about__subtitle {
-  font-weight: bold;
   margin: 30px 0 20px 0;
 }
-.about__subtitle--size {
+.about__subtitle--font {
   font-size: 20px;
+  font-weight: bold;
 }
 .about__subtitle--color {
   color: #111111;
 }
 .about__description {
-  line-height: 28px;
   margin-bottom: 30px;
 }
-.about__description--size {
+.about__description--font {
+  line-height: 28px;
   font-size: 18px;
 }
 .about__description--color {

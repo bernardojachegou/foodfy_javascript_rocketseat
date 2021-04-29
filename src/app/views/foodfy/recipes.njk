@@ -1,10 +1,14 @@
 {% extends "layout.njk" %}
 
+{% block head %}
+		<title>Foodfy - Receitas</title>
+{% endblock %}
+
 {% block header %}
 		<header class="header header--white">
 				<div class="header__navbar">
 						{% block navbar %}
-								{% include "parts/foodfy-navbar.njk"%}
+								{% include "parts/navbar.njk"%}
 						{% endblock %}
 						{% block filter %}
 								{% include "parts/filter.njk" %}
@@ -13,14 +17,10 @@
 		</header>
 {% endblock %}
 
-{% block head %}
-		<title>Foodfy - Receitas</title>
-{% endblock %}
-
 {% block content %}
 		<section class="cardSection">
 				{% for recipe in recipes %}
-						{% include "parts/foodfy-recipes.njk" %}
+						{% include "parts/recipes-section.njk" %}
 				{% endfor %}
 		</section>
 {% endblock %}

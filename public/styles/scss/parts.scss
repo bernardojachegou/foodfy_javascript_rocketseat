@@ -1,6 +1,6 @@
 @import 'variables.scss';
 
-// foodfy-navbar
+// navbar
 .header {
   padding: 24px 0;
   &--color {
@@ -99,7 +99,7 @@
   }
 }
 
-// foodfy-recipes
+// recipes-section
 .cardSection {
   width: 100%;
   display: grid;
@@ -115,13 +115,14 @@
   &__info {
     margin: 16px 0 20px 0;
   }
-  &__title {
+  &__recipeTitle {
+    margin-bottom: 5px;
     &--font {
       font-weight: 400;
       font-size: 18px;
     }
   }
-  &__author {
+  &__authorName {
     &--font {
       font-weight: 400;
       font-size: 14px;

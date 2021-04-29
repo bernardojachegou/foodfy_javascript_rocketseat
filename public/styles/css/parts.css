@@ -108,15 +108,18 @@
 .cardSection__info {
   margin: 16px 0 20px 0;
 }
-.cardSection__title--font {
+.cardSection__recipeTitle {
+  margin-bottom: 5px;
+}
+.cardSection__recipeTitle--font {
   font-weight: 400;
   font-size: 18px;
 }
-.cardSection__author--font {
+.cardSection__authorName--font {
   font-weight: 400;
   font-size: 14px;
 }
-.cardSection__author--color {
+.cardSection__authorName--color {
   color: #777777;
 }
 

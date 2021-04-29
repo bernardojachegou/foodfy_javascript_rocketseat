@@ -1,0 +1,47 @@
+@import '../variables.scss';
+
+.chefSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 26px;
+  &__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__imageBox {
+    padding-right: 16px;
+  }
+  &__image {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    object-fit: cover;
+    &--shadow {
+      box-shadow: 3px 1px 6px -4px black;
+    }
+  }
+  &__authorName {
+    margin-bottom: 5px;
+    &--font {
+      font-size: 18px;
+      font-weight: normal;
+    }
+    &--color {
+      color: $black;
+    }
+  }
+  &__totalRecipes {
+    &--font {
+      font-size: 14px;
+      font-weight: normal;
+    }
+    &--color {
+      color: $darkGray;
+    }
+  }
+}
