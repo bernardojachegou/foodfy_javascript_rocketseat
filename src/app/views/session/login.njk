@@ -1,34 +1,36 @@
 {% extends "layout.njk" %}
 
 {% block content %}
-  <section class="login">
-    <form method="POST" action="">
+  <section class="session">
+    <form class="session__form" method="POST" action="">
 
-      <div class="logo-box">
-        <a id="link_logo" href="/"><img id="logo" src="/assets/logo2.png" alt="logo"></a>
+      <div class="session__imageBox">
+        <a class="session__link" href="/">
+          <img class="session__image" src="/assets/logo2.png" alt="logo">
+        </a>
       </div>
 
-      <div class="header">
-        <h3>Iniciar sessão</h3>
+      <div class="session__header">
+        <h3 class="session__title session__title--font">Iniciar sessão</h3>
       </div>
 
-      <div class="item">
-        <label for="email">Email</label>
-        <div class="input">
-          <input type="email" name="email" placeholder="Digite seu email" value="{{user.email}}" onblur="Validate.apply(this, 'isEmail')">
+      <div class="session__item">
+        <label class="session__label" for="email">Email</label>
+        <div class="session__inputBox">
+          <input class="session__input session__input--color session__input--font" type="email" name="email" placeholder="Digite seu email" value="{{user.email}}" onblur="Validate.apply(this, 'isEmail')">
         </div>
       </div>
 
-      <div class="item">
-        <label for="password">Senha</label>
-        <div class="input">
-          <input type="password" name="password" placeholder="Digite sua senha">
+      <div class="session__item">
+        <label class="session__label" for="password">Senha</label>
+        <div class="session__inputBox">
+          <input class="session__input session__input--color session__input--font" type="password" name="password" placeholder="Digite sua senha">
         </div>
       </div>
 
-      <div class="button-box">
-        <a href="#">Perdeu a senha?</a>
-        <button class="button" type="submit">Acessar</button>
+      <div class="session__buttonBox">
+        <a class="session__recoveryLink session__recoveryLink--font session__recoveryLink--color" href="/password-reset">Perdeu a senha?</a>
+        <button class="session__button session__button--color session__button--font" type="submit">Acessar</button>
       </div>
 
     </form>

@@ -1,0 +1,89 @@
+@import '../variables.scss';
+
+.session {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__form {
+    width: 52%;
+  }
+  &__imageBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+  }
+  &__image {
+    padding: 36px 36px 0;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 36px;
+  }
+  &__title {
+    &--font {
+      font-size: 24px;
+    }
+  }
+  &__label {
+    font-weight: bold;
+  }
+  &__inputBox {
+    margin: 10px 0 35px 0;
+  }
+  &__input {
+    padding: 14px;
+    width: 100%;
+    border: 1px solid $lightGray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    &--color {
+      color: $darkGray;
+    }
+    &--font {
+      font-size: 16px;
+    }
+  }
+  &__buttonBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 36px;
+    &--position {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+  &__recoveryLink {
+    &--font {
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    &--color {
+      color: $gray;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__button {
+    border-radius: 4px;
+    padding: 8px 36px;
+    transition: 300ms;
+    cursor: pointer;
+    &--font {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &--color {
+      background-color: $purple;
+      color: $neutral;
+    }
+    &:hover {
+      background-color: $darkPuple;
+    }
+  }
+}
