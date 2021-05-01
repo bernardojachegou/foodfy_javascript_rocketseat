@@ -145,4 +145,142 @@
   color: #777777;
 }
 
+.recipe {
+  margin-bottom: 24px;
+}
+.recipe__header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.recipe__gallery {
+  width: 100%;
+  margin-top: 26px;
+}
+.recipe__image {
+  object-fit: cover;
+  width: 100%;
+  height: 280px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  cursor: zoom-in;
+}
+.recipe__lightboxTarget {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  z-index: 100;
+  left: 0;
+  top: -100%;
+  opacity: 0;
+  transition: opacity 400ms;
+}
+.recipe__lightboxImage {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  border-radius: 16px;
+}
+.recipe__lightboxClose {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  position: absolute;
+  top: -80px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 400ms;
+  border-radius: 8px;
+}
+.recipe__preview {
+  display: flex;
+  justify-content: flex-end;
+  grid-gap: 5px;
+}
+.recipe__previewImage {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 200ms;
+}
+.recipe__previewImage--active {
+  opacity: 1;
+}
+.recipe__previewImage:hover {
+  opacity: 1;
+}
+.recipe__title--font {
+  font-size: 36px;
+}
+.recipe__title--color {
+  color: #111111;
+}
+.recipe__chefName--font {
+  font-size: 20px;
+  line-height: 30px;
+}
+.recipe__chefName--color {
+  color: #777777;
+}
+.recipe__section {
+  margin-bottom: 24px;
+}
+.recipe__sectionBox {
+  display: flex;
+  align-items: baseline;
+}
+.recipe__sectionTitle {
+  margin-bottom: 16px;
+}
+.recipe__sectionTitle--font {
+  font-size: 24px;
+}
+.recipe__sectionTitle--color {
+  color: #111111;
+}
+.recipe__toggleButton {
+  padding-left: 12px;
+  transition: 300ms;
+  cursor: pointer;
+}
+.recipe__toggleButton--font {
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.recipe__toggleButton--color {
+  color: #999999;
+}
+.recipe__toggleButton:hover {
+  color: #111111;
+}
+.recipe__boxList--font {
+  font-size: 18px;
+  line-height: 28px;
+}
+.recipe__boxList--color {
+  color: #444444;
+}
+.recipe__boxList--hide {
+  display: none;
+}
+.recipe__list {
+  margin-left: 20px;
+}
+
 /*# sourceMappingURL=parts.css.map */

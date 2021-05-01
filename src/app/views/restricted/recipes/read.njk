@@ -29,7 +29,12 @@
 								</div>
 								<div class="gallery-preview">
 										{% for photo in recipeFiles %}
-												<img src="{{photo.src}}" alt="{{photo.name}}" %{% if loop.index0 == 0 %} class="active" {% endif %} onclick="ImageGallery.setImage(event)">
+												<img
+													src="{{photo.src}}" 
+													alt="{{photo.name}}" 
+													%{% if loop.index0 == 0 %} class="active" {% endif %} 
+													onclick="ImageGallery.setImage(event)"
+												>
 										{% endfor %}
 								</div>
 						</div>

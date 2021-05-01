@@ -12,16 +12,16 @@ function handleRecipeCards(element) {
 handleRecipeCards(recipeCards);
 
 const ImageGallery = {
-  hightlight: document.querySelector('.gallery .highlight > img'),
-  previews: document.querySelectorAll('.gallery-preview img'),
+  hightlight: document.querySelector('.recipe__image'),
+  previews: document.querySelectorAll('.recipe__previewImage'),
   setImage(event) {
     const { target } = event;
 
     ImageGallery.previews.forEach((preview) =>
-      preview.classList.remove('active')
+      preview.classList.remove('recipe__previewImage--active')
     );
 
-    target.classList.add('active');
+    target.classList.add('recipe__previewImage--active');
 
     ImageGallery.hightlight.src = target.src;
     Lightbox.image.src = target.src;
@@ -29,9 +29,9 @@ const ImageGallery = {
 };
 
 const Lightbox = {
-  target: document.querySelector('.lightbox-target'),
-  image: document.querySelector('.lightbox-target img'),
-  closeButton: document.querySelector('.lightbox-target a.lightbox-close'),
+  target: document.querySelector('.recipe__lightboxTarget'),
+  image: document.querySelector('.recipe__lightboxImage'),
+  closeButton: document.querySelector('.recipe__lightboxClose'),
   open() {
     Lightbox.target.style.opacity = 1;
     Lightbox.target.style.top = 0;
@@ -47,7 +47,7 @@ const Lightbox = {
 };
 
 function handleRecipeDetail(classSelected, element) {
-  document.querySelector(classSelected).classList.toggle('hide');
+  document.querySelector(classSelected).classList.toggle('recipe__boxList--hide');
 
   if (element.textContent == 'ESCONDER') {
     element.innerHTML = 'MOSTRAR';

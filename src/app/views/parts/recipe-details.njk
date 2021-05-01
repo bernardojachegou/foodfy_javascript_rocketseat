@@ -1,0 +1,80 @@
+<div class="recipe__header">
+  <div class="recipe__gallery">
+    <div class="recipe__highlight">
+      {% if not recipeFiles[0] %}
+        <img class="recipe__image" src="http://placehold.it/500x500?text=PRODUTO SEM FOTO">
+      {% else %}
+        <img class="recipe__image" src="{{recipeFiles[0].src}}" alt="{{recipe.title}}" onclick="Lightbox.open()">
+      {% endif %}
+
+      <div class="recipe__lightboxTarget">
+        <img class="recipe__lightboxImage" src="{{recipeFiles[0].src}}" alt="{{recipe.title}}">
+        <a class="recipe__lightboxClose" href="#" onclick="Lightbox.close()">
+          <i class="material-icons">close</i>
+        </a>
+      </div>
+    </div>
+
+    <div class="recipe__preview">
+      {% for photo in recipeFiles %}
+        <img 
+          class="recipe__previewImage" 
+          src="{{photo.src}}" 
+          alt="{{photo.name}}" 
+          {% if loop.index0 == 0 %} class="recipe__previewImage--active" {% endif %} 
+          onclick="ImageGallery.setImage(event)"
+        >
+      {% endfor %}
+    </div>
+  </div>
+
+  <h1 class="recipe__title recipe__title--font recipe__title--color">{{recipe.title}}</h1>
+  <p class="recipe__chefName recipe__chefName--font recipe__chefName--color">{{recipe.chef_name}}</p>
+</div>
+
+<div class="recipe__section">
+
+  <div class="recipe__sectionBox">
+    <h2 class="recipe__sectionTitle recipe__sectionTitle--font recipe__sectionTitle--color">Ingredientes</h2>
+    <a class="recipe__toggleButton recipe__toggleButton--font recipe__toggleButton--color" onclick="handleRecipeDetail('.recipe__ingredientsBoxList', this)">MOSTRAR</a>
+  </div>
+
+  <div class="recipe__boxList recipe__boxList--font recipe__boxList--color recipe__boxList--hide recipe__ingredientsBoxList">
+    <ul class="recipe__list">
+      {% for ingredient in recipe.ingredients %}
+        <li class="recipe__listItem">{{ingredient}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</div>
+
+<div class="recipe__section">
+
+  <div class="recipe__sectionBox">
+    <h2 class="recipe__sectionTitle recipe__sectionTitle recipe__sectionTitle--font recipe__sectionTitle--color">Modo de preparo</h2>
+    <a class="recipe__toggleButton recipe__toggleButton--font recipe__toggleButton--color" onclick="handleRecipeDetail('.recipe__preparationBoxList', this)">MOSTRAR</a>
+  </div>
+
+  <div class="recipe__boxList recipe__boxList--font recipe__boxList--color recipe__boxList--hide recipe__preparationBoxList ">
+    <ul class="recipe__list">
+      {% for instruction in recipe.preparation %}
+        <li class="recipe__listItem">{{instruction}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</div>
+
+<div class="recipe__section">
+
+  <div class="recipe__sectionBox">
+    <h2 class="recipe__sectionTitle recipe__sectionTitle recipe__sectionTitle--font recipe__sectionTitle--color">Informações adicionais</h2>
+    <a class="recipe__toggleButton recipe__toggleButton--font recipe__toggleButton--color" onclick="handleRecipeDetail('.recipe__information', this)">MOSTRAR</a>
+  </div>
+
+  <div class="recipe__boxList recipe__boxList--font recipe__boxList--color recipe__boxList--hide recipe__information">
+    <p class="recipe__informationItem">{{recipe.information}}</p>
+  </div>
+
+</div>
