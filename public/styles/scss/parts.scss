@@ -3,7 +3,7 @@
 // navbar
 .header {
   padding: 24px 0;
-  &--color {
+  &--adminColor {
     background-color: $black;
   }
   &__navbar {
@@ -30,11 +30,33 @@
       line-height: 18px;
       text-decoration: none;
     }
+    &--adminFont {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: bold;
+    }
     &--color {
       color: $black;
     }
+    &--adminColor {
+      color: $gray;
+    }
     &--active {
       font-weight: bold;
+    }
+    &--adminActive {
+      color: $neutral;
+    }
+    &--logout {
+      position: absolute;
+      top: 24px;
+      right: 48px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #999999;
+      font-weight: bold;
+      transition: 300ms;
     }
     &:hover {
       font-weight: bold;

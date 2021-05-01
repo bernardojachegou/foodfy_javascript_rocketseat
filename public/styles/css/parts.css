@@ -1,7 +1,7 @@
 .header {
   padding: 24px 0;
 }
-.header--color {
+.header--adminColor {
   background-color: #111111;
 }
 .header__navbar {
@@ -29,11 +29,33 @@
   line-height: 18px;
   text-decoration: none;
 }
+.header__link--adminFont {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+}
 .header__link--color {
   color: #111111;
 }
+.header__link--adminColor {
+  color: #999999;
+}
 .header__link--active {
   font-weight: bold;
+}
+.header__link--adminActive {
+  color: #ffffff;
+}
+.header__link--logout {
+  position: absolute;
+  top: 24px;
+  right: 48px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #999999;
+  font-weight: bold;
+  transition: 300ms;
 }
 .header__link:hover {
   font-weight: bold;

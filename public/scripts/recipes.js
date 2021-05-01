@@ -1,4 +1,4 @@
-const recipeCards = document.querySelectorAll('.card');
+const recipeCards = document.querySelectorAll('.cardSection__item');
 
 function handleRecipeCards(element) {
   for (let card of element) {
