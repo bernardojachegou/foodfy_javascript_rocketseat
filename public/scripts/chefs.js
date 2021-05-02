@@ -1,10 +1,10 @@
-const chefCards = document.querySelectorAll('.chef-card');
+const chefCards = document.querySelectorAll('.chefSection__item');
 
 function handleChefCards(element) {
   for (let card of element) {
-    card.addEventListener("click", () => {
-      const chefId = card.getAttribute("id");
-      window.location.href = `/chefs/${chefId}`
+    card.addEventListener('click', () => {
+      const chefId = card.getAttribute('id');
+      window.location.href = `/chefs/${chefId}`;
     });
   }
 }
@@ -12,7 +12,7 @@ function handleChefCards(element) {
 handleChefCards(chefCards);
 
 const AvatarUpload = {
-  input: "",
+  input: '',
   preview: document.querySelector('#avatar-preview'),
   uploadLimit: 1,
   files: [],
@@ -22,8 +22,7 @@ const AvatarUpload = {
 
     if (AvatarUpload.hasLimit(event)) return;
 
-    Array.from(fileList).forEach(file => {
-
+    Array.from(fileList).forEach((file) => {
       AvatarUpload.files.push(file);
 
       const reader = new FileReader();
@@ -34,18 +33,18 @@ const AvatarUpload = {
 
         const div = AvatarUpload.createContainer(image);
         AvatarUpload.preview.appendChild(div);
-
-      }
+      };
 
       reader.readAsDataURL(file);
-    })
+    });
 
     AvatarUpload.input.files = AvatarUpload.getAllFiles();
   },
   getAllFiles() {
-    const dataTransfer = new ClipboardEvent("").clipboardData || new DataTransfer();
+    const dataTransfer =
+      new ClipboardEvent('').clipboardData || new DataTransfer();
 
-    AvatarUpload.files.forEach(file => dataTransfer.items.add(file));
+    AvatarUpload.files.forEach((file) => dataTransfer.items.add(file));
 
     return dataTransfer.files;
   },
@@ -70,14 +69,14 @@ const AvatarUpload = {
     }
 
     const photosDiv = [];
-    preview.childNodes.forEach(item => {
-      if (item.classList && item.classList.value == "avatar")
+    preview.childNodes.forEach((item) => {
+      if (item.classList && item.classList.value == 'avatar')
         photosDiv.push(item);
-    })
+    });
 
     const totalPhotos = fileList.length + photosDiv.length;
     if (totalPhotos > uploadLimit) {
-      alert("Você atingiu o limite máximo de fotos")
+      alert('Você atingiu o limite máximo de fotos');
       event.preventDefault();
       return true;
     }
@@ -87,7 +86,7 @@ const AvatarUpload = {
   getRemoveButton() {
     const button = document.createElement('i');
     button.classList.add('material-icons');
-    button.innerHTML = "close";
+    button.innerHTML = 'close';
     return button;
   },
   removePhoto(event) {
@@ -99,5 +98,5 @@ const AvatarUpload = {
     AvatarUpload.input.files = AvatarUpload.getAllFiles();
 
     photoDiv.remove();
-  }
-}
+  },
+};

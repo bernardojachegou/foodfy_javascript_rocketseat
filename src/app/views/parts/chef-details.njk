@@ -1,0 +1,10 @@
+<div class="chef__boxImage">
+  {% if not files[0] %}
+    <img class="chef__image" src="http://placehold.it/500x500?text=Chef sem foto" alt="Chef">
+  {% else %}
+    <img class="chef__image" src="{{files[0].src}}" alt="{{files[0].name}}">
+  {% endif %}
+  <h1 class="chef__name chef__name--font chef__name--color">{{chef.name}}</h1>
+  <p class="chef__totalRecipes chef__totalRecipes--font chef__totalRecipes--color">{{chef.total_recipes}}
+    receitas</p>
+</div>

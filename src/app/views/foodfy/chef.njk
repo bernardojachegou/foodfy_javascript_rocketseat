@@ -4,7 +4,7 @@
 		<header class="header header--white">
 				<div class="header__navbar">
 						{% block navbar %}
-								{% include "parts/foodfy-navbar.njk"%}
+								{% include "parts/navbar.njk"%}
 						{% endblock %}
 						{% block filter %}
 								{% include "parts/filter.njk" %}
@@ -14,24 +14,17 @@
 {% endblock %}
 
 {% block content %}
-		<div class="recipe_details">
-				<div class="chef-box-img">
-						{% if not files[0] %}
-								<img src="http://placehold.it/500x500?text=Chef sem foto" alt="Chef">
-						{% else %}
-								<img src="{{files[0].src}}" alt="{{files[0].name}}">
-						{% endif %}
-						<h1>{{chef.name}}</h1>
-						<p>{{chef.total_recipes}}
-								receitas</p>
+		<div class="chef">
+
+				{% include "parts/chef-details.njk" %}
+
+				<div class="chef__sectionBox">
+						<h1 class="chef__sectionTitle chef__sectionTitle--font chef__sectionTitle--color">Receitas</h1>
 				</div>
 
-				<div class="recipe_options">
-						<h1>Receitas</h1>
-				</div>
-				<div class="cards">
+				<div class="cardSection">
 						{% for recipe in chefRecipes %}
-								{% include "parts/foodfy-recipes.njk" %}
+								{% include "parts/recipes-section.njk" %}
 						{% endfor %}
 				</div>
 

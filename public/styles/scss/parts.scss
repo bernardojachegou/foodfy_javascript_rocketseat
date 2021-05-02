@@ -299,3 +299,50 @@
     margin-left: 20px;
   }
 }
+
+// chef-details
+.chef {
+  &__boxImage {
+    text-align: center;
+    margin: 26px 0 50px;
+  }
+  &__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 0 30px;
+  }
+  &__name {
+    &--font {
+      font-size: 36px;
+    }
+    &--color {
+      color: $black;
+    }
+  }
+  &__totalRecipes {
+    &--font {
+      font-size: 20px;
+    }
+    &--color {
+      color: $darkGray;
+    }
+    text-align: center;
+    margin-top: 4px;
+  }
+  &__sectionBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__sectionTitle {
+    &--font {
+      font-size: 24px;
+    }
+    &--color {
+      color: $black;
+    }
+  }
+}

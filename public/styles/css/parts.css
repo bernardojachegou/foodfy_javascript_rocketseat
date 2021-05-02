@@ -283,4 +283,44 @@
   margin-left: 20px;
 }
 
+.chef__boxImage {
+  text-align: center;
+  margin: 26px 0 50px;
+}
+.chef__image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 0 30px;
+}
+.chef__name--font {
+  font-size: 36px;
+}
+.chef__name--color {
+  color: #111111;
+}
+.chef__totalRecipes {
+  text-align: center;
+  margin-top: 4px;
+}
+.chef__totalRecipes--font {
+  font-size: 20px;
+}
+.chef__totalRecipes--color {
+  color: #777777;
+}
+.chef__sectionBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.chef__sectionTitle--font {
+  font-size: 24px;
+}
+.chef__sectionTitle--color {
+  color: #111111;
+}
+
 /*# sourceMappingURL=parts.css.map */
