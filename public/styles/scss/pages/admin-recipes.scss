@@ -1,0 +1,89 @@
+@import '../variables.scss';
+
+// title and button
+.admin {
+  &__sectionBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0 30px;
+  }
+  &__sectionTitle {
+    &--color {
+      color: $black;
+    }
+    &--font {
+      font-size: 24px;
+    }
+  }
+  &__sectionButton {
+    padding: 9px 20px;
+    border-radius: 4px;
+    transition: 300ms;
+    cursor: pointer;
+    &--color {
+      background-color: $purple;
+      color: $neutral;
+    }
+    &--font {
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    &:hover {
+      background-color: $darkPurple;
+    }
+  }
+}
+
+// recipe cards
+.cardSection-admin {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  &__item {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 20px;
+  }
+  &__image {
+    height: 80px;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  &__recipeTitle {
+    &--font {
+      font-weight: 400;
+      font-size: 18px;
+    }
+    &--color {
+      color: $black;
+    }
+  }
+  &__authorName {
+    &--font {
+      font-weight: 400;
+      font-size: 14px;
+    }
+    &--color {
+      color: $darkGray;
+    }
+    margin: 5px 0 10px;
+  }
+  &__link {
+    transition: 200ms;
+    border-radius: 4px;
+    &--font {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    &--color {
+      color: $purple;
+    }
+    &:hover {
+      text-shadow: 0 0 1px $darkPurple;
+    }
+  }
+}

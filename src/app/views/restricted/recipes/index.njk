@@ -9,21 +9,21 @@
 {% endblock %}
 
 {% block content %}
-		<div class="recipe_options">
-				<h1>Gerenciar receitas</h1>
-				<a class="crud_button" href="/admin/recipes/create">Nova receita</a>
+		<div class="admin__sectionBox">
+				<h1 class="admin__sectionTitle admin__sectionTitle--color admin__sectionTitle--font">Gerenciar receitas</h1>
+				<a class="admin__sectionButton admin__sectionButton--color admin__sectionButton--font" href="/admin/recipes/create">Nova receita</a>
 		</div>
-		<section class="admin-cards">
 
+		<section class="cardSection-admin">
 				{% for recipe in recipes %}
-						<div class="admin-card" id="{{recipe.id}}">
-								<div class="admin-card-img">
-										<img src="{{recipe.image}}" alt="{{recipe.title}}">
+						<div class="cardSection-admin__item" id="{{recipe.id}}">
+								<div class="cardSection-admin__imageBox">
+										<img class="cardSection-admin__image" src="{{recipe.image}}" alt="{{recipe.title}}">
 								</div>
-								<div class="admin-card-info">
-										<h3>{{recipe.title}}</h3>
-										<p id="author_name">{{recipe.author}}</p>
-										<a href="/admin/recipes/{{recipe.id}}">Vizualizar</a>
+								<div class="cardSection-admin__info">
+										<h3 class="cardSection-admin__recipeTitle cardSection-admin__recipeTitle--font cardSection-admin__recipeTitle--color">{{recipe.title}}</h3>
+										<p class="cardSection-admin__authorName cardSection-admin__authorName--font cardSection-admin__authorName--color">{{recipe.chef_name}}</p>
+										<a class="cardSection-admin__link cardSection-admin__link--font cardSection-admin__link--color" href="/admin/recipes/{{recipe.id}}">Visualizar</a>
 								</div>
 						</div>
 				{% endfor %}

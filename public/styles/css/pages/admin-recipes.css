@@ -1,0 +1,81 @@
+.admin__sectionBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 0 30px;
+}
+.admin__sectionTitle--color {
+  color: #111111;
+}
+.admin__sectionTitle--font {
+  font-size: 24px;
+}
+.admin__sectionButton {
+  padding: 9px 20px;
+  border-radius: 4px;
+  transition: 300ms;
+  cursor: pointer;
+}
+.admin__sectionButton--color {
+  background-color: #6558c3;
+  color: #ffffff;
+}
+.admin__sectionButton--font {
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.admin__sectionButton:hover {
+  background-color: #4a418c;
+}
+
+.cardSection-admin {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.cardSection-admin__item {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 20px;
+}
+.cardSection-admin__image {
+  height: 80px;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.cardSection-admin__recipeTitle--font {
+  font-weight: 400;
+  font-size: 18px;
+}
+.cardSection-admin__recipeTitle--color {
+  color: #111111;
+}
+.cardSection-admin__authorName {
+  margin: 5px 0 10px;
+}
+.cardSection-admin__authorName--font {
+  font-weight: 400;
+  font-size: 14px;
+}
+.cardSection-admin__authorName--color {
+  color: #777777;
+}
+.cardSection-admin__link {
+  transition: 200ms;
+  border-radius: 4px;
+}
+.cardSection-admin__link--font {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+.cardSection-admin__link--color {
+  color: #6558c3;
+}
+.cardSection-admin__link:hover {
+  text-shadow: 0 0 1px #4a418c;
+}
+
+/*# sourceMappingURL=admin-recipes.css.map */

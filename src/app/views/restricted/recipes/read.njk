@@ -1,85 +1,19 @@
 {% extends "layout.njk" %}
 
 {% block header %}
-		{% include "parts/admin-navbar.njk" %}
+		{% include "parts/navbar-admin.njk" %}
 {% endblock %}
 
 {% block content %}
 		<div class="recipe_details">
-				<div class="recipe_options">
-						<h1>Receita:
+				<div class="admin__sectionBox">
+						<h1 class="admin__sectionTitle admin__sectionTitle--color admin__sectionTitle--font">Receita:
 								{{recipe.title}}</h1>
-						<a class="crud_button" href="/admin/recipes/{{recipe.id}}/edit">Editar receita</a>
+						<a class="admin__sectionButton admin__sectionButton--color admin__sectionButton--font" href="/admin/recipes/{{recipe.id}}/edit">Editar receita</a>
 				</div>
 
-				<div class="recipe_head">
-						<div class="gallery">
-								<div class="highlight">
-										{% if not recipeFiles[0] %}
-												<img src="http://placehold.it/500x500?text=SEM FOTO">
-										{% else %}
-												<img src="{{recipeFiles[0].src}}" alt="{{recipe.title}}" onclick="Lightbox.open()">
-										{% endif %}
-										<div class="lightbox-target">
-												<img src="{{recipeFiles[0].src}}" alt="{{recipe.title}}">
-												<a href="#" class="lightbox-close" onclick="Lightbox.close()">
-														<i class="material-icons">close</i>
-												</a>
-										</div>
-								</div>
-								<div class="gallery-preview">
-										{% for photo in recipeFiles %}
-												<img
-													src="{{photo.src}}" 
-													alt="{{photo.name}}" 
-													%{% if loop.index0 == 0 %} class="active" {% endif %} 
-													onclick="ImageGallery.setImage(event)"
-												>
-										{% endfor %}
-								</div>
-						</div>
-						<h1>{{recipe.title}}</h1>
-						<p>{{recipe.chef_name}}</p>
-				</div>
-
-				<div class="recipe_ingredients">
-						<div class="recipe_titles">
-								<h2>Ingredientes</h2>
-								<a class="toggle_button" onclick="handleRecipeDetail('.ingredients_list', this)">MOSTRAR</a>
-						</div>
-
-						<div class="ingredients_list hide">
-								<ul>
-										{% for ingredient in recipe.ingredients %}
-												<li>{{ingredient}}</li>
-										{% endfor %}
-								</ul>
-						</div>
-				</div>
-
-				<div class="recipe_preparation">
-						<div class="recipe_titles">
-								<h2>Modo de preparo</h2>
-								<a class="toggle_button" onclick="handleRecipeDetail('.preparation_list', this)">MOSTRAR</a>
-						</div>
-
-						<div class="preparation_list hide">
-								<ul>
-										{% for instruction in recipe.preparation %}
-												<li>{{instruction}}</li>
-										{% endfor %}
-								</ul>
-						</div>
-				</div>
-
-				<div class="recipe_additional">
-						<div class="recipe_titles">
-								<h2>Informações adicionais</h2>
-								<a class="toggle_button" onclick="handleRecipeDetail('.information_list', this)">MOSTRAR</a>
-						</div>
-						<div class="information_list hide">
-								<p>{{recipe.information}}</p>
-						</div>
+				<div class="recipe">
+						{% include "parts/recipe-details.njk"%}
 				</div>
 		</div>
 {% endblock %}
