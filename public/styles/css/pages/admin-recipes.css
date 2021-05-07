@@ -52,14 +52,14 @@
 .cardSection-admin__recipeTitle--color {
   color: #111111;
 }
-.cardSection-admin__authorName {
+.cardSection-admin__chefName {
   margin: 5px 0 10px;
 }
-.cardSection-admin__authorName--font {
+.cardSection-admin__chefName--font {
   font-weight: 400;
   font-size: 14px;
 }
-.cardSection-admin__authorName--color {
+.cardSection-admin__chefName--color {
   color: #777777;
 }
 .cardSection-admin__link {

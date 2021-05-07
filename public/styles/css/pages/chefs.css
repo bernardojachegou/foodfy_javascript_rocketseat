@@ -24,14 +24,14 @@
 .chefSection__image--shadow {
   box-shadow: 3px 1px 6px -4px black;
 }
-.chefSection__authorName {
+.chefSection__chefName {
   margin-bottom: 5px;
 }
-.chefSection__authorName--font {
+.chefSection__chefName--font {
   font-size: 18px;
   font-weight: normal;
 }
-.chefSection__authorName--color {
+.chefSection__chefName--color {
   color: #111111;
 }
 .chefSection__totalRecipes--font {

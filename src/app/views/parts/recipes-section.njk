@@ -5,10 +5,10 @@
   <div class="cardSection__info">
     <h3 class="cardSection__recipeTitle cardSection__recipeTitle--font">{{recipe.title}}</h3>
     {% if recipe.chef_name %}
-      <p class="cardSection__authorName cardSection__authorName--font cardSection__authorName--color">Por
+      <p class="cardSection__chefName cardSection__chefName--font cardSection__chefName--color">Por
         {{recipe.chef_name}}</p>
     {% else %}
-      <p class="cardSection__authorName">Por
+      <p class="cardSection__chefName">Por
         {{chef.name}}</p>
     {% endif %}
   </div>

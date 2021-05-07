@@ -137,11 +137,11 @@
   font-weight: 400;
   font-size: 18px;
 }
-.cardSection__authorName--font {
+.cardSection__chefName--font {
   font-weight: 400;
   font-size: 14px;
 }
-.cardSection__authorName--color {
+.cardSection__chefName--color {
   color: #777777;
 }
 
