@@ -1,46 +1,33 @@
 <div class="recipeCreation">
-
-		<h3 class="recipeCreation__sectionTitle">Imagem da receita</h3>
+		<h3 class="recipeCreation__sectionTitle recipeCreation__sectionTitle--font recipeCreation__sectionTitle--color">Imagem da receita</h3>
 
 		<div class="recipeCreation__wrapper">
-
-				<div class="recipeCreation__addImageBox" id="recipes-upload">
-
+				<div class="recipeCreation__addImageBoxDefault">
 						<input class="recipeCreation__addImageInput" type="file" name="recipe_photos" multiple="multiple" accept="image/*" onchange="PhotosUpload.handleFileInput(event)">
-
 						<div class="recipeCreation__addIcon">
 								<i class="material-icons">add</i>
 						</div>
-
 				</div>
 
 				<div class="recipeCreation__addImageBox">
-
 						{% if files %}
-
 								{% for image in files %}
-
 										<div class="recipeCreation__imageBoxPreview" id="{{image.id}}">
 												<img class="recipeCreation__imagePreview" src="{{image.src}}" alt="{{image.name}}">
 												<i class="material-icons" onclick="PhotosUpload.removePhoto(event)">close</i>
 										</div>
-
 								{% endfor %}
-
 								<input class="recipeCreation__removedInput" type="hidden" name="removed_files">
-
 						{% endif %}
-
 				</div>
-
 		</div>
 
 		<div class="recipeCreation__item">
-				<h3 class="recipeCreation__sectionTitle">Chef</h3>
+				<h3 class="recipeCreation__sectionTitle recipeCreation__sectionTitle--font recipeCreation__sectionTitle--color">Chef</h3>
 				<div class="recipeCreation__inputBox">
-						<select class="recipeCreation__select" name="chef">
+						<select class="recipeCreation__select recipeCreation__select--font recipeCreation__select--color" name="chef">
 								{% for chef in chefsList %}
-										<option class="recipeCreation__selectTitle" hidden="hidden" value="">Selecione um chef</option>
+										<option class="recipeCreation__selectTitle" hidden="hidden">Selecione um chef</option>
 										<option class="recipeCreation__selectChefName" value="{{chef.id}}" {% if recipe.chef_id == chef.id %} selected="selected" {% endif %}>
 												{{chef.name}}
 										</option>
@@ -50,45 +37,44 @@
 		</div>
 
 		<div class="recipeCreation__item">
-				<h3 class="recipeCreation__sectionTitle">Título da receita</h3>
+				<h3 class="recipeCreation__sectionTitle recipeCreation__sectionTitle--font recipeCreation__sectionTitle--color">Título da receita</h3>
 				<div class="recipeCreation__inputBox">
-						<input class="recipeCreation__input" type="text" name="title" value="{{ recipe.title }}"/>
+						<input class="recipeCreation__input recipeCreation__input--font recipeCreation__input--color" type="text" name="title" value="{{ recipe.title }}"/>
 				</div>
 		</div>
 
 		<div class="recipeCreation__item" id="ingredients">
-				<h3 class="recipeCreation__sectionTitle">Ingredientes</h3>
+				<h3 class="recipeCreation__sectionTitle recipeCreation__sectionTitle--font recipeCreation__sectionTitle--color">Ingredientes</h3>
 				{% for ingredient in recipe.ingredients %}
 						<div class="recipeCreation__inputBox" id="ingredient">
-								<input class="recipeCreation__input" type="text" name="ingredients[]" value="{{ ingredient }}"/>
+								<input class="recipeCreation__input recipeCreation__input--font recipeCreation__input--color" type="text" name="ingredients[]" value="{{ ingredient }}"/>
 						</div>
 				{% else %}
 						<div class="recipeCreation__inputBox" id="ingredient">
-								<input class="recipeCreation__input" type="text" name="ingredients[]" value=""/>
+								<input class="recipeCreation__input recipeCreation__input--font recipeCreation__input--color" type="text" name="ingredients[]" value=""/>
 						</div>
 				{% endfor %}
-				<button class="recipeCreation__addingButton" type="button" onclick="handleNewIngredientOrPreparation(ingredients, ingredientContainer)">Adicionar novo ingrediente</button>
+				<button class="recipeCreation__addingButton recipeCreation__addingButton--font recipeCreation__addingButton--color" type="button" onclick="handleNewIngredientOrPreparation(ingredients, ingredientContainer)">Adicionar novo ingrediente</button>
 		</div>
 
 		<div class="recipeCreation__item" id="preparation">
-				<h3 class="recipeCreation__sectionTitle">Modo de preparo</h3>
+				<h3 class="recipeCreation__sectionTitle recipeCreation__sectionTitle--font recipeCreation__sectionTitle--color">Modo de preparo</h3>
 				{% for instruction in recipe.preparation %}
 						<div class="recipeCreation__inputBox" id="preparation">
-								<input class="recipeCreation__input" type="text" name="preparation[]" value="{{ instruction }}">
+								<input class="recipeCreation__input recipeCreation__input--font recipeCreation__input--color" type="text" name="preparation[]" value="{{ instruction }}">
 						</div>
 				{% else %}
 						<div class="recipeCreation__inputBox" id="preparation">
-								<input class="recipeCreation__input" type="text" name="preparation[]" value=""/>
+								<input class="recipeCreation__input recipeCreation__input--font recipeCreation__input--color" type="text" name="preparation[]" value=""/>
 						</div>
 				{% endfor %}
-				<button class="recipeCreation__addingButton" type="button" onclick="handleNewIngredientOrPreparation(preparations, preparationContainer)">Adicionar novo passo</button>
+				<button class="recipeCreation__addingButton recipeCreation__addingButton--font recipeCreation__addingButton--color" type="button" onclick="handleNewIngredientOrPreparation(preparations, preparationContainer)">Adicionar novo passo</button>
 		</div>
 
 		<div class="recipeCreation__item">
-				<h3 class="recipeCreation__sectionTitle">Informações adicionais</h3>
+				<h3 class="recipeCreation__sectionTitle recipeCreation__sectionTitle--font recipeCreation__sectionTitle--color">Informações adicionais</h3>
 				<div class="recipeCreation__inputBox">
-						<textarea class="recipeCreation__textarea" name="information" cols="30" rows="10">{{ recipe.information }}</textarea>
+						<textarea class="recipeCreation__textarea recipeCreation__textarea--font recipeCreation__textarea--color" name="information" cols="30" rows="10">{{ recipe.information }}</textarea>
 				</div>
 		</div>
-
 </div>

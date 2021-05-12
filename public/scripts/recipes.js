@@ -47,7 +47,9 @@ const Lightbox = {
 };
 
 function handleRecipeDetail(classSelected, element) {
-  document.querySelector(classSelected).classList.toggle('recipe__boxList--hide');
+  document
+    .querySelector(classSelected)
+    .classList.toggle('recipe__boxList--hide');
 
   if (element.textContent == 'ESCONDER') {
     element.innerHTML = 'MOSTRAR';
@@ -104,7 +106,7 @@ function handleDeleteConfirmation() {
 
 const PhotosUpload = {
   input: '',
-  preview: document.querySelector('#photos-preview'),
+  preview: document.querySelector('.recipeCreation__addImageBox'),
   uploadLimit: 5,
   files: [],
   handleFileInput(event) {
@@ -141,7 +143,7 @@ const PhotosUpload = {
   },
   getContainer(image) {
     const div = document.createElement('div');
-    div.classList.add('photo');
+    div.classList.add('recipeCreation__imageBoxPreview');
     div.onclick = PhotosUpload.removePhoto;
 
     div.appendChild(image);
@@ -161,7 +163,10 @@ const PhotosUpload = {
 
     const photosDiv = [];
     preview.childNodes.forEach((item) => {
-      if (item.classList && item.classList.value == 'photo')
+      if (
+        item.classList &&
+        item.classList.value == 'recipeCreation__imageBoxPreview'
+      )
         photosDiv.push(item);
     });
 
