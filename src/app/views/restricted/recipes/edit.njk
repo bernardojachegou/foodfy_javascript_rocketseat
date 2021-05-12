@@ -1,28 +1,27 @@
 {% extends "layout.njk" %}
 
 {% block header %}
-		{% include "parts/admin-navbar.njk" %}
+		{% include "parts/navbar-admin.njk" %}
 {% endblock %}
 
 {% block content %}
-		<div class="all">
 
-				<form id="delete_form" method="POST" action="/admin/recipes?_method=DELETE">
-						<input type="hidden" name="id" value="{{recipe.id}}">
-				</form>
+		<form class="admin__deleteForm" id="delete_form" method="POST" action="/admin/recipes?_method=DELETE">
+				<input class="admin__hiddenInput" type="hidden" name="id" value="{{recipe.id}}">
+		</form>
 
-				<form method="POST" action="/admin/recipes?_method=PUT" enctype="multipart/form-data">
-						<div class="recipe_options">
-								<h1>Editando receita</h1>
-								<div class="options_buttons">
-										<input type="hidden" name="id" value="{{recipe.id}}">
-										<button id="delete_button" class="crud_button" type="submit" form="delete_form" onclick="handleDeleteConfirmation()">Deletar</button>
-										<button class="crud_button" type="submit">Salvar receita</button>
-								</div>
+		<form class="admin__recipeForm" method="POST" action="/admin/recipes?_method=PUT" enctype="multipart/form-data">
+				<div class="admin__sectionBox">
+						<h1 class="admin__sectionTitle admin__sectionTitle--color admin__sectionTitle--font">Editando receita</h1>
+						<div class="admin__sectionButtonBox">
+								<input class="admin__hiddenInput" type="hidden" name="id" value="{{recipe.id}}">
+								<button class="admin__sectionButton admin__sectionButton--deleteColor admin__sectionButton--font" type="submit" form="delete_form" onclick="handleDeleteConfirmation()">Deletar</button>
+								<button class="admin__sectionButton admin__sectionButton--color admin__sectionButton--font" type="submit">Salvar receita</button>
 						</div>
-						{% include 'restricted/recipes/fields.njk' %}
-				</form>
-		</div>
+				</div>
+				{% include 'restricted/recipes/fields.njk' %}
+		</form>
+
 {% endblock content %}
 
 {% block scripts %}

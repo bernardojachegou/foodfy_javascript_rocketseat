@@ -10,6 +10,11 @@
 .admin__sectionTitle--font {
   font-size: 24px;
 }
+.admin__sectionButtonBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
 .admin__sectionButton {
   padding: 9px 20px;
   border-radius: 4px;
@@ -20,6 +25,10 @@
   background-color: #6558c3;
   color: #ffffff;
 }
+.admin__sectionButton--deleteColor {
+  background-color: #dc4747;
+  color: #ffffff;
+}
 .admin__sectionButton--font {
   font-size: 16px;
   text-decoration: none;
@@ -27,6 +36,9 @@
 }
 .admin__sectionButton:hover {
   background-color: #4a418c;
+}
+.admin__sectionButton--deleteColor:hover {
+  background-color: #9b3131;
 }
 
 .cardSection-admin {
@@ -79,7 +91,7 @@
 }
 
 .recipeCreation__sectionTitle {
-  margin: 30px 0 10px 0;
+  margin-top: 20px;
 }
 .recipeCreation__sectionTitle--font {
   font-weight: 600;
@@ -87,6 +99,9 @@
 }
 .recipeCreation__sectionTitle--color {
   color: #111111;
+}
+.recipeCreation #first {
+  margin: 0 0 10px;
 }
 .recipeCreation__wrapper {
   display: grid;
@@ -119,11 +134,10 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  margin: 0;
   padding: 0;
   cursor: pointer;
 }
-.recipeCreation__addIcon {
+.recipeCreation__addIconBox {
   width: 100%;
   height: 100%;
   border: 1px solid #dddddd;
@@ -132,7 +146,7 @@
   align-items: center;
   justify-content: center;
 }
-.recipeCreation__addIcon i {
+.recipeCreation__addIconBox i {
   color: #999999;
   font-size: 300%;
 }
@@ -165,6 +179,7 @@
   border-radius: 4px;
 }
 .recipeCreation__input, .recipeCreation__textarea, .recipeCreation__select {
+  margin: 10px 0;
   width: 100%;
   padding: 12px 20px;
   border: 1px solid #dddddd;
@@ -177,11 +192,8 @@
 .recipeCreation__input--color, .recipeCreation__textarea--color, .recipeCreation__select--color {
   color: #111111;
 }
-.recipeCreation__select {
-  padding: 12px 20px;
-}
 .recipeCreation__addingButton {
-  margin-top: 15px;
+  margin-top: 5px;
   cursor: pointer;
 }
 .recipeCreation__addingButton--font {

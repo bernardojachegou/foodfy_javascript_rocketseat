@@ -59,9 +59,9 @@ function handleRecipeDetail(classSelected, element) {
 }
 
 const ingredients = document.querySelector('#ingredients');
-const ingredientContainer = document.querySelectorAll('.ingredient');
+const ingredientContainer = document.querySelectorAll('#ingredient');
 const preparations = document.querySelector('#preparation');
-const preparationContainer = document.querySelectorAll('.preparation');
+const preparationContainer = document.querySelectorAll('#preparation');
 
 function handleNewIngredientOrPreparation(element, container) {
   // Realiza um clone do último ingrediente adicionado

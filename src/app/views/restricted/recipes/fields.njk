@@ -1,10 +1,10 @@
 <div class="recipeCreation">
-		<h3 class="recipeCreation__sectionTitle recipeCreation__sectionTitle--font recipeCreation__sectionTitle--color">Imagem da receita</h3>
+		<h3 class="recipeCreation__sectionTitle recipeCreation__sectionTitle--font recipeCreation__sectionTitle--color" id="first">Imagem da receita</h3>
 
 		<div class="recipeCreation__wrapper">
 				<div class="recipeCreation__addImageBoxDefault">
 						<input class="recipeCreation__addImageInput" type="file" name="recipe_photos" multiple="multiple" accept="image/*" onchange="PhotosUpload.handleFileInput(event)">
-						<div class="recipeCreation__addIcon">
+						<div class="recipeCreation__addIconBox">
 								<i class="material-icons">add</i>
 						</div>
 				</div>
@@ -54,8 +54,8 @@
 								<input class="recipeCreation__input recipeCreation__input--font recipeCreation__input--color" type="text" name="ingredients[]" value=""/>
 						</div>
 				{% endfor %}
-				<button class="recipeCreation__addingButton recipeCreation__addingButton--font recipeCreation__addingButton--color" type="button" onclick="handleNewIngredientOrPreparation(ingredients, ingredientContainer)">Adicionar novo ingrediente</button>
 		</div>
+		<button class="recipeCreation__addingButton recipeCreation__addingButton--font recipeCreation__addingButton--color" type="button" onclick="handleNewIngredientOrPreparation(ingredients, ingredientContainer)">Adicionar novo ingrediente</button>
 
 		<div class="recipeCreation__item" id="preparation">
 				<h3 class="recipeCreation__sectionTitle recipeCreation__sectionTitle--font recipeCreation__sectionTitle--color">Modo de preparo</h3>
@@ -68,8 +68,8 @@
 								<input class="recipeCreation__input recipeCreation__input--font recipeCreation__input--color" type="text" name="preparation[]" value=""/>
 						</div>
 				{% endfor %}
-				<button class="recipeCreation__addingButton recipeCreation__addingButton--font recipeCreation__addingButton--color" type="button" onclick="handleNewIngredientOrPreparation(preparations, preparationContainer)">Adicionar novo passo</button>
 		</div>
+		<button class="recipeCreation__addingButton recipeCreation__addingButton--font recipeCreation__addingButton--color" type="button" onclick="handleNewIngredientOrPreparation(preparations, preparationContainer)">Adicionar novo passo</button>
 
 		<div class="recipeCreation__item">
 				<h3 class="recipeCreation__sectionTitle recipeCreation__sectionTitle--font recipeCreation__sectionTitle--color">Informações adicionais</h3>
