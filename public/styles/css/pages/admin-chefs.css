@@ -1,0 +1,65 @@
+.chefCreation__avatarPreviewBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chefCreation__avatarImagePreviewBox {
+  text-align: center;
+}
+.chefCreation__imagePreview {
+  padding-right: 0;
+  width: 200px;
+  height: 200px;
+  margin: 50px 0 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.chefCreation__imagePreview img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.chefCreation__sectionTitle {
+  color: #111111;
+  font-size: 24px;
+}
+.chefCreation__inputBox {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.chefCreation__input {
+  margin: 10px 0;
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #111111;
+}
+.chefCreation__avatarInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.chefCreation__avatarInputButton {
+  padding: 10px 16px;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px -6px #333;
+  background-color: #6558c3;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 16px;
+  max-width: 100px;
+}
+
+/*# sourceMappingURL=admin-chefs.css.map */

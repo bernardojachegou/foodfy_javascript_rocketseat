@@ -1,30 +1,33 @@
-<div class="item">
-		<div id="avatar-preview">
-				{% if files %}
-						<div class="avatar" id="{{files[0].id}}">
-								<img src="{{files[0].src}}" alt="{{files[0].name}}">
-								<i class="material-icons" onclick="AvatarUpload.removePhoto(event)">close</i>
-						</div>
-						<input type="hidden" name="removed_files">
-				{% endif %}
-		</div>
-</div>
-<div class="item">
-		<h3>Nome</h3>
-		<div>
-				<input type="text" name="name" value="{{ chef.name }}" placeholder="Digite o nome do chef"/>
-		</div>
-</div>
+<div class="chefCreation">
 
-<div class="item">
-		<h3>Avatar</h3>
-		<div id="input-avatar">
-				{% if files %}
-						<input value="{{files[0].src}}" disabled="disabled">
-				{% endif %}
-				<div id="avatar_upload">
-						<input id="avatar-input" type="file" name="chef_avatar" accept="image/*" multiple="multiple" onchange="AvatarUpload.handleAvatarInput(event)">
-						<p>Enviar avatar</p>
+		<div class="chefCreation__item">
+				<div class="chefCreation__avatarPreviewBox" id="avatar-preview">
+						{% if files %}
+								<div class="chefCreation__avatarImagePreviewBox" id="{{files[0].id}}">
+										<img class="chefCreation__imagePreview" src="{{files[0].src}}" alt="{{files[0].name}}">
+										<i class="material-icons" onclick="AvatarUpload.removePhoto(event)">close</i>
+								</div>
+								<input class="chefCreation__removedInput" type="hidden" name="removed_files">
+						{% endif %}
 				</div>
 		</div>
+
+		<div class="chefCreation__item">
+				<h3 class="chefCreation__sectionTitle">Nome</h3>
+				<input class="chefCreation__input" type="text" name="name" value="{{ chef.name }}" placeholder="Digite o nome do chef"/>
+		</div>
+
+		<div class="chefCreation__item">
+				<h3 class="chefCreation__sectionTitle">Avatar</h3>
+				<div class="chefCreation__inputBox" id="input-avatar">
+						{% if files %}
+								<input class="chefCreation__avatarInput" value="{{files[0].src}}" disabled="disabled">
+						{% endif %}
+						<div class="chefCreation__inputBox" id="avatar_upload">
+								<input class="chefCreation__avatarInput" id="avatar-input" type="file" name="chef_avatar" accept="image/*" multiple="multiple" onchange="AvatarUpload.handleAvatarInput(event)">
+								<p class="chefCreation__avatarInputButton">Enviar avatar</p>
+						</div>
+				</div>
+		</div>
+		
 </div>

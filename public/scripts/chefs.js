@@ -50,7 +50,7 @@ const AvatarUpload = {
   },
   createContainer(image) {
     const div = document.createElement('div');
-    div.classList.add('avatar');
+    div.classList.add('chefCreation__imagePreview');
     div.onclick = AvatarUpload.removePhoto;
 
     div.appendChild(image);
@@ -70,7 +70,10 @@ const AvatarUpload = {
 
     const photosDiv = [];
     preview.childNodes.forEach((item) => {
-      if (item.classList && item.classList.value == 'avatar')
+      if (
+        item.classList &&
+        item.classList.value == 'chefCreation__imagePreview'
+      )
         photosDiv.push(item);
     });
 

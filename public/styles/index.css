@@ -1,20 +1,4 @@
-#photos-preview .photo:hover i,
-#avatar-preview .avatar:hover i {
-  opacity: 1;
-}
-
-/* Listagem de Chefs */
-
-.chef-card .admin-card-info a {
-  padding: 0;
-}
-
-.chef-card .admin-card-info a:hover {
-  padding: 4px;
-}
-
 /* Página de exibição de chef */
-
 .recipe_details .chef-box-img {
   text-align: center;
 }
@@ -33,69 +17,4 @@
   color: #777777;
   text-align: center;
   margin-top: 4px;
-}
-
-/* Estlização do input de imagens do chef */
-
-.item #avatar_upload {
-  position: relative;
-  display: block;
-  overflow: hidden;
-}
-
-.item #avatar_upload p {
-  padding: 10px 16px;
-  border-radius: 4px;
-  box-shadow: 0 2px 2px -6px #333;
-  background-color: #6558c3;
-  color: white;
-  font-weight: 500;
-  text-align: center;
-  margin-top: 16px;
-  max-width: 100px;
-}
-
-.item #avatar_upload #avatar-input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-
-/* chef avatar configuration */
-
-#avatar-preview .avatar img {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-#avatar-preview {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Configuração padrão das opções de gerenciamento de receitas da área administrativa: criar, salvar */
-
-form #delete_button {
-  background: #dc4747;
-}
-
-form #delete_button:hover {
-  background-color: white;
-  border: 2px solid #dc4747;
-  color: #dc4747;
-}
-
-#delete_form {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
 }
