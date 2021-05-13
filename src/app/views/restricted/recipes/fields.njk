@@ -39,7 +39,7 @@
 		<div class="recipeCreation__item">
 				<h3 class="recipeCreation__sectionTitle recipeCreation__sectionTitle--font recipeCreation__sectionTitle--color">Título da receita</h3>
 				<div class="recipeCreation__inputBox">
-						<input class="recipeCreation__input recipeCreation__input--font recipeCreation__input--color" type="text" name="title" value="{{ recipe.title }}"/>
+						<input class="recipeCreation__input recipeCreation__input--font recipeCreation__input--color" type="text" name="title" value="{{ recipe.title }}" placeholder="Digite o nome da receita"/>
 				</div>
 		</div>
 
@@ -51,7 +51,7 @@
 						</div>
 				{% else %}
 						<div class="recipeCreation__inputBox" id="ingredient">
-								<input class="recipeCreation__input recipeCreation__input--font recipeCreation__input--color" type="text" name="ingredients[]" value=""/>
+								<input class="recipeCreation__input recipeCreation__input--font recipeCreation__input--color" type="text" name="ingredients[]" value="" placeholder="Digite o nome de um ingrediente"/>
 						</div>
 				{% endfor %}
 		</div>
@@ -65,7 +65,7 @@
 						</div>
 				{% else %}
 						<div class="recipeCreation__inputBox" id="preparation">
-								<input class="recipeCreation__input recipeCreation__input--font recipeCreation__input--color" type="text" name="preparation[]" value=""/>
+								<input class="recipeCreation__input recipeCreation__input--font recipeCreation__input--color" type="text" name="preparation[]" value="" placeholder="Digite uma etapa do modo de preparo"/>
 						</div>
 				{% endfor %}
 		</div>
@@ -74,7 +74,7 @@
 		<div class="recipeCreation__item">
 				<h3 class="recipeCreation__sectionTitle recipeCreation__sectionTitle--font recipeCreation__sectionTitle--color">Informações adicionais</h3>
 				<div class="recipeCreation__inputBox">
-						<textarea class="recipeCreation__textarea recipeCreation__textarea--font recipeCreation__textarea--color" name="information" cols="30" rows="10">{{ recipe.information }}</textarea>
+						<textarea class="recipeCreation__textarea recipeCreation__textarea--font recipeCreation__textarea--color" name="information" cols="30" rows="10" placeholder="Descreva alguma dica ou opinião">{{ recipe.information }}</textarea>
 				</div>
 		</div>
 </div>

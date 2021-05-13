@@ -1,28 +1,45 @@
-.chefCreation__avatarPreviewBox {
+.chefCreation__avatarBoxPreview {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.chefCreation__avatarImagePreviewBox {
-  text-align: center;
+.chefCreation__imageBoxPreview {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+.chefCreation__imageBoxPreview i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  color: red;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 300%;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.chefCreation__imageBoxPreview i:hover {
+  opacity: 1;
 }
 .chefCreation__imagePreview {
-  padding-right: 0;
-  width: 200px;
-  height: 200px;
-  margin: 50px 0 30px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-.chefCreation__imagePreview img {
   height: 200px;
   width: 200px;
   border-radius: 50%;
   object-fit: cover;
 }
-.chefCreation__sectionTitle {
+.chefCreation__sectionTitle--font {
+  font-size: 16px;
+}
+.chefCreation__sectionTitle--color {
   color: #111111;
-  font-size: 24px;
 }
 .chefCreation__inputBox {
   position: relative;
@@ -36,7 +53,11 @@
   border: 1px solid #dddddd;
   border-radius: 4px;
   box-sizing: border-box;
+}
+.chefCreation__input--font {
   font-size: 16px;
+}
+.chefCreation__input--color {
   color: #111111;
 }
 .chefCreation__avatarInput {
@@ -45,21 +66,25 @@
   left: 0;
   display: block;
   overflow: hidden;
-  width: 100%;
   height: 100%;
   opacity: 0;
+  width: 120px;
   cursor: pointer;
 }
 .chefCreation__avatarInputButton {
-  padding: 10px 16px;
+  margin-top: 10px;
+  padding: 9px 20px;
   border-radius: 4px;
-  box-shadow: 0 2px 2px -6px #333;
+  cursor: pointer;
+}
+.chefCreation__avatarInputButton--color {
   background-color: #6558c3;
-  color: white;
+  color: #ffffff;
+}
+.chefCreation__avatarInputButton--font {
+  font-size: 16px;
+  text-decoration: none;
   font-weight: 500;
-  text-align: center;
-  margin-top: 16px;
-  max-width: 100px;
 }
 
 /*# sourceMappingURL=admin-chefs.css.map */

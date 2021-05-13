@@ -13,7 +13,7 @@ handleChefCards(chefCards);
 
 const AvatarUpload = {
   input: '',
-  preview: document.querySelector('#avatar-preview'),
+  preview: document.querySelector('.chefCreation__avatarBoxPreview'),
   uploadLimit: 1,
   files: [],
   handleAvatarInput(event) {
@@ -30,6 +30,7 @@ const AvatarUpload = {
       reader.onload = () => {
         const image = new Image();
         image.src = String(reader.result);
+        image.classList.add('chefCreation__imagePreview');
 
         const div = AvatarUpload.createContainer(image);
         AvatarUpload.preview.appendChild(div);
@@ -50,7 +51,7 @@ const AvatarUpload = {
   },
   createContainer(image) {
     const div = document.createElement('div');
-    div.classList.add('chefCreation__imagePreview');
+    div.classList.add('chefCreation__imageBoxPreview');
     div.onclick = AvatarUpload.removePhoto;
 
     div.appendChild(image);
@@ -72,7 +73,7 @@ const AvatarUpload = {
     preview.childNodes.forEach((item) => {
       if (
         item.classList &&
-        item.classList.value == 'chefCreation__imagePreview'
+        item.classList.value == 'chefCreation__imageBoxPreview'
       )
         photosDiv.push(item);
     });

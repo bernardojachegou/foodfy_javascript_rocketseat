@@ -1,33 +1,51 @@
 @import '../variables.scss';
 
+// chef form (create)
 .chefCreation {
-  &__item {
-  }
-  &__avatarPreviewBox {
+  &__avatarBoxPreview {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  &__avatarImagePreviewBox {
-    text-align: center;
-  }
-  &__imagePreview {
-    padding-right: 0;
+  &__imageBoxPreview {
     width: 200px;
     height: 200px;
-    margin: 50px 0 30px;
     object-fit: cover;
     border-radius: 50%;
-    img {
-      height: 200px;
-      width: 200px;
-      border-radius: 50%;
-      object-fit: cover;
+    position: relative;
+    i {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.8);
+      color: red;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 300%;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 300ms;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
+  &__imagePreview {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
   &__sectionTitle {
-    color: $black;
-    font-size: 24px;
+    &--font {
+      font-size: 16px;
+    }
+    &--color {
+      color: $black;
+    }
   }
   &__inputBox {
     position: relative;
@@ -41,8 +59,12 @@
     border: 1px solid $lightGray;
     border-radius: 4px;
     box-sizing: border-box;
-    font-size: 16px;
-    color: $black;
+    &--font {
+      font-size: 16px;
+    }
+    &--color {
+      color: $black;
+    }
   }
   &__avatarInput {
     position: absolute;
@@ -50,20 +72,24 @@
     left: 0;
     display: block;
     overflow: hidden;
-    width: 100%;
     height: 100%;
     opacity: 0;
+    width: 120px;
     cursor: pointer;
   }
   &__avatarInputButton {
-    padding: 10px 16px;
+    margin-top: 10px;
+    padding: 9px 20px;
     border-radius: 4px;
-    box-shadow: 0 2px 2px -6px #333;
-    background-color: #6558c3;
-    color: white;
-    font-weight: 500;
-    text-align: center;
-    margin-top: 16px;
-    max-width: 100px;
+    cursor: pointer;
+    &--color {
+      background-color: $purple;
+      color: $neutral;
+    }
+    &--font {
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: 500;
+    }
   }
 }

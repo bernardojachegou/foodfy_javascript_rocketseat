@@ -1,53 +1,5 @@
 @import '../variables.scss';
 
-// default title and buttons
-.admin {
-  &__sectionBox {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 50px 0 30px;
-  }
-  &__sectionTitle {
-    &--color {
-      color: $black;
-    }
-    &--font {
-      font-size: 24px;
-    }
-  }
-  &__sectionButtonBox {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-  }
-  &__sectionButton {
-    padding: 9px 20px;
-    border-radius: 4px;
-    transition: 300ms;
-    cursor: pointer;
-    &--color {
-      background-color: $purple;
-      color: $neutral;
-    }
-    &--deleteColor {
-      background-color: $warning;
-      color: $neutral;
-    }
-    &--font {
-      font-size: 16px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    &:hover {
-      background-color: $darkPurple;
-    }
-    &--deleteColor:hover {
-      background-color: $darkWarning;
-    }
-  }
-}
-
 // recipe cards
 .cardSection-admin {
   display: grid;
