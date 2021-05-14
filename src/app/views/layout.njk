@@ -31,7 +31,7 @@
 						<div class="main">
 								{% block content %}{% endblock %}
 						</div>
-						{% include "parts/footer.njk" %}
+						{% block footer %}{% endblock %}
 				</div>
 				{% block scripts %}{% endblock scripts %}
 				<script src="/scripts/foodfy.js"></script>

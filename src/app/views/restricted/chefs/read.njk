@@ -5,42 +5,34 @@
 {% endblock %}
 
 {% block content %}
-		<div class="recipe_details">
-				<div class="recipe_options">
-						<h1>Chef:
-								{{chef.name}}</h1>
-						<a class="crud_button" href="/admin/chefs/{{chef.id}}/edit">Editar chef</a>
-				</div>
-				<div class="chef-box-img">
-						{% if not files[0] %}
-								<img src="http://placehold.it/500x500?text=Chef sem foto" alt="Chef">
-						{% else %}
-								<img src="{{files[0].src}}" alt="{{files[0].name}}">
-						{% endif %}
-						<h1>{{chef.name}}</h1>
-						<p>{{chef.total_recipes}}
-								receitas</p>
-				</div>
 
-				<div class="recipe_options">
-						<h1>Receitas</h1>
-				</div>
-				<div class="cards">
-						{% for recipe in chefRecipes %}
-								<div class="admin-card" id="{{recipe.id}}">
-										<div class="admin-card-img">
-												<img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
-										</div>
-										<div class="admin-card-info">
-												<h3>{{recipe.title}}</h3>
-												<p id="author_name">por{{chef.name}}</p>
-												<a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
-										</div>
-								</div>
-						{% endfor %}
-				</div>
-
+		<div class="admin__sectionBox">
+				<h1 class="admin__sectionTitle admin__sectionTitle--color admin__sectionTitle--font">Chef:
+						{{chef.name}}</h1>
+				<a class="admin__sectionButton admin__sectionButton--color admin__sectionButton--font" href="/admin/chefs/{{chef.id}}/edit">Editar chef</a>
 		</div>
+
+		{% include "parts/chef-details.njk" %}
+
+		<div class="admin__sectionBox">
+				<h1 class="admin__sectionTitle admin__sectionTitle--color admin__sectionTitle--font">Receitas</h1>
+		</div>
+
+		<section class="cardSection-admin">
+				{% for recipe in chefRecipes %}
+						<div class="cardSection-admin__item" id="{{recipe.id}}">
+								<div class="cardSection-admin__imageBox">
+										<img class="cardSection-admin__image" src="{{recipe.image}}" alt="{{recipe.title}}">
+								</div>
+								<div class="cardSection-admin__info">
+										<h3 class="cardSection-admin__recipeTitle cardSection-admin__recipeTitle--font cardSection-admin__recipeTitle--color">{{recipe.title}}</h3>
+										<p class="cardSection-admin__chefName cardSection-admin__chefName--font cardSection-admin__chefName--color">{{chef.name}}</p>
+										<a class="cardSection-admin__link cardSection-admin__link--font cardSection-admin__link--color" href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+								</div>
+						</div>
+				{% endfor %}
+		</div>
+
 {% endblock %}
 
 {% block scripts %}
