@@ -20,6 +20,6 @@ module.exports = (routes) => {
   // routes.post('/admin/users', UserController.post) // Cadastrar um usuário
   routes.get('/admin/users/create', UserController.create); // Mostrar o formulário de criação de um usuário
   // routes.put('/admin/users/:id', UserController.put) // Editar um usuário
-  // routes.get('/admin/users/:id/edit', UserController.edit) // Mostrar o formulário de edição de um usuário
+  routes.get('/admin/users/edit', UserController.edit); // Mostrar o formulário de edição de um usuário // routes.get('/admin/users/:id/edit'
   // routes.delete('/admin/users/:id', UserController.delete) // Deletar um usuário
 };

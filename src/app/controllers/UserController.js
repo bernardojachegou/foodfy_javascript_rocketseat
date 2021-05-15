@@ -8,4 +8,7 @@ module.exports = {
   list(request, response) {
     return response.render('restricted/user/list');
   },
+  edit(request, response) {
+    return response.render('restricted/user/edit');
+  },
 };

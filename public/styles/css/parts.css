@@ -336,15 +336,21 @@
   font-size: 24px;
 }
 .admin__sectionButtonBox {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .admin__sectionButton {
-  padding: 9px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 0;
   border-radius: 4px;
   transition: 300ms;
   cursor: pointer;
+}
+.admin__sectionButton:last-child {
+  margin-left: 10px;
 }
 .admin__sectionButton--color {
   background-color: #6558c3;

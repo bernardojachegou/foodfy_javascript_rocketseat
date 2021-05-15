@@ -1,7 +1,7 @@
-.user__creation {
+.user__fields {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 40px;
+  grid-gap: 35px;
   margin-top: 50px;
 }
 .user__label--font {
@@ -16,9 +16,6 @@
   align-items: center;
   justify-content: start;
   margin-top: 10px;
-}
-.user__inputBox:last-child {
-  height: 50px;
 }
 .user__input {
   padding: 15px 20px;
@@ -37,6 +34,40 @@
   width: 15px;
   height: 15px;
   margin-right: 8px;
+}
+.user__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 200px;
+  grid-row-gap: 32px;
+  margin-top: 50px;
+}
+.user__listName {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+.user__listEmail {
+  font-size: 14px;
+  font-weight: normal;
+  color: #777777;
+  margin-bottom: 16px;
+}
+.user__listButton:first-child {
+  color: #6558c3;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 16px;
+}
+.user__listButton:last-child {
+  color: #f55a5a;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+}
+.user__listButton:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=users.css.map */

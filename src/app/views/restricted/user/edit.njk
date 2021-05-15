@@ -1,7 +1,7 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-  <title>Foodfy - Criar usuário</title>
+  <title>Foodfy - Editar usuário</title>
 {% endblock %}
 
 {% block header %}
@@ -12,10 +12,10 @@
   <form class="admin__userForm" method="POST" action="/admin/users?_method=POST" enctype="multipart/form-data">
 
     <div class="admin__sectionBox">
-      <h1 class="admin__sectionTitle admin__sectionTitle--color admin__sectionTitle--font">Criar Usuário</h1>
+      <h1 class="admin__sectionTitle admin__sectionTitle--color admin__sectionTitle--font">Editar Usuário</h1>
       <div class="admin__sectionButtonBox">
         <input class="admin__hiddenInput" type="hidden" name="id" value="{{user.id}}">
-        <button class="admin__sectionButton admin__sectionButton--cancelColor admin__sectionButton--font admin__sectionButton--size" type="submit">Cancelar</button>
+        <button class="admin__sectionButton admin__sectionButton--deleteColor admin__sectionButton--font admin__sectionButton--size" type="submit">Deletar</button>
         <button class="admin__sectionButton admin__sectionButton--color admin__sectionButton--font admin__sectionButton--size" type="submit">Salvar</button>
       </div>
     </div>

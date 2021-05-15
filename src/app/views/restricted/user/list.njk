@@ -1,7 +1,7 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-  <title>Foodfy - Criar usuário</title>
+  <title>Foodfy - Lista de usuários</title>
 {% endblock %}
 
 {% block header %}
@@ -9,68 +9,64 @@
 {% endblock %}
 
 {% block content %}
-  <div class="user-list-header">
-    <h3>Usuários</h3>
-    <div class="user-list-buttons">
-      <a class="new-button" href="#">Novo</a>
-    </div>
+  <div class="admin__sectionBox">
+    <h1 class="admin__sectionTitle admin__sectionTitle--color admin__sectionTitle--font">Usuários</h1>
+    <a href="/admin/users/create" class="admin__sectionButton admin__sectionButton--color admin__sectionButton--font admin__sectionButton--size">Novo</a>
   </div>
 
-  <div class="user-list-items">
-
-    <div class="item">
-      <h4>Diego Fernandes</h4>
-      <p>diego@rocketseat.com.br</p>
-      <div class="buttons-box">
-        <a href="#">Editar</a>
-        <a href="#">Remover</a>
+  <section class="user__list">
+    <div class="user__listItem">
+      <h4 class="user__listName">Diego Fernandes</h4>
+      <p class="user__listEmail">diego@rocketseat.com.br</p>
+      <div class="user__listButtonBox">
+        <a class="user__listButton" href="#">Editar</a>
+        <a class="user__listButton" href="#">Remover</a>
       </div>
     </div>
 
-    <div class="item">
-      <h4>Diego Fernandes</h4>
-      <p>diego@rocketseat.com.br</p>
-      <div class="buttons-box">
-        <a href="#">Editar</a>
-        <a href="#">Remover</a>
+    <div class="user__listItem">
+      <h4 class="user__listName">Diego Fernandes</h4>
+      <p class="user__listEmail">diego@rocketseat.com.br</p>
+      <div class="user__listButtonBox">
+        <a class="user__listButton" href="#">Editar</a>
+        <a class="user__listButton" href="#">Remover</a>
       </div>
     </div>
 
-    <div class="item">
-      <h4>Diego Fernandes</h4>
-      <p>diego@rocketseat.com.br</p>
-      <div class="buttons-box">
-        <a href="#">Editar</a>
-        <a href="#">Remover</a>
+    <div class="user__listItem">
+      <h4 class="user__listName">Diego Fernandes</h4>
+      <p class="user__listEmail">diego@rocketseat.com.br</p>
+      <div class="user__listButtonBox">
+        <a class="user__listButton" href="#">Editar</a>
+        <a class="user__listButton" href="#">Remover</a>
       </div>
     </div>
 
-    <div class="item">
-      <h4>Diego Fernandes</h4>
-      <p>diego@rocketseat.com.br</p>
-      <div class="buttons-box">
-        <a href="#">Editar</a>
-        <a href="#">Remover</a>
+    <div class="user__listItem">
+      <h4 class="user__listName">Diego Fernandes</h4>
+      <p class="user__listEmail">diego@rocketseat.com.br</p>
+      <div class="user__listButtonBox">
+        <a class="user__listButton" href="#">Editar</a>
+        <a class="user__listButton" href="#">Remover</a>
       </div>
     </div>
 
-    <div class="item">
-      <h4>Diego Fernandes</h4>
-      <p>diego@rocketseat.com.br</p>
-      <div class="buttons-box">
-        <a href="#">Editar</a>
-        <a href="#">Remover</a>
+    <div class="user__listItem">
+      <h4 class="user__listName">Diego Fernandes</h4>
+      <p class="user__listEmail">diego@rocketseat.com.br</p>
+      <div class="user__listButtonBox">
+        <a class="user__listButton" href="#">Editar</a>
+        <a class="user__listButton" href="#">Remover</a>
       </div>
     </div>
 
-    <div class="item">
-      <h4>Diego Fernandes</h4>
-      <p>diego@rocketseat.com.br</p>
-      <div class="buttons-box">
-        <a href="#">Editar</a>
-        <a href="#">Remover</a>
+    <div class="user__listItem">
+      <h4 class="user__listName">Diego Fernandes</h4>
+      <p class="user__listEmail">diego@rocketseat.com.br</p>
+      <div class="user__listButtonBox">
+        <a class="user__listButton" href="#">Editar</a>
+        <a class="user__listButton" href="#">Remover</a>
       </div>
     </div>
-
-  </div>
+  </section>
 {% endblock %}
