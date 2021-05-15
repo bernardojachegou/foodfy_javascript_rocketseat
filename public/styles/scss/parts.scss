@@ -381,16 +381,26 @@
       background-color: $warning;
       color: $neutral;
     }
+    &--cancelColor {
+      background-color: $cancel;
+      color: $neutral;
+    }
     &--font {
       font-size: 16px;
       text-decoration: none;
       font-weight: 500;
+    }
+    &--size {
+      width: 140px;
     }
     &:hover {
       background-color: $darkPurple;
     }
     &--deleteColor:hover {
       background-color: $darkWarning;
+    }
+    &--cancelColor:hover {
+      background-color: $darkCancel;
     }
   }
 }

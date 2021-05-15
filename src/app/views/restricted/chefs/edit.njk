@@ -6,18 +6,17 @@
 
 {% block content %}
 		<div class="all">
-
-				<form id="delete_form" method="POST" action="/admin/chefs?_method=DELETE">
-						<input type="hidden" name="id" value="{{chef.id}}">
+				<form class="admin__deleteForm" id="delete_form" method="POST" action="/admin/chefs?_method=DELETE">
+						<input class="admin__hiddenInput" type="hidden" name="id" value="{{chef.id}}">
 				</form>
 
-				<form method="POST" action="/admin/chefs?_method=PUT" enctype="multipart/form-data">
-						<div class="recipe_options">
-								<h1>Editando chef</h1>
-								<div class="options_buttons">
-										<input type="hidden" name="id" value="{{chef.id}}">
-										<button id="delete_button" class="crud_button" type="submit" form="delete_form" onclick="handleDeleteConfirmation()">Deletar</button>
-										<button class="crud_button" type="submit">Salvar chef</button>
+				<form class="admin__chefForm" method="POST" action="/admin/chefs?_method=PUT" enctype="multipart/form-data">
+						<div class="admin__sectionBox">
+								<h1 class="admin__sectionTitle admin__sectionTitle--color admin__sectionTitle--font">Editando receita</h1>
+								<div class="admin__sectionButtonBox">
+										<input class="admin__hiddenInput" type="hidden" name="id" value="{{chef.id}}">
+										<button class="admin__sectionButton admin__sectionButton--deleteColor admin__sectionButton--font" type="submit" form="delete_form" onclick="handleDeleteConfirmation()">Deletar</button>
+										<button class="admin__sectionButton admin__sectionButton--color admin__sectionButton--font" type="submit">Salvar chef</button>
 								</div>
 						</div>
 						{% include 'restricted/chefs/fields.njk' %}

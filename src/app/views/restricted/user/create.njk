@@ -5,38 +5,42 @@
 {% endblock %}
 
 {% block header %}
-  {% include "parts/admin-navbar.njk" %}
+  {% include "parts/navbar-admin.njk" %}
 {% endblock %}
 
 {% block content %}
-  <div class="create-user-header">
-    <h3>Criar Usuário</h3>
-    <div class="create-user-buttons">
-      <a class="save-button" href="#">Salvar</a>
-      <a class="cancel-button" href="#">Cancelar</a>
-    </div>
-  </div>
+  <form class="admin__userForm" method="POST" action="/admin/users?_method=POST" enctype="multipart/form-data">
 
-  <div class="create-user-items">
-    <div class="item">
-      <label for="name">Nome</label>
-      <div class="input">
-        <input type="text" name="name" placeholder="Digite o seu nome completo" value="{{user.name}}">
+    <div class="admin__sectionBox">
+      <h1 class="admin__sectionTitle admin__sectionTitle--color admin__sectionTitle--font">Criar Usuário</h1>
+      <div class="admin__sectionButtonBox">
+        <input class="admin__hiddenInput" type="hidden" name="id" value="{{chef.id}}">
+        <button class="admin__sectionButton admin__sectionButton--color admin__sectionButton--font" type="submit">Salvar</button>
+        <button class="admin__sectionButton admin__sectionButton--cancelColor admin__sectionButton--font admin__sectionButton--size" type="submit">Cancelar</button>
       </div>
     </div>
 
-    <div class="item">
-      <label for="email">Email</label>
-      <div class="input">
-        <input type="email" name="email" placeholder="Digite o email" value="{{user.email}}" onblur="Validate.apply(this, 'isEmail')">
+    <section class="user__creation">
+      <div class="user__item">
+        <label class="user__label user__label--font user__label--color" for="name">Nome</label>
+        <div class="user__inputBox">
+          <input class="user__input user__input--font user__input--color" type="text" name="name" placeholder="Digite o seu nome completo" value="{{user.name}}">
+        </div>
       </div>
-    </div>
 
-    <div class="item">
-      <div class="input">
-        <input type="checkbox" id="isAdmin" nome="Administrador" value="isAdmin">
-        <label for="isAdmin">Administrador</label>
+      <div class="user__item">
+        <label class="user__label user__label--font user__label--color" for="email">Email</label>
+        <div class="user__inputBox">
+          <input class="user__input user__input--font user__input--color" type="email" name="email" placeholder="Digite o email" value="{{user.email}}" onblur="Validate.apply(this, 'isEmail')">
+        </div>
       </div>
-    </div>
-  </div>
+
+      <div class="user__item">
+        <div class="user__inputBox">
+          <input class="user__checkbox" type="checkbox" id="isAdmin" nome="Administrador" value="isAdmin">
+          <label class="user__label user__label--font user__label--color" for="isAdmin">Administrador</label>
+        </div>
+      </div>
+    </section>
+  </form>
 {% endblock %}

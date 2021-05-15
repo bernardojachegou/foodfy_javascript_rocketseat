@@ -1,0 +1,46 @@
+@import '../variables.scss';
+
+.user {
+  &__creation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    margin-top: 50px;
+  }
+  &__label {
+    &--font {
+      font-weight: bold;
+      font-size: 16px;
+    }
+    &--color {
+      color: $black;
+    }
+  }
+  &__inputBox {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 10px;
+    &:last-child {
+      height: 50px;
+    }
+  }
+  &__input {
+    padding: 15px 20px;
+    border: 1px solid $lightGray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    &--font {
+      font-size: 16px;
+    }
+    &--color {
+      color: $black;
+    }
+  }
+  &__checkbox {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+  }
+}

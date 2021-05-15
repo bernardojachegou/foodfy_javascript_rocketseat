@@ -354,16 +354,26 @@
   background-color: #dc4747;
   color: #ffffff;
 }
+.admin__sectionButton--cancelColor {
+  background-color: #8a8a8a;
+  color: #ffffff;
+}
 .admin__sectionButton--font {
   font-size: 16px;
   text-decoration: none;
   font-weight: 500;
+}
+.admin__sectionButton--size {
+  width: 140px;
 }
 .admin__sectionButton:hover {
   background-color: #4a418c;
 }
 .admin__sectionButton--deleteColor:hover {
   background-color: #9b3131;
+}
+.admin__sectionButton--cancelColor:hover {
+  background-color: #6e6e6e;
 }
 
 /*# sourceMappingURL=parts.css.map */

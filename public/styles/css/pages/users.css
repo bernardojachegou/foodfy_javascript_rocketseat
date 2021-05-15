@@ -1,0 +1,42 @@
+.user__creation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+  margin-top: 50px;
+}
+.user__label--font {
+  font-weight: bold;
+  font-size: 16px;
+}
+.user__label--color {
+  color: #111111;
+}
+.user__inputBox {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 10px;
+}
+.user__inputBox:last-child {
+  height: 50px;
+}
+.user__input {
+  padding: 15px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.user__input--font {
+  font-size: 16px;
+}
+.user__input--color {
+  color: #111111;
+}
+.user__checkbox {
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+}
+
+/*# sourceMappingURL=users.css.map */
