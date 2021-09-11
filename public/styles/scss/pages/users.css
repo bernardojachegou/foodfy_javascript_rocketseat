@@ -1,0 +1,73 @@
+.user__fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 35px;
+  margin-top: 50px;
+}
+.user__label--font {
+  font-weight: bold;
+  font-size: 16px;
+}
+.user__label--color {
+  color: #111111;
+}
+.user__inputBox {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 10px;
+}
+.user__input {
+  padding: 15px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.user__input--font {
+  font-size: 16px;
+}
+.user__input--color {
+  color: #111111;
+}
+.user__checkbox {
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+}
+.user__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 200px;
+  grid-row-gap: 32px;
+  margin-top: 50px;
+}
+.user__listName {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+.user__listEmail {
+  font-size: 14px;
+  font-weight: normal;
+  color: #777777;
+  margin-bottom: 16px;
+}
+.user__listButton:first-child {
+  color: #6558c3;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 16px;
+}
+.user__listButton:last-child {
+  color: #f55a5a;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+}
+.user__listButton:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=users.css.map */

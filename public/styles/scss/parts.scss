@@ -2,411 +2,411 @@
 
 // navbar
 .header {
-  padding: 24px 0;
-  &--adminColor {
-    background-color: $black;
-  }
-  &__navbar {
-    width: 960px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  &__items {
-    display: flex;
-    align-items: center;
-  }
-  &__logo {
-    margin-right: 120px;
-  }
-  &__imageLink {
-    margin: 0;
-  }
-  &__link {
-    margin: 0 15px;
-    transition: 300ms;
-    &--font {
-      line-height: 18px;
-      text-decoration: none;
-    }
-    &--adminFont {
-      text-transform: uppercase;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: bold;
-    }
-    &--color {
-      color: $black;
-    }
+    padding: 24px 0;
     &--adminColor {
-      color: $gray;
+        background-color: $black;
     }
-    &--active {
-      font-weight: bold;
+    &__navbar {
+        width: 960px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-    &--adminActive {
-      color: $neutral;
+    &__items {
+        display: flex;
+        align-items: center;
     }
-    &--logout {
-      position: absolute;
-      top: 24px;
-      right: 48px;
-      text-decoration: none;
-      text-transform: uppercase;
-      color: #999999;
-      font-weight: bold;
-      transition: 300ms;
+    &__logo {
+        margin-right: 120px;
     }
-    &:hover {
-      font-weight: bold;
+    &__imageLink {
+        margin: 0;
     }
-  }
+    &__link {
+        margin: 0 15px;
+        transition: 300ms;
+        &--font {
+            line-height: 18px;
+            text-decoration: none;
+        }
+        &--adminFont {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        &--color {
+            color: $black;
+        }
+        &--adminColor {
+            color: $gray;
+        }
+        &--active {
+            font-weight: bold;
+        }
+        &--adminActive {
+            color: $neutral;
+        }
+        &--logout {
+            position: absolute;
+            top: 24px;
+            right: 48px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #999999;
+            font-weight: bold;
+            transition: 300ms;
+        }
+        &:hover {
+            font-weight: bold;
+        }
+    }
 }
 
 // footer
 .footer {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 60px;
-  &--color {
-    background-color: $lighterGray;
-  }
-  &__item {
-    &--font {
-      font-size: 14px;
-    }
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
     &--color {
-      color: $gray;
+        background-color: $lighterGray;
     }
-  }
+    &__item {
+        &--font {
+            font-size: 14px;
+        }
+        &--color {
+            color: $gray;
+        }
+    }
 }
 
 // filter
 .filter {
-  display: flex;
-  align-items: center;
-  &__item {
-    width: 250px;
-    padding: 10px;
-    border: 1px solid $lightGray;
-    border-radius: 4px;
-    margin-right: 8px;
-    &--font {
-      font-size: 14px;
+    display: flex;
+    align-items: center;
+    &__item {
+        width: 250px;
+        padding: 10px;
+        border: 1px solid $lightGray;
+        border-radius: 4px;
+        margin-right: 8px;
+        &--font {
+            font-size: 14px;
+        }
+        &::placeholder {
+            color: $gray;
+        }
     }
-    &::placeholder {
-      color: $gray;
+    &__button {
+        padding: 10px 20px;
+        border-radius: 4px;
+        transition: 200ms;
+        &--font {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        &--color {
+            background-color: $purple;
+            color: $neutral;
+        }
+        &:hover {
+            background-color: $darkPurple;
+        }
     }
-  }
-  &__button {
-    padding: 10px 20px;
-    border-radius: 4px;
-    transition: 200ms;
-    &--font {
-      font-weight: bold;
-      font-size: 16px;
-    }
-    &--color {
-      background-color: $purple;
-      color: $neutral;
-    }
-    &:hover {
-      background-color: $darkPurple;
-    }
-  }
 }
 
 // recipes-section
 .cardSection {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  &__image {
-    width: 300px;
-    height: 140px;
-    border-radius: 15px;
-    cursor: pointer;
-    object-fit: cover;
-  }
-  &__info {
-    margin: 16px 0 20px 0;
-  }
-  &__recipeTitle {
-    margin-bottom: 5px;
-    &--font {
-      font-weight: 400;
-      font-size: 18px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    &__image {
+        width: 300px;
+        height: 140px;
+        border-radius: 15px;
+        cursor: pointer;
+        object-fit: cover;
     }
-  }
-  &__chefName {
-    &--font {
-      font-weight: 400;
-      font-size: 14px;
+    &__info {
+        margin: 16px 0 20px 0;
     }
-    &--color {
-      color: $darkGray;
+    &__recipeTitle {
+        margin-bottom: 5px;
+        &--font {
+            font-weight: 400;
+            font-size: 18px;
+        }
     }
-  }
+    &__chefName {
+        &--font {
+            font-weight: 400;
+            font-size: 14px;
+        }
+        &--color {
+            color: $darkGray;
+        }
+    }
 }
 
 // recipe-details
 .recipe {
-  margin-bottom: 24px;
-  &__header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  &__gallery {
-    width: 100%;
-    margin-top: 26px;
-  }
-  &__image {
-    object-fit: cover;
-    width: 100%;
-    height: 280px;
-    border-radius: 15px;
-    margin-bottom: 5px;
-    cursor: zoom-in;
-  }
-  &__lightboxTarget {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    overflow: hidden;
-    z-index: 100;
-    left: 0;
-    top: -100%;
-    opacity: 0;
-    transition: opacity 400ms;
-  }
-  &__lightboxImage {
-    margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
-    border-radius: 16px;
-  }
-  &__lightboxClose {
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    position: absolute;
-    top: -80px;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: 400ms;
-    border-radius: 8px;
-  }
-  &__preview {
-    display: flex;
-    justify-content: flex-end;
-    grid-gap: 5px;
-  }
-  &__previewImage {
-    height: 50px;
-    width: 50px;
-    object-fit: cover;
-    border-radius: 4px;
-    opacity: 0.6;
-    cursor: pointer;
-    transition: 200ms;
-    &--active {
-      opacity: 1;
-    }
-    &:hover {
-      opacity: 1;
-    }
-  }
-  &__title {
-    &--font {
-      font-size: 36px;
-    }
-    &--color {
-      color: $black;
-    }
-  }
-  &__chefName {
-    &--font {
-      font-size: 20px;
-      line-height: 30px;
-    }
-    &--color {
-      color: $darkGray;
-    }
-  }
-  &__section {
     margin-bottom: 24px;
-  }
-  &__sectionBox {
-    display: flex;
-    align-items: baseline;
-  }
-  &__sectionTitle {
-    margin-bottom: 16px;
-    &--font {
-      font-size: 24px;
+    &__header {
+        text-align: center;
+        margin-bottom: 30px;
     }
-    &--color {
-      color: $black;
+    &__gallery {
+        width: 100%;
+        margin-top: 26px;
     }
-  }
-  &__toggleButton {
-    padding-left: 12px;
-    transition: 300ms;
-    cursor: pointer;
-    &--font {
-      font-size: 12px;
-      text-decoration: none;
-      font-weight: 700;
+    &__image {
+        object-fit: cover;
+        width: 100%;
+        height: 280px;
+        border-radius: 15px;
+        margin-bottom: 5px;
+        cursor: zoom-in;
     }
-    &--color {
-      color: $gray;
+    &__lightboxTarget {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        overflow: hidden;
+        z-index: 100;
+        left: 0;
+        top: -100%;
+        opacity: 0;
+        transition: opacity 400ms;
     }
-    &:hover {
-      color: $black;
+    &__lightboxImage {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+        border-radius: 16px;
     }
-  }
-  &__boxList {
-    &--font {
-      font-size: 18px;
-      line-height: 28px;
+    &__lightboxClose {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        position: absolute;
+        top: -80px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 400ms;
+        border-radius: 8px;
     }
-    &--color {
-      color: $darkerGray;
+    &__preview {
+        display: flex;
+        justify-content: flex-end;
+        grid-gap: 5px;
     }
-    &--hide {
-      display: none;
+    &__previewImage {
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+        border-radius: 4px;
+        opacity: 0.6;
+        cursor: pointer;
+        transition: 200ms;
+        &--active {
+            opacity: 1;
+        }
+        &:hover {
+            opacity: 1;
+        }
     }
-  }
-  &__list {
-    margin-left: 20px;
-  }
+    &__title {
+        &--font {
+            font-size: 36px;
+        }
+        &--color {
+            color: $black;
+        }
+    }
+    &__chefName {
+        &--font {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        &--color {
+            color: $darkGray;
+        }
+    }
+    &__section {
+        margin-bottom: 24px;
+    }
+    &__sectionBox {
+        display: flex;
+        align-items: baseline;
+    }
+    &__sectionTitle {
+        margin-bottom: 16px;
+        &--font {
+            font-size: 24px;
+        }
+        &--color {
+            color: $black;
+        }
+    }
+    &__toggleButton {
+        padding-left: 12px;
+        transition: 300ms;
+        cursor: pointer;
+        &--font {
+            font-size: 12px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        &--color {
+            color: $gray;
+        }
+        &:hover {
+            color: $black;
+        }
+    }
+    &__boxList {
+        &--font {
+            font-size: 18px;
+            line-height: 28px;
+        }
+        &--color {
+            color: $darkerGray;
+        }
+        &--hide {
+            display: none;
+        }
+    }
+    &__list {
+        margin-left: 20px;
+    }
 }
 
 // chef-details
 .chef {
-  &__boxImage {
-    text-align: center;
-    margin: 26px 0 50px;
-  }
-  &__image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 0 30px;
-  }
-  &__name {
-    &--font {
-      font-size: 36px;
+    &__boxImage {
+        text-align: center;
+        margin: 26px 0 50px;
     }
-    &--color {
-      color: $black;
+    &__image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 0 30px;
     }
-  }
-  &__totalRecipes {
-    &--font {
-      font-size: 20px;
+    &__name {
+        &--font {
+            font-size: 36px;
+        }
+        &--color {
+            color: $black;
+        }
     }
-    &--color {
-      color: $darkGray;
+    &__totalRecipes {
+        &--font {
+            font-size: 20px;
+        }
+        &--color {
+            color: $darkGray;
+        }
+        text-align: center;
+        margin-top: 4px;
     }
-    text-align: center;
-    margin-top: 4px;
-  }
-  &__sectionBox {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-  &__sectionTitle {
-    &--font {
-      font-size: 24px;
+    &__sectionBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
     }
-    &--color {
-      color: $black;
+    &__sectionTitle {
+        &--font {
+            font-size: 24px;
+        }
+        &--color {
+            color: $black;
+        }
     }
-  }
 }
 
 // default admin title and button
 .admin {
-  &__sectionBox {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 50px 0 30px;
-  }
-  &__sectionTitle {
-    &--color {
-      color: $black;
+    &__sectionBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 50px 0 30px;
     }
-    &--font {
-      font-size: 24px;
+    &__sectionTitle {
+        &--color {
+            color: $black;
+        }
+        &--font {
+            font-size: 24px;
+        }
     }
-  }
-  &__sectionButtonBox {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  &__sectionButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 9px 0;
-    border-radius: 4px;
-    transition: 300ms;
-    cursor: pointer;
-    &:last-child {
-      margin-left: 10px;
+    &__sectionButtonBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
-    &--color {
-      background-color: $purple;
-      color: $neutral;
+    &__sectionButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 9px 0;
+        border-radius: 4px;
+        transition: 300ms;
+        cursor: pointer;
+        &:last-child {
+            margin-left: 10px;
+        }
+        &--color {
+            background-color: $purple;
+            color: $neutral;
+        }
+        &--deleteColor {
+            background-color: $warning;
+            color: $neutral;
+        }
+        &--cancelColor {
+            background-color: $cancel;
+            color: $neutral;
+        }
+        &--font {
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        &--size {
+            width: 140px;
+        }
+        &:hover {
+            background-color: $darkPurple;
+        }
+        &--deleteColor:hover {
+            background-color: $darkWarning;
+        }
+        &--cancelColor:hover {
+            background-color: $darkCancel;
+        }
     }
-    &--deleteColor {
-      background-color: $warning;
-      color: $neutral;
-    }
-    &--cancelColor {
-      background-color: $cancel;
-      color: $neutral;
-    }
-    &--font {
-      font-size: 16px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    &--size {
-      width: 140px;
-    }
-    &:hover {
-      background-color: $darkPurple;
-    }
-    &--deleteColor:hover {
-      background-color: $darkWarning;
-    }
-    &--cancelColor:hover {
-      background-color: $darkCancel;
-    }
-  }
 }

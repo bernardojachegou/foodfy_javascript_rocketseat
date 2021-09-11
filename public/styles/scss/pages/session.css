@@ -1,0 +1,85 @@
+.session {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.session__form {
+  width: 52%;
+}
+.session__imageBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+.session__image {
+  padding: 36px 36px 0;
+}
+.session__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 36px;
+}
+.session__title--font {
+  font-size: 24px;
+}
+.session__label {
+  font-weight: bold;
+}
+.session__inputBox {
+  margin: 10px 0 35px 0;
+}
+.session__input {
+  padding: 14px;
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.session__input--color {
+  color: #777777;
+}
+.session__input--font {
+  font-size: 16px;
+}
+.session__buttonBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 36px;
+}
+.session__buttonBox--position {
+  flex-direction: column;
+  align-items: flex-end;
+}
+.session__recoveryLink--font {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.session__recoveryLink--color {
+  color: #999999;
+}
+.session__recoveryLink:hover {
+  text-decoration: underline;
+}
+.session__button {
+  border-radius: 4px;
+  padding: 8px 36px;
+  transition: 300ms;
+  cursor: pointer;
+}
+.session__button--font {
+  font-size: 16px;
+  font-weight: bold;
+}
+.session__button--color {
+  background-color: #6558c3;
+  color: #ffffff;
+}
+.session__button:hover {
+  background-color: #4a418c;
+}
+
+/*# sourceMappingURL=session.css.map */

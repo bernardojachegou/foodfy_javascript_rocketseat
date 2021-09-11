@@ -1,0 +1,385 @@
+.header {
+  padding: 24px 0;
+}
+.header--adminColor {
+  background-color: #111111;
+}
+.header__navbar {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__items {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  margin-right: 120px;
+}
+.header__imageLink {
+  margin: 0;
+}
+.header__link {
+  margin: 0 15px;
+  transition: 300ms;
+}
+.header__link--font {
+  line-height: 18px;
+  text-decoration: none;
+}
+.header__link--adminFont {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+.header__link--color {
+  color: #111111;
+}
+.header__link--adminColor {
+  color: #999999;
+}
+.header__link--active {
+  font-weight: bold;
+}
+.header__link--adminActive {
+  color: #ffffff;
+}
+.header__link--logout {
+  position: absolute;
+  top: 24px;
+  right: 48px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #999999;
+  font-weight: bold;
+  transition: 300ms;
+}
+.header__link:hover {
+  font-weight: bold;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+}
+.footer--color {
+  background-color: #eeeeee;
+}
+.footer__item--font {
+  font-size: 14px;
+}
+.footer__item--color {
+  color: #999999;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+}
+.filter__item {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+.filter__item--font {
+  font-size: 14px;
+}
+.filter__item::placeholder {
+  color: #999999;
+}
+.filter__button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: 200ms;
+}
+.filter__button--font {
+  font-weight: bold;
+  font-size: 16px;
+}
+.filter__button--color {
+  background-color: #6558c3;
+  color: #ffffff;
+}
+.filter__button:hover {
+  background-color: #4a418c;
+}
+
+.cardSection {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.cardSection__image {
+  width: 300px;
+  height: 140px;
+  border-radius: 15px;
+  cursor: pointer;
+  object-fit: cover;
+}
+.cardSection__info {
+  margin: 16px 0 20px 0;
+}
+.cardSection__recipeTitle {
+  margin-bottom: 5px;
+}
+.cardSection__recipeTitle--font {
+  font-weight: 400;
+  font-size: 18px;
+}
+.cardSection__chefName--font {
+  font-weight: 400;
+  font-size: 14px;
+}
+.cardSection__chefName--color {
+  color: #777777;
+}
+
+.recipe {
+  margin-bottom: 24px;
+}
+.recipe__header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.recipe__gallery {
+  width: 100%;
+  margin-top: 26px;
+}
+.recipe__image {
+  object-fit: cover;
+  width: 100%;
+  height: 280px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  cursor: zoom-in;
+}
+.recipe__lightboxTarget {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  z-index: 100;
+  left: 0;
+  top: -100%;
+  opacity: 0;
+  transition: opacity 400ms;
+}
+.recipe__lightboxImage {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  border-radius: 16px;
+}
+.recipe__lightboxClose {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  position: absolute;
+  top: -80px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 400ms;
+  border-radius: 8px;
+}
+.recipe__preview {
+  display: flex;
+  justify-content: flex-end;
+  grid-gap: 5px;
+}
+.recipe__previewImage {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 200ms;
+}
+.recipe__previewImage--active {
+  opacity: 1;
+}
+.recipe__previewImage:hover {
+  opacity: 1;
+}
+.recipe__title--font {
+  font-size: 36px;
+}
+.recipe__title--color {
+  color: #111111;
+}
+.recipe__chefName--font {
+  font-size: 20px;
+  line-height: 30px;
+}
+.recipe__chefName--color {
+  color: #777777;
+}
+.recipe__section {
+  margin-bottom: 24px;
+}
+.recipe__sectionBox {
+  display: flex;
+  align-items: baseline;
+}
+.recipe__sectionTitle {
+  margin-bottom: 16px;
+}
+.recipe__sectionTitle--font {
+  font-size: 24px;
+}
+.recipe__sectionTitle--color {
+  color: #111111;
+}
+.recipe__toggleButton {
+  padding-left: 12px;
+  transition: 300ms;
+  cursor: pointer;
+}
+.recipe__toggleButton--font {
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.recipe__toggleButton--color {
+  color: #999999;
+}
+.recipe__toggleButton:hover {
+  color: #111111;
+}
+.recipe__boxList--font {
+  font-size: 18px;
+  line-height: 28px;
+}
+.recipe__boxList--color {
+  color: #444444;
+}
+.recipe__boxList--hide {
+  display: none;
+}
+.recipe__list {
+  margin-left: 20px;
+}
+
+.chef__boxImage {
+  text-align: center;
+  margin: 26px 0 50px;
+}
+.chef__image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 0 30px;
+}
+.chef__name--font {
+  font-size: 36px;
+}
+.chef__name--color {
+  color: #111111;
+}
+.chef__totalRecipes {
+  text-align: center;
+  margin-top: 4px;
+}
+.chef__totalRecipes--font {
+  font-size: 20px;
+}
+.chef__totalRecipes--color {
+  color: #777777;
+}
+.chef__sectionBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.chef__sectionTitle--font {
+  font-size: 24px;
+}
+.chef__sectionTitle--color {
+  color: #111111;
+}
+
+.admin__sectionBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 0 30px;
+}
+.admin__sectionTitle--color {
+  color: #111111;
+}
+.admin__sectionTitle--font {
+  font-size: 24px;
+}
+.admin__sectionButtonBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.admin__sectionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 0;
+  border-radius: 4px;
+  transition: 300ms;
+  cursor: pointer;
+}
+.admin__sectionButton:last-child {
+  margin-left: 10px;
+}
+.admin__sectionButton--color {
+  background-color: #6558c3;
+  color: #ffffff;
+}
+.admin__sectionButton--deleteColor {
+  background-color: #dc4747;
+  color: #ffffff;
+}
+.admin__sectionButton--cancelColor {
+  background-color: #8a8a8a;
+  color: #ffffff;
+}
+.admin__sectionButton--font {
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.admin__sectionButton--size {
+  width: 140px;
+}
+.admin__sectionButton:hover {
+  background-color: #4a418c;
+}
+.admin__sectionButton--deleteColor:hover {
+  background-color: #9b3131;
+}
+.admin__sectionButton--cancelColor:hover {
+  background-color: #6e6e6e;
+}
+
+/*# sourceMappingURL=parts.css.map */

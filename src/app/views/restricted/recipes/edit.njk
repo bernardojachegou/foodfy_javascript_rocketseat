@@ -15,8 +15,8 @@
 						<h1 class="admin__sectionTitle admin__sectionTitle--color admin__sectionTitle--font">Editando receita</h1>
 						<div class="admin__sectionButtonBox">
 								<input class="admin__hiddenInput" type="hidden" name="id" value="{{recipe.id}}">
-								<button class="admin__sectionButton admin__sectionButton--deleteColor admin__sectionButton--font" type="submit" form="delete_form" onclick="handleDeleteConfirmation()">Deletar</button>
-								<button class="admin__sectionButton admin__sectionButton--color admin__sectionButton--font" type="submit">Salvar receita</button>
+								<button class="admin__sectionButton admin__sectionButton--deleteColor admin__sectionButton--font admin__sectionButton--size" type="submit" form="delete_form" onclick="handleDeleteConfirmation()">Deletar</button>
+								<button class="admin__sectionButton admin__sectionButton--color admin__sectionButton--font admin__sectionButton--size" type="submit">Salvar receita</button>
 						</div>
 				</div>
 				{% include 'restricted/recipes/fields.njk' %}

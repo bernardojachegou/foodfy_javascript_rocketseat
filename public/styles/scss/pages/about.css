@@ -1,0 +1,32 @@
+.about__title {
+  margin: 26px 0 20px 0;
+}
+.about__title--font {
+  font-size: 24px;
+  font-weight: bold;
+}
+.about__title--color {
+  color: #111111;
+}
+.about__subtitle {
+  margin: 30px 0 20px 0;
+}
+.about__subtitle--font {
+  font-size: 20px;
+  font-weight: bold;
+}
+.about__subtitle--color {
+  color: #111111;
+}
+.about__description {
+  margin-bottom: 30px;
+}
+.about__description--font {
+  line-height: 28px;
+  font-size: 18px;
+}
+.about__description--color {
+  color: #444444;
+}
+
+/*# sourceMappingURL=about.css.map */
